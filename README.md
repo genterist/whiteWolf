@@ -1,1 +1,3 @@
-# whiteWolf
+# Project White Wolf
+
+...under development
