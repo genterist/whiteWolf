@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  Test
+//
+//  This App has been generated using IBM Mobile UI Builder
+//
+
+#ifndef Test_PrefixHeader_pch
+#define Test_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif
