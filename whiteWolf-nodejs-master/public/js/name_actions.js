@@ -100,6 +100,65 @@ $(document).ready(function(){
 	});
 
 
+$("#view_room").click(function(e){
+		e.preventDefault();
+		console.log("Before $.ajax");
+		$.ajax({
+			url: "/view_rooms",
+			type: "GET",
+			dataType: "json",
+			data:{allnames: ""},
+			contentType: "application/json",
+			cache: true,
+			timeout: 5000,
+			complete: function() {
+			  //called when complete
+			  console.log('process complete');
+			},
+			success: function(data) {
+				//back end(app.js) sends back either added: DB read error or a list of names. Check for that before taking necessary action
+				if(!data.hasOwnProperty("added"))
+				{
+					console.log("Received info from back end");
+					document.getElementById("add_new_name_form").style.display="none";
+					document.getElementById("remove_name_form").style.display="none";
+					document.getElementById("show_all_names").style.display="block";
+					document.getElementById("added_name").style.display="none";
+					document.getElementById("removed_name").style.display="none";
+					document.getElementById("duplicate_name").style.display="none";
+					document.getElementById("db_insert_error").style.display="none";
+					document.getElementById("could_not_remove").style.display="none";
+					document.getElementById("db_read_error").style.display="none";
+					document.getElementById("updated_name").style.display="none";
+					document.getElementById("could_not_update").style.display="none";
+					document.getElementById("update_name_form").style.display="none";
+					document.getElementById("empty_database").style.display="none";
+
+          			//Bootstrap for table-stripped
+
+
+          			var names_table = "<table class=\"table table-striped table-hover\">";
+          			names_table += "<thead><th> Rooms in Database </th></thead>";
+          			names_table += "<tbody>";
+          			for(var i = 0; i < data.length; i++) {
+            			names_table += "<tr class=\"info\"><td > Room: " + data[i].name + "</td>";
+            			names_table += "<td >Device Warning:" + data[i].deviceWarning + "</td></tr>";
+        			}
+
+          			names_table += "</tbody></table>";
+          			document.getElementById("show_all_names").innerHTML = names_table;
+				}
+				else
+					document.getElementById("db_read_error").style.display="block";
+			},
+
+			error: function() {
+			  console.log('process error');
+			},
+		});
+	});
+
+
 	$("#add_name_button").click(function(e){
 			e.preventDefault();
 			//In 'data' parameter, send new name to be added to 'url', to be received by back end for further processing

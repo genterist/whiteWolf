@@ -32,6 +32,7 @@ var cloudant = Cloudant({url: cloudant_url});
 var dbname = 'names_database';
 var dbroom = 'threatmap';
 var db;
+var db_room;
 
 //Create database
 cloudant.db.create(dbname, function(err, data) {
@@ -42,6 +43,7 @@ cloudant.db.create(dbname, function(err, data) {
 
   	//Use the database for further operations like create view, update doc., read doc., delete doc. etc, by assigning dbname to db.
   	db = cloudant.db.use(dbname);
+  	db_room = cloudant.db.use(dbroom);
     //Create a design document. It stores the structure of the database and contains the design and map of views too
     //A design doc. referred by _id = "_design/<any name your choose>"
     //A view is used to limit the amount of data returned
@@ -190,9 +192,9 @@ app.get('/view_names',function(req, res){
 	});
 });
 
-//To update the 'Read Names' list
 app.get('/view_rooms',function(req, res){
-	var url = cloudant_url + "/threatmap";
+	var json_string_for_csv_conversion = new Array();
+	var url = cloudant_url + "/threatmap/_design/newRoom/_view/threatmap";
 	request({
 			 url: url, //'request' makes a call to API URL which in turn returns a JSON to the variable 'body'
 			 json: true
@@ -202,12 +204,19 @@ app.get('/view_rooms',function(req, res){
 			var user_data = body.rows;  //body.rows contains an array of IDs, Revision numbers and Names from the view
 			var list_of_names = '[';
 			var name_array = [];
+			var deviceWarning_array = [];
 
+			for(var i=0; i< user_data.length; i++)
+			{
+				name_array.push(user_data[i].value[1]);
+				deviceWarning_array.push(user_data[i].value[2]);
+			}
+			var fields =['|__Rooms_in_Database__|'];
 
 			name_array.sort();
 			for(var i=0; i<name_array.length; i++)
 			{
-				var name_JSON = '{\"roomName\":\"' + name_array[i] + '\"}'; //create an array of names only
+				var name_JSON = '{\"name\":\"' + name_array[i] + '\" , \"deviceWarning\":\"' + deviceWarning_array[i] +'\"}'; //create an array of names only
 				if(i !== 0)
 					list_of_names = list_of_names.concat(",");
 				list_of_names = list_of_names.concat(name_JSON);
@@ -215,6 +224,7 @@ app.get('/view_rooms',function(req, res){
 			list_of_names = list_of_names.concat("]");
 			res.contentType('application/json');
 			console.log("Returning names");
+			console.log(list_of_names);
 			res.send(JSON.parse(list_of_names)); //return the list to front end for display
 		}
 		else
