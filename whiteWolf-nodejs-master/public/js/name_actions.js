@@ -140,11 +140,40 @@ $("#view_room").click(function(e){
           			var names_table = "<table class=\"table table-striped table-hover\">";
           			names_table += "<thead><th> Rooms in Database </th></thead>";
           			names_table += "<tbody>";
+             		names_table += "<tr class=\"info\"><td >";
+            		names_table += "<form>";         			
           			for(var i = 0; i < data.length; i++) {
-            			names_table += "<tr class=\"info\"><td > Room: " + data[i].name + "</td>";
-            			names_table += "<td >Device Warning:" + data[i].deviceWarning + "</td></tr>";
+                          	names_table += "<h3>Room " + data[i].roomId +" : " + data[i].roomName + " </h3>";
+                          	names_table += '<img src=\"' + data[i].roomImage + '\" alt=\"\" width=\"35px\"/><br/>';
+                            
+                            names_table += '<label for=\"deviceWarning\">Device warning:</label>';
+                            names_table += '<input type=\"number\" name=\"deviceWarning\" id=\"deviceWarning\" value=\"'+data[i].deviceWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"humanWarning\">Human warning:</label>';
+                            names_table += '<input type=\"number\" name=\"humanWarning\" id=\"humanWarning\" value=\"'+data[i].humanWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"timeWarning\">Time warning:</label>';
+                            names_table += '<input type=\"number\" name=\"timeWarning\" id=\"timeWarning\" value=\"'+data[i].timeWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"breachWarning\">Breach warning:</label>';
+                            names_table += '<input type=\"number\" name=\"breachWarning\" id=\"breachWarning\" value=\"'+data[i].breachWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"currentPeople\">Current ocupancy:</label>';
+                            names_table += '<input type=\"number\" name=\"currentPeople\" id=\"currentPeople\" value=\"'+data[i].currentPeople+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"totalTasks\">Total task:</label>';
+                            names_table += '<input type=\"number\" name=\"totalTasks\" id=\"totalTasks\" value=\"'+data[i].totalTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"executingTasks\">Executing tasks:</label>';
+                            names_table += '<input type=\"number\" name=\"executingTasks\" id=\"executingTasks\" value=\"'+data[i].executingTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                            
+                            names_table += '<label for=\"missedTasks\">Missed tasks:</label>';
+                            names_table += '<input type=\"number\" name=\"missedTasks\" id=\"missedTasks\" value=\"'+data[i].missedTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
+                    
         			}
 
+                    names_table += '</form>';
+            		names_table += "</td></tr>";
           			names_table += "</tbody></table>";
           			document.getElementById("show_all_names").innerHTML = names_table;
 				}

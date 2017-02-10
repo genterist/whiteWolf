@@ -203,20 +203,51 @@ app.get('/view_rooms',function(req, res){
 		{
 			var user_data = body.rows;  //body.rows contains an array of IDs, Revision numbers and Names from the view
 			var list_of_names = '[';
-			var name_array = [];
+			var roomId_array  = [];
+			var roomName_array = [];
+			var roomImage_array  = [];
 			var deviceWarning_array = [];
+			var humanWarning_array  = [];
+			var timeWarning_array  = [];
+			var breachWarning_array  = [];
+			var currentPeople_array  = [];
+			var totalTasks_array  = [];
+			var executingTasks_array  = [];
+			var missedTasks_array  = [];
 
 			for(var i=0; i< user_data.length; i++)
 			{
-				name_array.push(user_data[i].value[1]);
-				deviceWarning_array.push(user_data[i].value[2]);
+				roomId_array.push(user_data[i].value[1]);
+			    roomName_array.push(user_data[i].value[2]);
+			    roomImage_array.push(user_data[i].value[3]);
+			    deviceWarning_array.push(user_data[i].value[4]);
+			    humanWarning_array.push(user_data[i].value[5]);
+			    timeWarning_array.push(user_data[i].value[6]);
+			    breachWarning_array.push(user_data[i].value[7]);
+			    currentPeople_array.push(user_data[i].value[8]);
+			    totalTasks_array.push(user_data[i].value[9]);
+			    executingTasks_array.push(user_data[i].value[10]);
+			    missedTasks_array.push(user_data[i].value[11]);
 			}
 			var fields =['|__Rooms_in_Database__|'];
 
-			name_array.sort();
-			for(var i=0; i<name_array.length; i++)
+			//name_array.sort();
+			
+			//generate JSON object to send to front end here
+			for(var i=0; i<roomId_array.length; i++)
 			{
-				var name_JSON = '{\"name\":\"' + name_array[i] + '\" , \"deviceWarning\":\"' + deviceWarning_array[i] +'\"}'; //create an array of names only
+				var name_JSON = '{\"roomId\":\"' + roomId_array[i] + '\" ,';
+				name_JSON += '\"roomName\":\"' + roomName_array[i] + '\" ,';
+				name_JSON += '\"roomImage\":\"' + roomImage_array[i] + '\" ,';
+				name_JSON += '\"deviceWarning\":\"' + deviceWarning_array[i] + '\" ,';
+				name_JSON += '\"humanWarning\":\"' + deviceWarning_array[i] + '\" ,';
+				name_JSON += '\"timeWarning\":\"' + timeWarning_array[i] + '\" ,';
+				name_JSON += '\"breachWarning\":\"' + breachWarning_array[i] + '\" ,';
+				name_JSON += '\"currentPeople\":\"' + currentPeople_array[i] + '\" ,';
+				name_JSON += '\"totalTasks\":\"' + totalTasks_array[i] + '\" ,';
+				name_JSON += '\"executingTasks\":\"' + executingTasks_array[i] + '\" ,';
+				name_JSON += '\"missedTasks\":\"' + missedTasks_array[i] + '\"';
+				name_JSON += '}';
 				if(i !== 0)
 					list_of_names = list_of_names.concat(",");
 				list_of_names = list_of_names.concat(name_JSON);
