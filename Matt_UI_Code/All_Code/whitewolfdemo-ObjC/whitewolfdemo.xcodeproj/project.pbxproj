@@ -1,0 +1,1725 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
+
+/* Begin PBXBuildFile section */
+        573341FA1D36218D008CB947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57741E8619E887BA000B31BC /* Assets.xcassets */; };
+		57741E8719E887BA000B31BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57741E8619E887BA000B31BC /* Assets.xcassets */; };
+		577421C419E89235000B31BC /* Style.plist in Resources */ = {isa = PBXBuildFile; fileRef = 577421C319E89235000B31BC /* Style.plist */; };
+		577421C519E89235000B31BC /* Style.plist in Resources */ = {isa = PBXBuildFile; fileRef = 577421C319E89235000B31BC /* Style.plist */; };
+		57F68B631BDE959C00835706 /* LaunchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57F68B621BDE959C00835706 /* LaunchScreenView.xib */; };
+        2308417DA9FD603F0C3CF53D /* BluemixPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F45FDB4AD9320FA3FEB97 /* BluemixPush.swift */; };
+        60644D87B3F3DA571A393383 /* BluemixCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E694FDBAE22A5974EE198A4 /* BluemixCredentials.swift */; };
+        C3B14C26BC303502E338447F /* ABOUTUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348B4B8FB60F6E22464FBBA8 /* ABOUTUSViewController.m */; };
+        6C534A638919C8E1A5F940A7 /* THREATMAPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E547A8836C71D9EF81DD2D /* THREATMAPDetailViewController.m */; };
+        42B14D159EED7B84E90FCE9A /* THREATMAPFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD94880AA2875F9A52CC6D1 /* THREATMAPFormViewController.m */; };
+        F8EA4E1CA734B7CE6FDDA595 /* THREATMAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1495C908E3C61B3B520A7 /* THREATMAPViewController.m */; };
+        807D434280F060B840022672 /* THREATSCORESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4F4C9ACC67EBDA3E73C5 /* THREATSCORESViewController.m */; };
+        4FE54217B2072602A14CB132 /* TODOFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB014E12A394B426C9EC3DAC /* TODOFormViewController.m */; };
+        00FA4825AACAE03C57C08336 /* TODOLISTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F548BB90B61DFE6D7A811A /* TODOLISTDetailViewController.m */; };
+        D8804715A98431B744E8E183 /* TODOLISTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4940FE9118F6019EC2EC65 /* TODOLISTViewController.m */; };
+        8DDA49B18FF45D7E230AAF57 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55142BE9491C0F5F3FF44AB /* WelcomeViewController.m */; };
+        D0824F8B88BF5D33725F2461 /* WHITEWOLFHAITOOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069A40788A996CD12C698945 /* WHITEWOLFHAITOOLViewController.m */; };
+        258F41808C2862E2DDEB9B83 /* DatasourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FD4ADF93B34041C9C82029 /* DatasourceManager.m */; };
+        522D4B6CB66049160574E2E4 /* EmptyDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D83349588BDA8BB3828AAB2D /* EmptyDatasource.m */; };
+        B74C45FB8DEE4BD959A1B23E /* GoogleTrendsTestDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 743B45A3B105DC1A2B6B0633 /* GoogleTrendsTestDS.m */; };
+        76894B75861D2BD5B317C706 /* TasksDBDS.m in Sources */ = {isa = PBXBuildFile; fileRef = C84E4CFA831796D79AAE5FCF /* TasksDBDS.m */; };
+        D5EF4BDAAC2F2FB54CF72039 /* ThreatmapDBDS.m in Sources */ = {isa = PBXBuildFile; fileRef = C4864FA3B0E5BFEB88C3BBE8 /* ThreatmapDBDS.m */; };
+        1B894F6CB573D1B898743EBD /* WwdemoDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 279942069F9D27D1163DB3F2 /* WwdemoDS.m */; };
+        1F8D4382B22D6C745CD4F6E0 /* GoogleTrendsTestDSSchemaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5430412D83D9C818B1EAB9E9 /* GoogleTrendsTestDSSchemaItem.m */; };
+        1DD34074B7E57B93BC8DA930 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6E41C9BAE88505F0A49F15 /* Item.m */; };
+        951542B59192A7D6FF14AD44 /* TasksDBDSSchemaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC748AD8DCA59E3B83D7736 /* TasksDBDSSchemaItem.m */; };
+        3C234AAAB922C625C7D54EDF /* ThreatmapDBDSSchemaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F14C42B611ACC96593EEE6 /* ThreatmapDBDSSchemaItem.m */; };
+        133E42FC9F137ACE0B5B2204 /* WwdemoDSSchemaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9E4CB7ADC1DC72E34F4263 /* WwdemoDSSchemaItem.m */; };
+        03074E39A352D5A3BE216401 /* ROBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D4812A10A3F04DFD16E0D /* ROBlockAction.m */; };
+        597A49BCA84FB926686FB94B /* ROFacetimeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C243029E339CC9FFF78BCD /* ROFacetimeAction.m */; };
+        586945ED8D5872FD9D4BC1E5 /* ROMailAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3643719791BA67CC346426 /* ROMailAction.m */; };
+        112E4EF1826ABCDD08CCBE58 /* ROMapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D34A45B47271BE1BB9719B /* ROMapAction.m */; };
+        206F419BBE226CDECE79C294 /* ROMapDirectionsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 312E4FBE984FF92559D43791 /* ROMapDirectionsAction.m */; };
+        091F4FDCBF811E6D81CC2001 /* ROMapSearchAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C4284F61ABF2DD0760F44FA1 /* ROMapSearchAction.m */; };
+        B9D645C88D3DB79BC5CF29F6 /* RONavigationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B11E4DD792B41A19C954D26F /* RONavigationAction.m */; };
+        71FE4F3BB2B32B32D28A9893 /* ROPhoneAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 339348B29C507FF44A6A213B /* ROPhoneAction.m */; };
+        76E249C98685E0011BB1E2AB /* ROSMSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C66A44C0BA78B0680F725E0C /* ROSMSAction.m */; };
+        FD014B3188E95A6F33F2B037 /* ROUriAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 714C438DAFB8E3BBFC26A202 /* ROUriAction.m */; };
+        4C1247DC8A2288E29785988F /* ROWebBrowserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB24BA5925142C20D94D192 /* ROWebBrowserAction.m */; };
+        1D984101A501AC390DE3F53D /* ROYoutubeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A174A6A88983DCBB119F584 /* ROYoutubeAction.m */; };
+        24064F84A16BE7C7FEFEA021 /* ROUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D4D7FB6918444E1DE51C8 /* ROUtils.m */; };
+        B7EC4288842603E203859FF3 /* ROCreateItemBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = E88D4231ABD112F75B5FCAE3 /* ROCreateItemBehavior.m */; };
+        147543F4A6806D87EC95D4B6 /* RODeleteItemBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E74E239ABFD262294F3A4F /* RODeleteItemBehavior.m */; };
+        929149F59B10F43B11562D5B /* ROEditCellsBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEC4A2A83C9E314FF956BB0 /* ROEditCellsBehavior.m */; };
+        E7AB430CB74C620FB2C42FB2 /* ROEditRowsBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8544D4B493658731CB5F14 /* ROEditRowsBehavior.m */; };
+        62934D85938F40E61B779940 /* ROFilterBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E094EA1B3375E30DB5BCBA5 /* ROFilterBehavior.m */; };
+        57E04D0D8E3EFBDC5BDE2968 /* ROMapSearchBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 737E48A2B8DF1BF9A02ECF8D /* ROMapSearchBehavior.m */; };
+        747A4C9FAC2915850D22EE35 /* RORefreshBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = B39E4A0A8422145581676918 /* RORefreshBehavior.m */; };
+        348240699E33906E8724E0FD /* ROSearchBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = A968404A9E8235A3412F9A7F /* ROSearchBehavior.m */; };
+        D2AB45B2B524071E3C539FA3 /* ROShareBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F143B584B5B7497AB2F819 /* ROShareBehavior.m */; };
+        7E2F4C8EA78A3EA77A998AD9 /* ROUpdateItemBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 124D4FF3A0C029C305F994D3 /* ROUpdateItemBehavior.m */; };
+        FF15449399EB21A224EBDAD0 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78C46ED8B9EF9CE81C3C4CD /* ROViewController.m */; };
+        CB05496B865A954391901816 /* RODataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2A4B50ADE5DBDDD5C1773D /* RODataViewController.m */; };
+        336D4D3CAA27DD500072C2FD /* ROScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96854F6A9008D33E5E684420 /* ROScrollViewController.m */; };
+        9A2346A2B16079C8C9A10083 /* ROCollectionCloudDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA42B1AC99430CBCA1C091 /* ROCollectionCloudDatasource.m */; };
+        DAB244C0A909A6FD1FD7B606 /* ROCollectionLocalDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4149B08937ADE5AA575E9F /* ROCollectionLocalDatasource.m */; };
+        E8C5482994835E1CA6BA348A /* RORestDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2C4606B3E73965AF36722A /* RORestDatasource.m */; };
+        6AF947ACA553EC1D4FC7C549 /* ROItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E4AA8B28E6ABB61BB04EB /* ROItemCell.m */; };
+        403B4191B11AE1658D771188 /* ROObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E4687A655E057BF0C6171 /* ROObject.m */; };
+        1E3543638689E747511D6E6C /* Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B244ABB9AEDFF752275A10A /* Push.m */; };
+        4ED449DABAE7211495FC7A96 /* RONotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7450D8F8B0CC617763112 /* RONotificationHandler.m */; };
+        38CF4A2293E203B058E25A7B /* RONotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6964375904CA199959FBB85 /* RONotificationView.m */; };
+        062A4943B99F85DB4B8B6EF6 /* ROBasicAuthLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 370444459A1BCD72818457EB /* ROBasicAuthLoginService.m */; };
+        ABDE4F1F8DC3524955F2961F /* ROLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A947F990A6386E817D3C65 /* ROLoginManager.m */; };
+        F8F5450E9DEC669C03B3B55A /* ROLoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6244DE9A2C8B7D86B5C4D9 /* ROLoginResponse.m */; };
+        13E94973B10F36CC8C24E6E7 /* ROLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD432A84E5761A9F691A79 /* ROLoginViewController.m */; };
+        754B4BD8BD7912D3178E2745 /* ROLogoutAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC142C5B89DF9A8D3D11A0C /* ROLogoutAction.m */; };
+        A75A463FB61A2615254EC422 /* ROLogoutBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7D4E8F80A7F67585EA02F5 /* ROLogoutBehavior.m */; };
+        992B4EAC8267184222F1C3CE /* RORestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D74548359F9F9B8568AFB4EB /* RORestClient.m */; };
+        F1454AF3A0B9C631E5D40444 /* ROSlidingAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 713649B4BBD45246C9876BA1 /* ROSlidingAction.m */; };
+        4F984AFF991D11A1BB72D719 /* UIViewController+Sliding.m in Sources */ = {isa = PBXBuildFile; fileRef = 11674B4DA394C5F8CFBFCA84 /* UIViewController+Sliding.m */; };
+        B8CE44ABBC72DFD9E3550E27 /* Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F0554CB8B6C266B7BCA0D66D /* Analytics.m */; };
+        23744ADCB4F69499D62D968E /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA48678C0459E103D35039 /* Logger.m */; };
+        0F944A41B9EACBCD9E9EB6F5 /* ROChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057480685DFCF19478EC74D /* ROChartViewController.m */; };
+        A5B2438EA50FA6FCFD1D8B60 /* ROCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6F42C9BDA6C2B302E026D6 /* ROCollectionViewController.m */; };
+        A46E4C03AECE093DD0194D29 /* ROFilterFieldDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 10334686B29520B0DC010233 /* ROFilterFieldDateRange.m */; };
+        85574193A21126FB39A580AC /* ROFilterFieldSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F4A038690327C0E2BE99E /* ROFilterFieldSelection.m */; };
+        07C7466CBE4EF65FF2057AE6 /* ROFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 420D470B8131E0C5EE3A322E /* ROFilterViewController.m */; };
+        F49D4880B9EECEC644D6DB13 /* ROOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E4FA29FCF3EC95C14A714 /* ROOptionsViewController.m */; };
+        A58A4D82AA25D06E1BE791EB /* ROFormFieldButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9414D11B8B53BE71BC14ECC /* ROFormFieldButton.m */; };
+        859842C4A47A91A31FC5F5FD /* ROFormFieldDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7705497A81A72800160C1878 /* ROFormFieldDate.m */; };
+        F81C40E7A0C46ABC32847004 /* ROFormFieldDatetime.m in Sources */ = {isa = PBXBuildFile; fileRef = 091E436CAB30010CCB385819 /* ROFormFieldDatetime.m */; };
+        D393494CA123916AD367AE39 /* ROFormFieldDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A4E0F918BCD574F86E63F /* ROFormFieldDecimal.m */; };
+        52824C3382AF3901F48744E5 /* ROFormFieldGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = D71B468E8FAED4506E2C6E6D /* ROFormFieldGeo.m */; };
+        C26648D39D0E1456B0C2FD5C /* ROFormFieldImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 142E4F7F8742160E264F09E0 /* ROFormFieldImage.m */; };
+        610E4FF0BC5D1EDB2CAF6000 /* ROFormFieldInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0543BB94E694D7F8CEBED5 /* ROFormFieldInteger.m */; };
+        755341F18715BF7BC15B866D /* ROFormFieldPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 992C43B691E08512389CE88E /* ROFormFieldPassword.m */; };
+        9BF34F8A86E0C0424DD135B9 /* ROFormFieldSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B4C93A7B84F2272C478D6 /* ROFormFieldSwitch.m */; };
+        31CE4E75B5D1F512FE9682FB /* ROFormFieldText.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F047CFB35275AFE5AD930F /* ROFormFieldText.m */; };
+        78754CD6A7657B8B4A8CE539 /* ROFormFieldTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D864D2EA7BBCA383A4D8C58 /* ROFormFieldTime.m */; };
+        73594A0395954ECB7C1A3FEC /* ROFormFieldTristateBool.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F74E2F9CAB036F7930A9AF /* ROFormFieldTristateBool.m */; };
+        BBBA4DFEAC4C0E63815F3722 /* ROFormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B4B6F8C704CE241E1E359 /* ROFormTableViewController.m */; };
+        64AE4404BA62DF54BE793115 /* ROAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E41439D88C03B5A60916A /* ROAnnotation.m */; };
+        AAAB449DB9430D275351C1C9 /* ROMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B747A4B0604ACA5CF1CB73 /* ROMapViewController.m */; };
+        71AE4AC38F9059C940BE6678 /* ROTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C346AD83A104008B7DCC30 /* ROTabBarController.m */; };
+        4E834204A1A8C2B92DA88F07 /* ROCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C27438C83F1AE03B4AD2610 /* ROCustomTableViewController.m */; };
+        6FEA471A8B46925BDB3F49E7 /* ROTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 395343A093CAC55C15BF2E56 /* ROTableViewController.m */; };
+        FA8E434F803E8976D6FD1FDB /* ROCRUDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22914484A5F4F1FAD1A5D56C /* ROCRUDTableViewController.m */; };
+        7DD44E239FC610F4216DE5B1 /* ROCloudantDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C41ACBE0105C930535905 /* ROCloudantDatasource.m */; };
+        69BD48CF852E415BDE2D75CF /* ROCloudantDatastoreManagerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4046E99BFC042588122AA9 /* ROCloudantDatastoreManagerBuilder.m */; };
+        FC8E4CD3A82D2F88640BACC3 /* ROCloudantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D4F9AABEA1493FA95E3D3 /* ROCloudantManager.m */; };
+        291C43D3A13E5FF1085B9ECA /* ROCloudantManagerBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E92450F8B8AE1E48FE2B7E0 /* ROCloudantManagerBuilder.m */; };
+        4D4E44C6841D2D4EA33DE01A /* ROBoundingBoxFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C46AAAEDE934351D532F2 /* ROBoundingBoxFilter.m */; };
+        9423489489B4472BDAB8D2FE /* RODateRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 525E4F8789F6473B3E91BC39 /* RODateRangeFilter.m */; };
+        6A2F40F1BF594637DD0B3626 /* RONearFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA741108AB1198C84F7D69B /* RONearFilter.m */; };
+        8B9949C8AACCA827BF59E37E /* RONumberFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7644A18828019A1CECD8D3 /* RONumberFilter.m */; };
+        A0CF421FB02BC770E1F5C582 /* ROOptionsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A084ECE88CB3E715C14A7BE /* ROOptionsFilter.m */; };
+        CD4D4CCB88B7972A9CB5BC07 /* ROStringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D35242258DDC9A8F4A879FDD /* ROStringFilter.m */; };
+        D9C941B1851AABFC19AC83CF /* ROStringListFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 552D437587A4A728518B29CB /* ROStringListFilter.m */; };
+        3A39421C88F732C5DCAA9AD3 /* ROListDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 270946E5AF722851A349ECFE /* ROListDataLoader.m */; };
+        692742E7B610812736BBC68F /* ROSingleDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FE46AAA3FE4C3A3C69D568 /* ROSingleDataLoader.m */; };
+        6758454DB6BD26FEFB415E1E /* RORestGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD435B9223513BAB50B523 /* RORestGeoPoint.m */; };
+        97FF4A2384451AE8E32A2439 /* NSArray+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B204149BB87EFD344698812 /* NSArray+RO.m */; };
+        71774D7FB6288593A96CFEF5 /* NSDate+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 309A4CD4AD55BBAEE04CF11C /* NSDate+RO.m */; };
+        380743D98DB026E7CE7460AF /* NSDecimalNumber+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = DA254913A23FB4DCFBF253A5 /* NSDecimalNumber+RO.m */; };
+        CF2B4CEFBD564303C714F27F /* NSDictionary+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A24580B514080C36E07885 /* NSDictionary+RO.m */; };
+        B3A045BD80EF438145DDCDF6 /* NSNumber+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = B10D4866AC1E55DD72F6A1B4 /* NSNumber+RO.m */; };
+        490F4C67B0C91E1EF2D9B073 /* NSString+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4A4320B3305E86562AAF6A /* NSString+RO.m */; };
+        F8A54F08B8BF5D21BE3A7529 /* UIAlertView+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA548F58E25C9CBDEB61894 /* UIAlertView+RO.m */; };
+        A6AA4EF89466A0C491D44C3D /* UIColor+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = E23941C3BE620D6A9ED92FEF /* UIColor+RO.m */; };
+        874645D9A18C4267EBC11CBA /* UIFont+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE64E8AB78BF5C53C4F256F /* UIFont+RO.m */; };
+        9161488F8FE0FF79A2244A9E /* UIImage+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01314E789D45B54F0BD4417A /* UIImage+RO.m */; };
+        CFC74F4588199AF98738645C /* UIImageView+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = D09943F0A003349B808F7EB4 /* UIImageView+RO.m */; };
+        05ED4FD7B9C6B31B1F8D14E8 /* UILabel+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C92459C8E2F4E8B6A5D1330 /* UILabel+RO.m */; };
+        70F34861BBAEDF984FE6FB3E /* UITableViewCell+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = EE564600A17164D2C8B23B26 /* UITableViewCell+RO.m */; };
+        06124926BB34DB47F4C116EA /* UIView+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = A992405686C66D0C23076750 /* UIView+RO.m */; };
+        8EF34B7E830815C2F2389AF1 /* UIViewController+RO.m in Sources */ = {isa = PBXBuildFile; fileRef = D5404400B82A2F244B6999CE /* UIViewController+RO.m */; };
+        5C0F4A439B9929962F41D2C2 /* ROError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C524B2C84D9E2E55103F6F4 /* ROError.m */; };
+        603D4FA88012FEAEB30BE0E9 /* ROErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF94BB8A3CE6464A1F7537C /* ROErrorManager.m */; };
+        B38B4F08B355A04189405AD8 /* ROStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA43D0A11881BEFF342C5C /* ROStyle.m */; };
+        000E47D59A40DAA94129A547 /* ROTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15094A01B1DD44BD6D2C17D6 /* ROTextStyle.m */; };
+        B3B946D6B71CEC49F6D2E773 /* ROGeoFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 967C4A6983FC0C85C5924623 /* ROGeoFieldTableViewCell.m */; };
+        E02245C3B14977DF8875B254 /* ROImageCrudTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17594F91968E895F501A39F8 /* ROImageCrudTableViewCell.m */; };
+        0A5447FCAFF6A0A2C4B95C74 /* ROPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65014331AA7F4E43A6E629FB /* ROPhotoCollectionViewCell.m */; };
+        70F44822A818622638B39989 /* ROPhotoTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CA4DAB87EF4A291BB038A4 /* ROPhotoTitleCollectionViewCell.m */; };
+        A2D54BF580459171F9CAEF99 /* ROSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F84658BA1F728D9C78AAC3 /* ROSwitchTableViewCell.m */; };
+        1C2F436CA4EFB36A5A3EFB8E /* ROTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8545069015AAC13ACC4BD7 /* ROTableViewCell.m */; };
+        D613491C8C9EF7329EC63DB0 /* ROTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B94CBAB991A03101282DD6 /* ROTextFieldTableViewCell.m */; };
+        9B6F426983CF2E1DB52AA5F9 /* ROChartSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D4616ADA643A1F6B578BB /* ROChartSerie.m */; };
+        5C864C50BEDC1096A4DBB240 /* ROChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22124005B073A5B43F5F6DD3 /* ROChartView.m */; };
+        D3DA4F82A38BE1184DC5EEE7 /* ROHeaderCellDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A53C4EAF915052A9AE52D9ED /* ROHeaderCellDescriptor.m */; };
+        DE3C44229128F4C858A03F3B /* ROImageCellDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F41A1ADFE1392EF121CAA /* ROImageCellDescriptor.m */; };
+        82F34939A05B242CF84F3F37 /* ROTextCellDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BE4014ACB165C4527A728E /* ROTextCellDescriptor.m */; };
+        A0B04B5FA858983F56341A06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5449CC9D23690998831D24 /* AppDelegate.m */; };
+        55244EFC941DDFD3CB53272E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67514B3C9552A66EABBFB041 /* main.m */; };
+        2E224BA4AA85CA5082A4BC83 /* MainNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 446B49C7B564C54B331C2756 /* MainNavigationManager.m */; };
+        5F5A485F8A47AF0CDE3EA294 /* EmptyDatasource.plist in Resources */ = {isa = PBXBuildFile; fileRef = B189454F86E83FFF1873B596 /* EmptyDatasource.plist */; };
+        76C849F886984880C042CD2B /* ROLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E72441898490E2EAB30ED23 /* ROLoginViewController.xib */; };
+        1BD84700AA88B30361477EF1 /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93F0469DA26EBDB8FCE57EFA /* mfpclient.plist */; };
+        278D410BB99276A110E341D6 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97CD416285E508725B6BBA9E /* credentials.plist */; };
+ 
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+        57741E9019E887BB000B31BC /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 57741E6E19E887BA000B31BC /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 57741E7519E887BA000B31BC;
+            remoteInfo = whitewolfdemo;
+        };
+        5774204819E88E1C000B31BC /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 57741E6E19E887BA000B31BC /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 57741E7519E887BA000B31BC;
+            remoteInfo = whitewolfdemo;
+        };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+        573342361D363C38008CB947 /* Embed Frameworks */ = {
+            isa = PBXCopyFilesBuildPhase;
+            buildActionMask = 2147483647;
+            dstPath = "";
+            dstSubfolderSpec = 10;
+			files = (
+			);
+            name = "Embed Frameworks";
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		57741E7619E887BA000B31BC /* whitewolfdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whitewolfdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        57741E8F19E887BB000B31BC /* whitewolfdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whitewolfdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57741E8619E887BA000B31BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57741E7A19E887BA000B31BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57741E9419E887BB000B31BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };		
+		577421C319E89235000B31BC /* Style.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Style.plist; sourceTree = "<group>"; };
+		5774246419E894A3000B31BC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		57F68B621BDE959C00835706 /* LaunchScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenView.xib; sourceTree = "<group>"; };
+        E18E4E28B0BE83DBDCCD7E84 /* ABOUTUSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABOUTUSViewController.h"; sourceTree = "<group>"; };
+        9B5149C3887A8D31BCA1C686 /* THREATMAPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THREATMAPDetailViewController.h"; sourceTree = "<group>"; };
+        85E444869A0CA6CEFAFCAD58 /* THREATMAPFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THREATMAPFormViewController.h"; sourceTree = "<group>"; };
+        6751406886485A4A5F242335 /* THREATMAPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THREATMAPViewController.h"; sourceTree = "<group>"; };
+        A701430990515B0CD7C3EBD7 /* THREATSCORESViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THREATSCORESViewController.h"; sourceTree = "<group>"; };
+        B3D14850A664F185263BA002 /* TODOFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TODOFormViewController.h"; sourceTree = "<group>"; };
+        56674DEFB09BF19BDD2016D5 /* TODOLISTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TODOLISTDetailViewController.h"; sourceTree = "<group>"; };
+        1CB64E6381BFA0A3691FF008 /* TODOLISTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TODOLISTViewController.h"; sourceTree = "<group>"; };
+        8A024982BEF46B2F76BB066E /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WelcomeViewController.h"; sourceTree = "<group>"; };
+        3E994DB9B43BA8DD916FF164 /* WHITEWOLFHAITOOLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WHITEWOLFHAITOOLViewController.h"; sourceTree = "<group>"; };
+        32394CC79E9D411FF0304235 /* DatasourceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DatasourceManager.h"; sourceTree = "<group>"; };
+        6D1D48E6B80A9DB65B7A128E /* EmptyDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmptyDatasource.h"; sourceTree = "<group>"; };
+        AAF846AE9ADC9378784738CF /* GoogleTrendsTestDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleTrendsTestDS.h"; sourceTree = "<group>"; };
+        2EFD47E39603A4E7F334A9D3 /* TasksDBDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TasksDBDS.h"; sourceTree = "<group>"; };
+        906A4DCEAD628EBDC76EA67E /* ThreatmapDBDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreatmapDBDS.h"; sourceTree = "<group>"; };
+        5D0A4917B8950F065BABE099 /* WwdemoDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WwdemoDS.h"; sourceTree = "<group>"; };
+        943B4A2E875C40D3FE3FC010 /* GoogleTrendsTestDSSchemaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleTrendsTestDSSchemaItem.h"; sourceTree = "<group>"; };
+        62C34F209478A6AAE9BDFE0B /* GoogleTrendsTestDSSchemaItemkeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleTrendsTestDSSchemaItemkeys.h"; sourceTree = "<group>"; };
+        68A74F339F60034CF9C5D0F9 /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Item.h"; sourceTree = "<group>"; };
+        E2784AD2AAF45C70352C98E0 /* Itemkeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Itemkeys.h"; sourceTree = "<group>"; };
+        454B466B86F20E4BC85678B3 /* TasksDBDSSchemaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TasksDBDSSchemaItem.h"; sourceTree = "<group>"; };
+        5E1C41A6BABD8103E2C69A69 /* TasksDBDSSchemaItemkeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TasksDBDSSchemaItemkeys.h"; sourceTree = "<group>"; };
+        8EDF4862A92B03DB040F42D4 /* ThreatmapDBDSSchemaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreatmapDBDSSchemaItem.h"; sourceTree = "<group>"; };
+        1B154A209749042B4C7087CA /* ThreatmapDBDSSchemaItemkeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreatmapDBDSSchemaItemkeys.h"; sourceTree = "<group>"; };
+        716A4F48AECB00AC87E624D3 /* WwdemoDSSchemaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WwdemoDSSchemaItem.h"; sourceTree = "<group>"; };
+        FD9D4F8AB635741360AB799F /* WwdemoDSSchemaItemkeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WwdemoDSSchemaItemkeys.h"; sourceTree = "<group>"; };
+        C58B42B28D0A7BDA716E8119 /* ROAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROAction.h"; sourceTree = "<group>"; };
+        367E49AC8140BD1E63AB67B2 /* ROBlockAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROBlockAction.h"; sourceTree = "<group>"; };
+        F36A4516B34C998A56782B5E /* ROFacetimeAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFacetimeAction.h"; sourceTree = "<group>"; };
+        9FBA4E9AB3CF1E1EC9277335 /* ROMailAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMailAction.h"; sourceTree = "<group>"; };
+        3DF44BEA90F98926B355F9B7 /* ROMapAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapAction.h"; sourceTree = "<group>"; };
+        D98C45D2858A76E0804DEBBA /* ROMapDirectionsAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapDirectionsAction.h"; sourceTree = "<group>"; };
+        11DA4DEDA51506C8C77857ED /* ROMapSearchAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapSearchAction.h"; sourceTree = "<group>"; };
+        04D242AAB3938CDDC7363847 /* RONavigationAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RONavigationAction.h"; sourceTree = "<group>"; };
+        359E48D08B0AC10FE8203D3E /* ROPhoneAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROPhoneAction.h"; sourceTree = "<group>"; };
+        7B944E5F8BAC09E63EBC4437 /* ROSMSAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSMSAction.h"; sourceTree = "<group>"; };
+        43EE45A5850573ED9C27AB63 /* ROUriAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROUriAction.h"; sourceTree = "<group>"; };
+        7009470F9BE0A3F225FF1E48 /* ROWebBrowserAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROWebBrowserAction.h"; sourceTree = "<group>"; };
+        E13745E68164F5711E840D8B /* ROYoutubeAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROYoutubeAction.h"; sourceTree = "<group>"; };
+        AD0041E590BD7E81C076020A /* ROAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROAnalytics.h"; sourceTree = "<group>"; };
+        EFE2427FA3E1DD385B755D6A /* ROLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLogger.h"; sourceTree = "<group>"; };
+        D28544A4BAE52F6660C0D608 /* ROUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROUtils.h"; sourceTree = "<group>"; };
+        70F846718A49286AFB607297 /* ROBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROBehavior.h"; sourceTree = "<group>"; };
+        B357414882FD1BFD088A99A4 /* ROCreateItemBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCreateItemBehavior.h"; sourceTree = "<group>"; };
+        C9884D8D9E6C3A020A90A14F /* RODeleteItemBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODeleteItemBehavior.h"; sourceTree = "<group>"; };
+        1581403780F44970E0DC4EF3 /* ROEditCellsBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROEditCellsBehavior.h"; sourceTree = "<group>"; };
+        238F48AAA7206BA72B93A091 /* ROEditRowsBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROEditRowsBehavior.h"; sourceTree = "<group>"; };
+        7CAA4DFBB56532B6B2D5CE30 /* ROFilterBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilterBehavior.h"; sourceTree = "<group>"; };
+        A1474E20BACE4B5EA09EBB2E /* ROMapSearchBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapSearchBehavior.h"; sourceTree = "<group>"; };
+        CE5E4AE2B828BD8C97E5D611 /* RORefreshBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RORefreshBehavior.h"; sourceTree = "<group>"; };
+        0EFC4CD1AD7B7A9B7CEE4912 /* ROSearchBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSearchBehavior.h"; sourceTree = "<group>"; };
+        B38E460C897EB74C75B1D3D4 /* ROShareBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROShareBehavior.h"; sourceTree = "<group>"; };
+        B65A4BC1A9B1EDAEBCAC4B73 /* ROUpdateItemBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROUpdateItemBehavior.h"; sourceTree = "<group>"; };
+        4A96431D9814D40BB0FBBB5D /* ROViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROViewController.h"; sourceTree = "<group>"; };
+        51574CC4A5B3C5BD52E4695F /* RODataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODataViewController.h"; sourceTree = "<group>"; };
+        2D0F41F5A66A64AF5DCB35BB /* ROScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROScrollViewController.h"; sourceTree = "<group>"; };
+        C7714026BE6706DBAC128BC1 /* ROCollectionCloudDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCollectionCloudDatasource.h"; sourceTree = "<group>"; };
+        971C4088AED650A19EDD6577 /* ROCollectionLocalDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCollectionLocalDatasource.h"; sourceTree = "<group>"; };
+        E16B4B8980359F9B8C4D270D /* RODataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODataDelegate.h"; sourceTree = "<group>"; };
+        86BC4C31AF9D3767A02F760F /* ROItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROItemDelegate.h"; sourceTree = "<group>"; };
+        BB944426904EA3D90F19DCF0 /* RODatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODatasource.h"; sourceTree = "<group>"; };
+        127F4E4D96629B5991A19A31 /* ROPagination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROPagination.h"; sourceTree = "<group>"; };
+        E85D45C9B7E1E48DD9FCBE72 /* RORestDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RORestDatasource.h"; sourceTree = "<group>"; };
+        0E2048079E5D9AE873A41E76 /* ROSearchable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSearchable.h"; sourceTree = "<group>"; };
+        23814975B7771EF12FE82002 /* ROSynchronize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSynchronize.h"; sourceTree = "<group>"; };
+        9AB24B4D9E315C567756CAF6 /* ROItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROItemCell.h"; sourceTree = "<group>"; };
+        26A04279A34F5B98C3C7B27D /* ROModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROModel.h"; sourceTree = "<group>"; };
+        D87C4DA1B07AB61197D17D9F /* ROObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROObject.h"; sourceTree = "<group>"; };
+        A3684D26BA912F5A9D57014F /* Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Push.h"; sourceTree = "<group>"; };
+        D39F4E9E9C5D743DCF5F181D /* RONotificationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RONotificationHandler.h"; sourceTree = "<group>"; };
+        E1B749299F4E1AE0B3E33DAA /* RONotificationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RONotificationView.h"; sourceTree = "<group>"; };
+        3F734226BFB3B4D2156031F4 /* ROPushDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROPushDelegate.h"; sourceTree = "<group>"; };
+        FDE1421097D4BC4E69443ADB /* ROBasicAuthLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROBasicAuthLoginService.h"; sourceTree = "<group>"; };
+        B1064DC584613048D753D365 /* ROLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLoginManager.h"; sourceTree = "<group>"; };
+        DBBF4A8596789C5761677AFE /* ROLoginResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLoginResponse.h"; sourceTree = "<group>"; };
+        03B34D65808EC7699E8FCB55 /* ROLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLoginService.h"; sourceTree = "<group>"; };
+        013C466695D5193218F68DD7 /* ROLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLoginViewController.h"; sourceTree = "<group>"; };
+        B2EA491199D750F34449918A /* ROLogoutAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLogoutAction.h"; sourceTree = "<group>"; };
+        2BA6453FA59AB825208359F6 /* ROLogoutBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROLogoutBehavior.h"; sourceTree = "<group>"; };
+        5ADF4AE88BA221EF673CDAF0 /* RORestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RORestClient.h"; sourceTree = "<group>"; };
+        9706468CA36B9113AD7ADF59 /* ROSlidingAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSlidingAction.h"; sourceTree = "<group>"; };
+        28E34887BA329FEEEB76BD6B /* UIViewController+Sliding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Sliding.h"; sourceTree = "<group>"; };
+        7A704A8681655282038569E9 /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Analytics.h"; sourceTree = "<group>"; };
+        D0154648B4C2E2735D15CD14 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Logger.h"; sourceTree = "<group>"; };
+        21004B8685BAEEAD38326112 /* ROChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROChartViewController.h"; sourceTree = "<group>"; };
+        7C444DDC9B0BCB5B5013C529 /* ROCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCollectionViewController.h"; sourceTree = "<group>"; };
+        840D41B9A2BADAC0F7E4C53F /* ROFilterField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilterField.h"; sourceTree = "<group>"; };
+        965B4763BDE4A6CDC6A9C8D9 /* ROFilterFieldDateRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilterFieldDateRange.h"; sourceTree = "<group>"; };
+        3D034D2599927DE252E3EDB6 /* ROFilterFieldSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilterFieldSelection.h"; sourceTree = "<group>"; };
+        DA7944DBA83463CB39E67E34 /* ROFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilterViewController.h"; sourceTree = "<group>"; };
+        CA264F52BCD9D34843A95879 /* ROOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROOptionsViewController.h"; sourceTree = "<group>"; };
+        A13B43A58C2469C151DE22D0 /* ROFormFieldButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldButton.h"; sourceTree = "<group>"; };
+        E64F41859AE5748773FA6151 /* ROFormFieldDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldDate.h"; sourceTree = "<group>"; };
+        BDE042C58A1B37A99BFA00EC /* ROFormFieldDatetime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldDatetime.h"; sourceTree = "<group>"; };
+        5C12477090728A5D4158EBC3 /* ROFormFieldDecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldDecimal.h"; sourceTree = "<group>"; };
+        76F74D8986ABF31319E162E5 /* ROFormFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldDelegate.h"; sourceTree = "<group>"; };
+        3AE54B1F9B2D88036352ADF6 /* ROFormFieldGeo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldGeo.h"; sourceTree = "<group>"; };
+        956242E2A83A59BDEDD55C9B /* ROFormFieldImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldImage.h"; sourceTree = "<group>"; };
+        D62345EB969FEC1C894D3043 /* ROFormFieldInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldInteger.h"; sourceTree = "<group>"; };
+        35444351A0B67526F4750C3A /* ROFormFieldPassword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldPassword.h"; sourceTree = "<group>"; };
+        A35B41778388BB7DC8245DAD /* ROFormFieldSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldSwitch.h"; sourceTree = "<group>"; };
+        741F4B2FB040B9EE44446E6E /* ROFormFieldText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldText.h"; sourceTree = "<group>"; };
+        477241558030EAE54863FC9C /* ROFormFieldTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldTime.h"; sourceTree = "<group>"; };
+        6645442990685EF0262957BF /* ROFormFieldTristateBool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormFieldTristateBool.h"; sourceTree = "<group>"; };
+        6476478EB1DC775015AD48D4 /* ROFormTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFormTableViewController.h"; sourceTree = "<group>"; };
+        48F94637A1A346315DD5D5F9 /* ROAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROAnnotation.h"; sourceTree = "<group>"; };
+        C7CF4D25A469C36E1185332E /* ROMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapViewController.h"; sourceTree = "<group>"; };
+        038D418AB88D478225F89C59 /* ROMapViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROMapViewDelegate.h"; sourceTree = "<group>"; };
+        D8594BE2B813EFD06DB00D41 /* ROTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTabBarController.h"; sourceTree = "<group>"; };
+        2ADE470CA646BBB8DB2B10A0 /* ROCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCustomTableViewController.h"; sourceTree = "<group>"; };
+        796346869F1D224315B9C96D /* ROTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTableViewController.h"; sourceTree = "<group>"; };
+        86BA4EDE97A96C21B42A4FBF /* ROCreateItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCreateItemDelegate.h"; sourceTree = "<group>"; };
+        ADDB457EB8BC10B628497614 /* ROCRUDServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCRUDServiceDelegate.h"; sourceTree = "<group>"; };
+        55E04661BF3A0FEEB87FF881 /* ROCRUDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCRUDTableViewController.h"; sourceTree = "<group>"; };
+        2F9C48759D0975C0EE8D536A /* RODeleteItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODeleteItemDelegate.h"; sourceTree = "<group>"; };
+        6EE94EDB9966BC16DC4EDE63 /* ROUpdateItemDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROUpdateItemDelegate.h"; sourceTree = "<group>"; };
+        23FD41809B4433C97C073F75 /* ROCloudantDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCloudantDatasource.h"; sourceTree = "<group>"; };
+        E63441D2837054C55F8011B1 /* ROCloudantDatastoreManagerBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCloudantDatastoreManagerBuilder.h"; sourceTree = "<group>"; };
+        F0194D8BB5ECD8418A4A6FC8 /* ROCloudantItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCloudantItem.h"; sourceTree = "<group>"; };
+        94054F9EBDA5719B56F26084 /* ROCloudantManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCloudantManager.h"; sourceTree = "<group>"; };
+        28F94828AACFEE5B905EC162 /* ROCloudantManagerBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCloudantManagerBuilder.h"; sourceTree = "<group>"; };
+        C6AD40F786605A2A58C2612D /* ROBoundingBoxFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROBoundingBoxFilter.h"; sourceTree = "<group>"; };
+        1E214C9EB8A3CC9D0D8ABDB4 /* RODateRangeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODateRangeFilter.h"; sourceTree = "<group>"; };
+        D9B3461BACFC3B137BE63F7F /* ROFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROFilter.h"; sourceTree = "<group>"; };
+        5B444B91A260C5A27944D7A3 /* RONearFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RONearFilter.h"; sourceTree = "<group>"; };
+        1D504610AD63691BEC63ECD2 /* RONumberFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RONumberFilter.h"; sourceTree = "<group>"; };
+        57544E70AFC489B21D508BF4 /* ROOptionsFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROOptionsFilter.h"; sourceTree = "<group>"; };
+        C6D9423E902902CF828254AD /* ROStringFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROStringFilter.h"; sourceTree = "<group>"; };
+        19F24CEA8956769DAB9964AC /* ROStringListFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROStringListFilter.h"; sourceTree = "<group>"; };
+        1CF04D54A9769B5ED0D75B08 /* RODataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RODataLoader.h"; sourceTree = "<group>"; };
+        0D8E433AA8A753C09B06A728 /* ROListDataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROListDataLoader.h"; sourceTree = "<group>"; };
+        BA2F4DFBA130EC325752F8CE /* ROSingleDataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSingleDataLoader.h"; sourceTree = "<group>"; };
+        434E4CD0BF0B64D4D45D9411 /* RORestGeoPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RORestGeoPoint.h"; sourceTree = "<group>"; };
+        70BA4249961DC84AAD835D52 /* NSArray+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RO.h"; sourceTree = "<group>"; };
+        D80F430993F1DEE60A942588 /* NSDate+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+RO.h"; sourceTree = "<group>"; };
+        1ED94E208F037751257E177E /* NSDecimalNumber+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+RO.h"; sourceTree = "<group>"; };
+        22F6410F97353A87471F9F53 /* NSDictionary+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RO.h"; sourceTree = "<group>"; };
+        158B4FCAB85EDA9240370BA2 /* NSNumber+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RO.h"; sourceTree = "<group>"; };
+        FE4D4A87A5EC51F36E184660 /* NSString+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RO.h"; sourceTree = "<group>"; };
+        6168495B90B50A2450E4C8C8 /* UIAlertView+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RO.h"; sourceTree = "<group>"; };
+        FBE44C86B52FDA94292871E3 /* UIColor+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RO.h"; sourceTree = "<group>"; };
+        443D4F9E8923A56B45BC0A9C /* UIFont+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+RO.h"; sourceTree = "<group>"; };
+        CEEA439F9B4A5528BB44F8AD /* UIImage+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+RO.h"; sourceTree = "<group>"; };
+        73CF4D8EBBD8A96A9C7D2562 /* UIImageView+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RO.h"; sourceTree = "<group>"; };
+        EBAE4CB5A801BF0627937796 /* UILabel+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+RO.h"; sourceTree = "<group>"; };
+        150D42D7A83272A60434AC96 /* UITableViewCell+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+RO.h"; sourceTree = "<group>"; };
+        77CC4E30AC9396310911AD41 /* UIView+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RO.h"; sourceTree = "<group>"; };
+        CE5B4222BD6B0B4B9B25E004 /* UIViewController+RO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RO.h"; sourceTree = "<group>"; };
+        E417472BBA01B04281D31804 /* ROError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROError.h"; sourceTree = "<group>"; };
+        77B04A86B58A828603E4FE10 /* ROErrorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROErrorManager.h"; sourceTree = "<group>"; };
+        8CF94E649AB7E0842DCFBB2F /* ROStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROStyle.h"; sourceTree = "<group>"; };
+        C9DE45C3A461020DE0E52C68 /* ROTextStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTextStyle.h"; sourceTree = "<group>"; };
+        8D8A44D392A9D29B24F0F853 /* ROGeoFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROGeoFieldTableViewCell.h"; sourceTree = "<group>"; };
+        CCF24B89A995BDF5B6C8F1D5 /* ROImageCrudTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROImageCrudTableViewCell.h"; sourceTree = "<group>"; };
+        C63349D980ED51E5DCC488D5 /* ROPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROPhotoCollectionViewCell.h"; sourceTree = "<group>"; };
+        986E470DB4ED9C8047325707 /* ROPhotoTitleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROPhotoTitleCollectionViewCell.h"; sourceTree = "<group>"; };
+        955A446EAC3C67D22242D271 /* ROSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROSwitchTableViewCell.h"; sourceTree = "<group>"; };
+        858943D5A8EA63CC67C058A0 /* ROTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTableViewCell.h"; sourceTree = "<group>"; };
+        D2FA4124922FDCC35364B5E6 /* ROTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTextFieldTableViewCell.h"; sourceTree = "<group>"; };
+        95824C419E3CBF887BEA7467 /* ROChartSerie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROChartSerie.h"; sourceTree = "<group>"; };
+        7D534CB991799693E84049FD /* ROChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROChartView.h"; sourceTree = "<group>"; };
+        7B87459E97966745F885C7A9 /* ROCellDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROCellDescriptor.h"; sourceTree = "<group>"; };
+        68DE4217BD909129E0F67000 /* ROHeaderCellDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROHeaderCellDescriptor.h"; sourceTree = "<group>"; };
+        F7BD41DD83A1AC5DD2643702 /* ROImageCellDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROImageCellDescriptor.h"; sourceTree = "<group>"; };
+        F9294915B090AA5EAEF63A6D /* ROTextCellDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROTextCellDescriptor.h"; sourceTree = "<group>"; };
+        19A449BC8AA31EB7CB79F76C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate.h"; sourceTree = "<group>"; };
+        93F745CB81038071A3859668 /* MainNavigationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainNavigationManager.h"; sourceTree = "<group>"; };
+        C3774E0FB44F4A5A9A299F7F /* whitewolfdemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whitewolfdemo-Bridging-Header.h"; sourceTree = "<group>"; };
+        C57F45FDB4AD9320FA3FEB97 /* BluemixPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BluemixPush.swift"; sourceTree = "<group>"; };
+        5E694FDBAE22A5974EE198A4 /* BluemixCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BluemixCredentials.swift"; sourceTree = "<group>"; };
+        348B4B8FB60F6E22464FBBA8 /* ABOUTUSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ABOUTUSViewController.m"; sourceTree = "<group>"; };
+        10E547A8836C71D9EF81DD2D /* THREATMAPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "THREATMAPDetailViewController.m"; sourceTree = "<group>"; };
+        1DD94880AA2875F9A52CC6D1 /* THREATMAPFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "THREATMAPFormViewController.m"; sourceTree = "<group>"; };
+        54D1495C908E3C61B3B520A7 /* THREATMAPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "THREATMAPViewController.m"; sourceTree = "<group>"; };
+        2C1A4F4C9ACC67EBDA3E73C5 /* THREATSCORESViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "THREATSCORESViewController.m"; sourceTree = "<group>"; };
+        FB014E12A394B426C9EC3DAC /* TODOFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TODOFormViewController.m"; sourceTree = "<group>"; };
+        46F548BB90B61DFE6D7A811A /* TODOLISTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TODOLISTDetailViewController.m"; sourceTree = "<group>"; };
+        AD4940FE9118F6019EC2EC65 /* TODOLISTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TODOLISTViewController.m"; sourceTree = "<group>"; };
+        C55142BE9491C0F5F3FF44AB /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WelcomeViewController.m"; sourceTree = "<group>"; };
+        069A40788A996CD12C698945 /* WHITEWOLFHAITOOLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WHITEWOLFHAITOOLViewController.m"; sourceTree = "<group>"; };
+        90FD4ADF93B34041C9C82029 /* DatasourceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DatasourceManager.m"; sourceTree = "<group>"; };
+        D83349588BDA8BB3828AAB2D /* EmptyDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EmptyDatasource.m"; sourceTree = "<group>"; };
+        743B45A3B105DC1A2B6B0633 /* GoogleTrendsTestDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GoogleTrendsTestDS.m"; sourceTree = "<group>"; };
+        C84E4CFA831796D79AAE5FCF /* TasksDBDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TasksDBDS.m"; sourceTree = "<group>"; };
+        C4864FA3B0E5BFEB88C3BBE8 /* ThreatmapDBDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ThreatmapDBDS.m"; sourceTree = "<group>"; };
+        279942069F9D27D1163DB3F2 /* WwdemoDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WwdemoDS.m"; sourceTree = "<group>"; };
+        5430412D83D9C818B1EAB9E9 /* GoogleTrendsTestDSSchemaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GoogleTrendsTestDSSchemaItem.m"; sourceTree = "<group>"; };
+        FF6E41C9BAE88505F0A49F15 /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Item.m"; sourceTree = "<group>"; };
+        3CC748AD8DCA59E3B83D7736 /* TasksDBDSSchemaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TasksDBDSSchemaItem.m"; sourceTree = "<group>"; };
+        22F14C42B611ACC96593EEE6 /* ThreatmapDBDSSchemaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ThreatmapDBDSSchemaItem.m"; sourceTree = "<group>"; };
+        8F9E4CB7ADC1DC72E34F4263 /* WwdemoDSSchemaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WwdemoDSSchemaItem.m"; sourceTree = "<group>"; };
+        274D4812A10A3F04DFD16E0D /* ROBlockAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROBlockAction.m"; sourceTree = "<group>"; };
+        02C243029E339CC9FFF78BCD /* ROFacetimeAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFacetimeAction.m"; sourceTree = "<group>"; };
+        FD3643719791BA67CC346426 /* ROMailAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMailAction.m"; sourceTree = "<group>"; };
+        40D34A45B47271BE1BB9719B /* ROMapAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMapAction.m"; sourceTree = "<group>"; };
+        312E4FBE984FF92559D43791 /* ROMapDirectionsAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMapDirectionsAction.m"; sourceTree = "<group>"; };
+        C4284F61ABF2DD0760F44FA1 /* ROMapSearchAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMapSearchAction.m"; sourceTree = "<group>"; };
+        B11E4DD792B41A19C954D26F /* RONavigationAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RONavigationAction.m"; sourceTree = "<group>"; };
+        339348B29C507FF44A6A213B /* ROPhoneAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROPhoneAction.m"; sourceTree = "<group>"; };
+        C66A44C0BA78B0680F725E0C /* ROSMSAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROSMSAction.m"; sourceTree = "<group>"; };
+        714C438DAFB8E3BBFC26A202 /* ROUriAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROUriAction.m"; sourceTree = "<group>"; };
+        1DB24BA5925142C20D94D192 /* ROWebBrowserAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROWebBrowserAction.m"; sourceTree = "<group>"; };
+        8A174A6A88983DCBB119F584 /* ROYoutubeAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROYoutubeAction.m"; sourceTree = "<group>"; };
+        2B9D4D7FB6918444E1DE51C8 /* ROUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROUtils.m"; sourceTree = "<group>"; };
+        E88D4231ABD112F75B5FCAE3 /* ROCreateItemBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCreateItemBehavior.m"; sourceTree = "<group>"; };
+        14E74E239ABFD262294F3A4F /* RODeleteItemBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RODeleteItemBehavior.m"; sourceTree = "<group>"; };
+        CEEC4A2A83C9E314FF956BB0 /* ROEditCellsBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROEditCellsBehavior.m"; sourceTree = "<group>"; };
+        CF8544D4B493658731CB5F14 /* ROEditRowsBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROEditRowsBehavior.m"; sourceTree = "<group>"; };
+        8E094EA1B3375E30DB5BCBA5 /* ROFilterBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFilterBehavior.m"; sourceTree = "<group>"; };
+        737E48A2B8DF1BF9A02ECF8D /* ROMapSearchBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMapSearchBehavior.m"; sourceTree = "<group>"; };
+        B39E4A0A8422145581676918 /* RORefreshBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RORefreshBehavior.m"; sourceTree = "<group>"; };
+        A968404A9E8235A3412F9A7F /* ROSearchBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROSearchBehavior.m"; sourceTree = "<group>"; };
+        C6F143B584B5B7497AB2F819 /* ROShareBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROShareBehavior.m"; sourceTree = "<group>"; };
+        124D4FF3A0C029C305F994D3 /* ROUpdateItemBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROUpdateItemBehavior.m"; sourceTree = "<group>"; };
+        B78C46ED8B9EF9CE81C3C4CD /* ROViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROViewController.m"; sourceTree = "<group>"; };
+        AA2A4B50ADE5DBDDD5C1773D /* RODataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RODataViewController.m"; sourceTree = "<group>"; };
+        96854F6A9008D33E5E684420 /* ROScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROScrollViewController.m"; sourceTree = "<group>"; };
+        0BDA42B1AC99430CBCA1C091 /* ROCollectionCloudDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCollectionCloudDatasource.m"; sourceTree = "<group>"; };
+        5C4149B08937ADE5AA575E9F /* ROCollectionLocalDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCollectionLocalDatasource.m"; sourceTree = "<group>"; };
+        BE2C4606B3E73965AF36722A /* RORestDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RORestDatasource.m"; sourceTree = "<group>"; };
+        DB9E4AA8B28E6ABB61BB04EB /* ROItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROItemCell.m"; sourceTree = "<group>"; };
+        0A2E4687A655E057BF0C6171 /* ROObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROObject.m"; sourceTree = "<group>"; };
+        6B244ABB9AEDFF752275A10A /* Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Push.m"; sourceTree = "<group>"; };
+        DFE7450D8F8B0CC617763112 /* RONotificationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RONotificationHandler.m"; sourceTree = "<group>"; };
+        E6964375904CA199959FBB85 /* RONotificationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RONotificationView.m"; sourceTree = "<group>"; };
+        370444459A1BCD72818457EB /* ROBasicAuthLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROBasicAuthLoginService.m"; sourceTree = "<group>"; };
+        A7A947F990A6386E817D3C65 /* ROLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROLoginManager.m"; sourceTree = "<group>"; };
+        AD6244DE9A2C8B7D86B5C4D9 /* ROLoginResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROLoginResponse.m"; sourceTree = "<group>"; };
+        1BCD432A84E5761A9F691A79 /* ROLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROLoginViewController.m"; sourceTree = "<group>"; };
+        6CC142C5B89DF9A8D3D11A0C /* ROLogoutAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROLogoutAction.m"; sourceTree = "<group>"; };
+        7E7D4E8F80A7F67585EA02F5 /* ROLogoutBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROLogoutBehavior.m"; sourceTree = "<group>"; };
+        D74548359F9F9B8568AFB4EB /* RORestClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RORestClient.m"; sourceTree = "<group>"; };
+        713649B4BBD45246C9876BA1 /* ROSlidingAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROSlidingAction.m"; sourceTree = "<group>"; };
+        11674B4DA394C5F8CFBFCA84 /* UIViewController+Sliding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Sliding.m"; sourceTree = "<group>"; };
+        F0554CB8B6C266B7BCA0D66D /* Analytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Analytics.m"; sourceTree = "<group>"; };
+        6AAA48678C0459E103D35039 /* Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Logger.m"; sourceTree = "<group>"; };
+        2057480685DFCF19478EC74D /* ROChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROChartViewController.m"; sourceTree = "<group>"; };
+        2E6F42C9BDA6C2B302E026D6 /* ROCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCollectionViewController.m"; sourceTree = "<group>"; };
+        10334686B29520B0DC010233 /* ROFilterFieldDateRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFilterFieldDateRange.m"; sourceTree = "<group>"; };
+        E68F4A038690327C0E2BE99E /* ROFilterFieldSelection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFilterFieldSelection.m"; sourceTree = "<group>"; };
+        420D470B8131E0C5EE3A322E /* ROFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFilterViewController.m"; sourceTree = "<group>"; };
+        9B7E4FA29FCF3EC95C14A714 /* ROOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROOptionsViewController.m"; sourceTree = "<group>"; };
+        A9414D11B8B53BE71BC14ECC /* ROFormFieldButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldButton.m"; sourceTree = "<group>"; };
+        7705497A81A72800160C1878 /* ROFormFieldDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldDate.m"; sourceTree = "<group>"; };
+        091E436CAB30010CCB385819 /* ROFormFieldDatetime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldDatetime.m"; sourceTree = "<group>"; };
+        756A4E0F918BCD574F86E63F /* ROFormFieldDecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldDecimal.m"; sourceTree = "<group>"; };
+        D71B468E8FAED4506E2C6E6D /* ROFormFieldGeo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldGeo.m"; sourceTree = "<group>"; };
+        142E4F7F8742160E264F09E0 /* ROFormFieldImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldImage.m"; sourceTree = "<group>"; };
+        5B0543BB94E694D7F8CEBED5 /* ROFormFieldInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldInteger.m"; sourceTree = "<group>"; };
+        992C43B691E08512389CE88E /* ROFormFieldPassword.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldPassword.m"; sourceTree = "<group>"; };
+        FE4B4C93A7B84F2272C478D6 /* ROFormFieldSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldSwitch.m"; sourceTree = "<group>"; };
+        42F047CFB35275AFE5AD930F /* ROFormFieldText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldText.m"; sourceTree = "<group>"; };
+        8D864D2EA7BBCA383A4D8C58 /* ROFormFieldTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldTime.m"; sourceTree = "<group>"; };
+        F7F74E2F9CAB036F7930A9AF /* ROFormFieldTristateBool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormFieldTristateBool.m"; sourceTree = "<group>"; };
+        496B4B6F8C704CE241E1E359 /* ROFormTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROFormTableViewController.m"; sourceTree = "<group>"; };
+        2A2E41439D88C03B5A60916A /* ROAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROAnnotation.m"; sourceTree = "<group>"; };
+        56B747A4B0604ACA5CF1CB73 /* ROMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROMapViewController.m"; sourceTree = "<group>"; };
+        A5C346AD83A104008B7DCC30 /* ROTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTabBarController.m"; sourceTree = "<group>"; };
+        8C27438C83F1AE03B4AD2610 /* ROCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCustomTableViewController.m"; sourceTree = "<group>"; };
+        395343A093CAC55C15BF2E56 /* ROTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTableViewController.m"; sourceTree = "<group>"; };
+        22914484A5F4F1FAD1A5D56C /* ROCRUDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCRUDTableViewController.m"; sourceTree = "<group>"; };
+        0C4C41ACBE0105C930535905 /* ROCloudantDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCloudantDatasource.m"; sourceTree = "<group>"; };
+        1A4046E99BFC042588122AA9 /* ROCloudantDatastoreManagerBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCloudantDatastoreManagerBuilder.m"; sourceTree = "<group>"; };
+        7F0D4F9AABEA1493FA95E3D3 /* ROCloudantManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCloudantManager.m"; sourceTree = "<group>"; };
+        5E92450F8B8AE1E48FE2B7E0 /* ROCloudantManagerBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROCloudantManagerBuilder.m"; sourceTree = "<group>"; };
+        9F3C46AAAEDE934351D532F2 /* ROBoundingBoxFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROBoundingBoxFilter.m"; sourceTree = "<group>"; };
+        525E4F8789F6473B3E91BC39 /* RODateRangeFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RODateRangeFilter.m"; sourceTree = "<group>"; };
+        5FA741108AB1198C84F7D69B /* RONearFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RONearFilter.m"; sourceTree = "<group>"; };
+        4A7644A18828019A1CECD8D3 /* RONumberFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RONumberFilter.m"; sourceTree = "<group>"; };
+        3A084ECE88CB3E715C14A7BE /* ROOptionsFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROOptionsFilter.m"; sourceTree = "<group>"; };
+        D35242258DDC9A8F4A879FDD /* ROStringFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROStringFilter.m"; sourceTree = "<group>"; };
+        552D437587A4A728518B29CB /* ROStringListFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROStringListFilter.m"; sourceTree = "<group>"; };
+        270946E5AF722851A349ECFE /* ROListDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROListDataLoader.m"; sourceTree = "<group>"; };
+        F0FE46AAA3FE4C3A3C69D568 /* ROSingleDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROSingleDataLoader.m"; sourceTree = "<group>"; };
+        3DCD435B9223513BAB50B523 /* RORestGeoPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RORestGeoPoint.m"; sourceTree = "<group>"; };
+        8B204149BB87EFD344698812 /* NSArray+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RO.m"; sourceTree = "<group>"; };
+        309A4CD4AD55BBAEE04CF11C /* NSDate+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RO.m"; sourceTree = "<group>"; };
+        DA254913A23FB4DCFBF253A5 /* NSDecimalNumber+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+RO.m"; sourceTree = "<group>"; };
+        D1A24580B514080C36E07885 /* NSDictionary+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RO.m"; sourceTree = "<group>"; };
+        B10D4866AC1E55DD72F6A1B4 /* NSNumber+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RO.m"; sourceTree = "<group>"; };
+        6C4A4320B3305E86562AAF6A /* NSString+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RO.m"; sourceTree = "<group>"; };
+        FEA548F58E25C9CBDEB61894 /* UIAlertView+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RO.m"; sourceTree = "<group>"; };
+        E23941C3BE620D6A9ED92FEF /* UIColor+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RO.m"; sourceTree = "<group>"; };
+        5FE64E8AB78BF5C53C4F256F /* UIFont+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+RO.m"; sourceTree = "<group>"; };
+        01314E789D45B54F0BD4417A /* UIImage+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RO.m"; sourceTree = "<group>"; };
+        D09943F0A003349B808F7EB4 /* UIImageView+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RO.m"; sourceTree = "<group>"; };
+        8C92459C8E2F4E8B6A5D1330 /* UILabel+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RO.m"; sourceTree = "<group>"; };
+        EE564600A17164D2C8B23B26 /* UITableViewCell+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+RO.m"; sourceTree = "<group>"; };
+        A992405686C66D0C23076750 /* UIView+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RO.m"; sourceTree = "<group>"; };
+        D5404400B82A2F244B6999CE /* UIViewController+RO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RO.m"; sourceTree = "<group>"; };
+        5C524B2C84D9E2E55103F6F4 /* ROError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROError.m"; sourceTree = "<group>"; };
+        EBF94BB8A3CE6464A1F7537C /* ROErrorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROErrorManager.m"; sourceTree = "<group>"; };
+        00BA43D0A11881BEFF342C5C /* ROStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROStyle.m"; sourceTree = "<group>"; };
+        15094A01B1DD44BD6D2C17D6 /* ROTextStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTextStyle.m"; sourceTree = "<group>"; };
+        967C4A6983FC0C85C5924623 /* ROGeoFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROGeoFieldTableViewCell.m"; sourceTree = "<group>"; };
+        17594F91968E895F501A39F8 /* ROImageCrudTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROImageCrudTableViewCell.m"; sourceTree = "<group>"; };
+        65014331AA7F4E43A6E629FB /* ROPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROPhotoCollectionViewCell.m"; sourceTree = "<group>"; };
+        32CA4DAB87EF4A291BB038A4 /* ROPhotoTitleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROPhotoTitleCollectionViewCell.m"; sourceTree = "<group>"; };
+        43F84658BA1F728D9C78AAC3 /* ROSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROSwitchTableViewCell.m"; sourceTree = "<group>"; };
+        1E8545069015AAC13ACC4BD7 /* ROTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTableViewCell.m"; sourceTree = "<group>"; };
+        92B94CBAB991A03101282DD6 /* ROTextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTextFieldTableViewCell.m"; sourceTree = "<group>"; };
+        085D4616ADA643A1F6B578BB /* ROChartSerie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROChartSerie.m"; sourceTree = "<group>"; };
+        22124005B073A5B43F5F6DD3 /* ROChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROChartView.m"; sourceTree = "<group>"; };
+        A53C4EAF915052A9AE52D9ED /* ROHeaderCellDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROHeaderCellDescriptor.m"; sourceTree = "<group>"; };
+        554F41A1ADFE1392EF121CAA /* ROImageCellDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROImageCellDescriptor.m"; sourceTree = "<group>"; };
+        B0BE4014ACB165C4527A728E /* ROTextCellDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ROTextCellDescriptor.m"; sourceTree = "<group>"; };
+        FD5449CC9D23690998831D24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate.m"; sourceTree = "<group>"; };
+        67514B3C9552A66EABBFB041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "main.m"; sourceTree = "<group>"; };
+        446B49C7B564C54B331C2756 /* MainNavigationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainNavigationManager.m"; sourceTree = "<group>"; };
+        B189454F86E83FFF1873B596 /* EmptyDatasource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EmptyDatasource.plist"; sourceTree = "<group>"; };
+        3E72441898490E2EAB30ED23 /* ROLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ROLoginViewController.xib"; sourceTree = "<group>"; };
+        93F0469DA26EBDB8FCE57EFA /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "mfpclient.plist"; sourceTree = "<group>"; };
+        97CD416285E508725B6BBA9E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "credentials.plist"; sourceTree = "<group>"; };
+  
+		5754612A1DB6B438007402E9 /* whitewolfdemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whitewolfdemo.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        57741E7319E887BA000B31BC /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+			files = (
+			);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        57741E8C19E887BB000B31BC /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        57741E6D19E887BA000B31BC = {
+            isa = PBXGroup;
+            children = (
+                57741E7819E887BA000B31BC /* whitewolfdemo */,
+                57741E9219E887BB000B31BC /* whitewolfdemoTests */,
+                57741E7719E887BA000B31BC /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        57741E7719E887BA000B31BC /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                57741E7619E887BA000B31BC /* whitewolfdemo.app */,
+                57741E8F19E887BB000B31BC /* whitewolfdemoTests.xctest */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        57741E7819E887BA000B31BC /* whitewolfdemo */ = {
+            isa = PBXGroup;
+            children = (
+				57741E8619E887BA000B31BC /* Assets.xcassets */,
+				46F74A90A00F08728F24FB10 /*  Core */,
+				4C744A348A28AC165D6F9C2A /*  Controllers */,
+				4AE94660A7B06370DC1FF4B4 /*  Datasources */,
+				E2A542CDACB7721C48D7E57E /*  Models */,
+			
+				57741E7919E887BA000B31BC /* Supporting Files */,
+				19A449BC8AA31EB7CB79F76C /*  AppDelegate.h */,
+				FD5449CC9D23690998831D24 /*  AppDelegate.m */,
+				67514B3C9552A66EABBFB041 /*  main.m */,
+				93F745CB81038071A3859668 /*  MainNavigationManager.h */,
+				446B49C7B564C54B331C2756 /*  MainNavigationManager.m */,
+				93F0469DA26EBDB8FCE57EFA /*  mfpclient.plist */,
+				C3774E0FB44F4A5A9A299F7F /*  whitewolfdemo-Bridging-Header.h */,
+				97CD416285E508725B6BBA9E /*  credentials.plist */,
+				5E694FDBAE22A5974EE198A4 /*  BluemixCredentials.swift */,
+			
+                577421C319E89235000B31BC /* Style.plist */,
+               
+                57F68B621BDE959C00835706 /* LaunchScreenView.xib */,
+				5754612A1DB6B438007402E9 /* whitewolfdemo.entitlements */,
+				
+            );
+            path = whitewolfdemo;
+            sourceTree = "<group>";
+        };
+		46F74A90A00F08728F24FB10 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				67154FB6BBA0DB75A7C22CE0 /*  Actions */,
+				302D41DBA77363A8D6CEC5A7 /*  Analytics */,
+				60F54A288278140666332B56 /*  Behaviors */,
+				31BD4A4A94BB471924C4FC73 /*  Controllers */,
+				633F4E6E9E57AC91BDA45F52 /*  Datasources */,
+				449D46E7971A300096602F52 /*  Models */,
+				4B5E487D97FEC7875A96A9FA /*  Push */,
+				4E2544C59923D1B28762C7A0 /*  Security */,
+				84484B47976D96E1CC7E19A1 /*  Services */,
+				A316418EAAD584E7A59E3C96 /*  Sliding */,
+				3B98464F80B2910C3B91DE07 /*  Utils */,
+				5AC74607ACE8E646A5F3099B /*  Views */,
+		 
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4C744A348A28AC165D6F9C2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E18E4E28B0BE83DBDCCD7E84 /*  ABOUTUSViewController.h */,
+				348B4B8FB60F6E22464FBBA8 /*  ABOUTUSViewController.m */,
+				9B5149C3887A8D31BCA1C686 /*  THREATMAPDetailViewController.h */,
+				10E547A8836C71D9EF81DD2D /*  THREATMAPDetailViewController.m */,
+				85E444869A0CA6CEFAFCAD58 /*  THREATMAPFormViewController.h */,
+				1DD94880AA2875F9A52CC6D1 /*  THREATMAPFormViewController.m */,
+				6751406886485A4A5F242335 /*  THREATMAPViewController.h */,
+				54D1495C908E3C61B3B520A7 /*  THREATMAPViewController.m */,
+				A701430990515B0CD7C3EBD7 /*  THREATSCORESViewController.h */,
+				2C1A4F4C9ACC67EBDA3E73C5 /*  THREATSCORESViewController.m */,
+				B3D14850A664F185263BA002 /*  TODOFormViewController.h */,
+				FB014E12A394B426C9EC3DAC /*  TODOFormViewController.m */,
+				56674DEFB09BF19BDD2016D5 /*  TODOLISTDetailViewController.h */,
+				46F548BB90B61DFE6D7A811A /*  TODOLISTDetailViewController.m */,
+				1CB64E6381BFA0A3691FF008 /*  TODOLISTViewController.h */,
+				AD4940FE9118F6019EC2EC65 /*  TODOLISTViewController.m */,
+				8A024982BEF46B2F76BB066E /*  WelcomeViewController.h */,
+				C55142BE9491C0F5F3FF44AB /*  WelcomeViewController.m */,
+				3E994DB9B43BA8DD916FF164 /*  WHITEWOLFHAITOOLViewController.h */,
+				069A40788A996CD12C698945 /*  WHITEWOLFHAITOOLViewController.m */,
+		 
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4AE94660A7B06370DC1FF4B4 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				32394CC79E9D411FF0304235 /*  DatasourceManager.h */,
+				90FD4ADF93B34041C9C82029 /*  DatasourceManager.m */,
+				6D1D48E6B80A9DB65B7A128E /*  EmptyDatasource.h */,
+				D83349588BDA8BB3828AAB2D /*  EmptyDatasource.m */,
+				AAF846AE9ADC9378784738CF /*  GoogleTrendsTestDS.h */,
+				743B45A3B105DC1A2B6B0633 /*  GoogleTrendsTestDS.m */,
+				2EFD47E39603A4E7F334A9D3 /*  TasksDBDS.h */,
+				C84E4CFA831796D79AAE5FCF /*  TasksDBDS.m */,
+				906A4DCEAD628EBDC76EA67E /*  ThreatmapDBDS.h */,
+				C4864FA3B0E5BFEB88C3BBE8 /*  ThreatmapDBDS.m */,
+				5D0A4917B8950F065BABE099 /*  WwdemoDS.h */,
+				279942069F9D27D1163DB3F2 /*  WwdemoDS.m */,
+				B189454F86E83FFF1873B596 /*  EmptyDatasource.plist */,
+		 
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		E2A542CDACB7721C48D7E57E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				943B4A2E875C40D3FE3FC010 /*  GoogleTrendsTestDSSchemaItem.h */,
+				5430412D83D9C818B1EAB9E9 /*  GoogleTrendsTestDSSchemaItem.m */,
+				62C34F209478A6AAE9BDFE0B /*  GoogleTrendsTestDSSchemaItemkeys.h */,
+				68A74F339F60034CF9C5D0F9 /*  Item.h */,
+				FF6E41C9BAE88505F0A49F15 /*  Item.m */,
+				E2784AD2AAF45C70352C98E0 /*  Itemkeys.h */,
+				454B466B86F20E4BC85678B3 /*  TasksDBDSSchemaItem.h */,
+				3CC748AD8DCA59E3B83D7736 /*  TasksDBDSSchemaItem.m */,
+				5E1C41A6BABD8103E2C69A69 /*  TasksDBDSSchemaItemkeys.h */,
+				8EDF4862A92B03DB040F42D4 /*  ThreatmapDBDSSchemaItem.h */,
+				22F14C42B611ACC96593EEE6 /*  ThreatmapDBDSSchemaItem.m */,
+				1B154A209749042B4C7087CA /*  ThreatmapDBDSSchemaItemkeys.h */,
+				716A4F48AECB00AC87E624D3 /*  WwdemoDSSchemaItem.h */,
+				8F9E4CB7ADC1DC72E34F4263 /*  WwdemoDSSchemaItem.m */,
+				FD9D4F8AB635741360AB799F /*  WwdemoDSSchemaItemkeys.h */,
+		 
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67154FB6BBA0DB75A7C22CE0 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C58B42B28D0A7BDA716E8119 /*  ROAction.h */,
+				367E49AC8140BD1E63AB67B2 /*  ROBlockAction.h */,
+				274D4812A10A3F04DFD16E0D /*  ROBlockAction.m */,
+				F36A4516B34C998A56782B5E /*  ROFacetimeAction.h */,
+				02C243029E339CC9FFF78BCD /*  ROFacetimeAction.m */,
+				9FBA4E9AB3CF1E1EC9277335 /*  ROMailAction.h */,
+				FD3643719791BA67CC346426 /*  ROMailAction.m */,
+				3DF44BEA90F98926B355F9B7 /*  ROMapAction.h */,
+				40D34A45B47271BE1BB9719B /*  ROMapAction.m */,
+				D98C45D2858A76E0804DEBBA /*  ROMapDirectionsAction.h */,
+				312E4FBE984FF92559D43791 /*  ROMapDirectionsAction.m */,
+				11DA4DEDA51506C8C77857ED /*  ROMapSearchAction.h */,
+				C4284F61ABF2DD0760F44FA1 /*  ROMapSearchAction.m */,
+				04D242AAB3938CDDC7363847 /*  RONavigationAction.h */,
+				B11E4DD792B41A19C954D26F /*  RONavigationAction.m */,
+				359E48D08B0AC10FE8203D3E /*  ROPhoneAction.h */,
+				339348B29C507FF44A6A213B /*  ROPhoneAction.m */,
+				7B944E5F8BAC09E63EBC4437 /*  ROSMSAction.h */,
+				C66A44C0BA78B0680F725E0C /*  ROSMSAction.m */,
+				43EE45A5850573ED9C27AB63 /*  ROUriAction.h */,
+				714C438DAFB8E3BBFC26A202 /*  ROUriAction.m */,
+				7009470F9BE0A3F225FF1E48 /*  ROWebBrowserAction.h */,
+				1DB24BA5925142C20D94D192 /*  ROWebBrowserAction.m */,
+				E13745E68164F5711E840D8B /*  ROYoutubeAction.h */,
+				8A174A6A88983DCBB119F584 /*  ROYoutubeAction.m */,
+		 
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		302D41DBA77363A8D6CEC5A7 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				CCF542E8B8A2C88E98203C04 /*  MFP8 */,
+				AD0041E590BD7E81C076020A /*  ROAnalytics.h */,
+				EFE2427FA3E1DD385B755D6A /*  ROLogger.h */,
+				D28544A4BAE52F6660C0D608 /*  ROUtils.h */,
+				2B9D4D7FB6918444E1DE51C8 /*  ROUtils.m */,
+		 
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		60F54A288278140666332B56 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				70F846718A49286AFB607297 /*  ROBehavior.h */,
+				B357414882FD1BFD088A99A4 /*  ROCreateItemBehavior.h */,
+				E88D4231ABD112F75B5FCAE3 /*  ROCreateItemBehavior.m */,
+				C9884D8D9E6C3A020A90A14F /*  RODeleteItemBehavior.h */,
+				14E74E239ABFD262294F3A4F /*  RODeleteItemBehavior.m */,
+				1581403780F44970E0DC4EF3 /*  ROEditCellsBehavior.h */,
+				CEEC4A2A83C9E314FF956BB0 /*  ROEditCellsBehavior.m */,
+				238F48AAA7206BA72B93A091 /*  ROEditRowsBehavior.h */,
+				CF8544D4B493658731CB5F14 /*  ROEditRowsBehavior.m */,
+				7CAA4DFBB56532B6B2D5CE30 /*  ROFilterBehavior.h */,
+				8E094EA1B3375E30DB5BCBA5 /*  ROFilterBehavior.m */,
+				A1474E20BACE4B5EA09EBB2E /*  ROMapSearchBehavior.h */,
+				737E48A2B8DF1BF9A02ECF8D /*  ROMapSearchBehavior.m */,
+				CE5E4AE2B828BD8C97E5D611 /*  RORefreshBehavior.h */,
+				B39E4A0A8422145581676918 /*  RORefreshBehavior.m */,
+				0EFC4CD1AD7B7A9B7CEE4912 /*  ROSearchBehavior.h */,
+				A968404A9E8235A3412F9A7F /*  ROSearchBehavior.m */,
+				B38E460C897EB74C75B1D3D4 /*  ROShareBehavior.h */,
+				C6F143B584B5B7497AB2F819 /*  ROShareBehavior.m */,
+				B65A4BC1A9B1EDAEBCAC4B73 /*  ROUpdateItemBehavior.h */,
+				124D4FF3A0C029C305F994D3 /*  ROUpdateItemBehavior.m */,
+		 
+			);
+			path = Behaviors;
+			sourceTree = "<group>";
+		};
+		31BD4A4A94BB471924C4FC73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6D04A409B048F2B47F44B52 /*  Chart */,
+				1301453C8D575C78C53A311A /*  Collection */,
+				3B5A4918BA008DC66D7E56D5 /*  Filters */,
+				9ABE4D7C84C6479C789BF96A /*  Forms */,
+				F3B248D7BDABF64BBFD3AA46 /*  Map */,
+				81D14E1E92D063E0050725A0 /*  Tab */,
+				3CD44E3D97110689BE25FFDA /*  Table */,
+				4A96431D9814D40BB0FBBB5D /*  ROViewController.h */,
+				B78C46ED8B9EF9CE81C3C4CD /*  ROViewController.m */,
+				51574CC4A5B3C5BD52E4695F /*  RODataViewController.h */,
+				AA2A4B50ADE5DBDDD5C1773D /*  RODataViewController.m */,
+				2D0F41F5A66A64AF5DCB35BB /*  ROScrollViewController.h */,
+				96854F6A9008D33E5E684420 /*  ROScrollViewController.m */,
+		 
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		633F4E6E9E57AC91BDA45F52 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				D2E64DD6BF4D2414C18E7579 /*  Cloudant */,
+				27C64CE9BAC3E0CF066DC8F3 /*  Filters */,
+				00AF4739B348F032FCEC44C7 /*  Loaders */,
+				C7714026BE6706DBAC128BC1 /*  ROCollectionCloudDatasource.h */,
+				0BDA42B1AC99430CBCA1C091 /*  ROCollectionCloudDatasource.m */,
+				971C4088AED650A19EDD6577 /*  ROCollectionLocalDatasource.h */,
+				5C4149B08937ADE5AA575E9F /*  ROCollectionLocalDatasource.m */,
+				E16B4B8980359F9B8C4D270D /*  RODataDelegate.h */,
+				86BC4C31AF9D3767A02F760F /*  ROItemDelegate.h */,
+				BB944426904EA3D90F19DCF0 /*  RODatasource.h */,
+				127F4E4D96629B5991A19A31 /*  ROPagination.h */,
+				E85D45C9B7E1E48DD9FCBE72 /*  RORestDatasource.h */,
+				BE2C4606B3E73965AF36722A /*  RORestDatasource.m */,
+				0E2048079E5D9AE873A41E76 /*  ROSearchable.h */,
+				23814975B7771EF12FE82002 /*  ROSynchronize.h */,
+		 
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		449D46E7971A300096602F52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AFF4BF2897FBF33EC262C59 /*  Geo */,
+				9AB24B4D9E315C567756CAF6 /*  ROItemCell.h */,
+				DB9E4AA8B28E6ABB61BB04EB /*  ROItemCell.m */,
+				26A04279A34F5B98C3C7B27D /*  ROModel.h */,
+				D87C4DA1B07AB61197D17D9F /*  ROObject.h */,
+				0A2E4687A655E057BF0C6171 /*  ROObject.m */,
+		 
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B5E487D97FEC7875A96A9FA /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				C57F45FDB4AD9320FA3FEB97 /*  BluemixPush.swift */,
+				A3684D26BA912F5A9D57014F /*  Push.h */,
+				6B244ABB9AEDFF752275A10A /*  Push.m */,
+				D39F4E9E9C5D743DCF5F181D /*  RONotificationHandler.h */,
+				DFE7450D8F8B0CC617763112 /*  RONotificationHandler.m */,
+				E1B749299F4E1AE0B3E33DAA /*  RONotificationView.h */,
+				E6964375904CA199959FBB85 /*  RONotificationView.m */,
+				3F734226BFB3B4D2156031F4 /*  ROPushDelegate.h */,
+		 
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		4E2544C59923D1B28762C7A0 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				FDE1421097D4BC4E69443ADB /*  ROBasicAuthLoginService.h */,
+				370444459A1BCD72818457EB /*  ROBasicAuthLoginService.m */,
+				B1064DC584613048D753D365 /*  ROLoginManager.h */,
+				A7A947F990A6386E817D3C65 /*  ROLoginManager.m */,
+				DBBF4A8596789C5761677AFE /*  ROLoginResponse.h */,
+				AD6244DE9A2C8B7D86B5C4D9 /*  ROLoginResponse.m */,
+				03B34D65808EC7699E8FCB55 /*  ROLoginService.h */,
+				013C466695D5193218F68DD7 /*  ROLoginViewController.h */,
+				1BCD432A84E5761A9F691A79 /*  ROLoginViewController.m */,
+				3E72441898490E2EAB30ED23 /*  ROLoginViewController.xib */,
+				B2EA491199D750F34449918A /*  ROLogoutAction.h */,
+				6CC142C5B89DF9A8D3D11A0C /*  ROLogoutAction.m */,
+				2BA6453FA59AB825208359F6 /*  ROLogoutBehavior.h */,
+				7E7D4E8F80A7F67585EA02F5 /*  ROLogoutBehavior.m */,
+		 
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		84484B47976D96E1CC7E19A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5ADF4AE88BA221EF673CDAF0 /*  RORestClient.h */,
+				D74548359F9F9B8568AFB4EB /*  RORestClient.m */,
+		 
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A316418EAAD584E7A59E3C96 /* Sliding */ = {
+			isa = PBXGroup;
+			children = (
+				9706468CA36B9113AD7ADF59 /*  ROSlidingAction.h */,
+				713649B4BBD45246C9876BA1 /*  ROSlidingAction.m */,
+				28E34887BA329FEEEB76BD6B /*  UIViewController+Sliding.h */,
+				11674B4DA394C5F8CFBFCA84 /*  UIViewController+Sliding.m */,
+		 
+			);
+			path = Sliding;
+			sourceTree = "<group>";
+		};
+		3B98464F80B2910C3B91DE07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91DD4107AE1F3D6076FCA3AE /*  Categories */,
+				377643E1AE799EB8003EDCE8 /*  Error */,
+				76F6441DB3A26E460A399245 /*  Style */,
+		 
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5AC74607ACE8E646A5F3099B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6B44039A08FBED04848848F /*  Cells */,
+				4D5547C59EB3FD7266455700 /*  Charts */,
+		 
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCF542E8B8A2C88E98203C04 /* MFP8 */ = {
+			isa = PBXGroup;
+			children = (
+				7A704A8681655282038569E9 /*  Analytics.h */,
+				F0554CB8B6C266B7BCA0D66D /*  Analytics.m */,
+				D0154648B4C2E2735D15CD14 /*  Logger.h */,
+				6AAA48678C0459E103D35039 /*  Logger.m */,
+		 
+			);
+			path = MFP8;
+			sourceTree = "<group>";
+		};
+		C6D04A409B048F2B47F44B52 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				21004B8685BAEEAD38326112 /*  ROChartViewController.h */,
+				2057480685DFCF19478EC74D /*  ROChartViewController.m */,
+		 
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		1301453C8D575C78C53A311A /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				7C444DDC9B0BCB5B5013C529 /*  ROCollectionViewController.h */,
+				2E6F42C9BDA6C2B302E026D6 /*  ROCollectionViewController.m */,
+		 
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		3B5A4918BA008DC66D7E56D5 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				840D41B9A2BADAC0F7E4C53F /*  ROFilterField.h */,
+				965B4763BDE4A6CDC6A9C8D9 /*  ROFilterFieldDateRange.h */,
+				10334686B29520B0DC010233 /*  ROFilterFieldDateRange.m */,
+				3D034D2599927DE252E3EDB6 /*  ROFilterFieldSelection.h */,
+				E68F4A038690327C0E2BE99E /*  ROFilterFieldSelection.m */,
+				DA7944DBA83463CB39E67E34 /*  ROFilterViewController.h */,
+				420D470B8131E0C5EE3A322E /*  ROFilterViewController.m */,
+				CA264F52BCD9D34843A95879 /*  ROOptionsViewController.h */,
+				9B7E4FA29FCF3EC95C14A714 /*  ROOptionsViewController.m */,
+		 
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		9ABE4D7C84C6479C789BF96A /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				000D42928BA9D8EBC4C12BF9 /*  CRUD */,
+				A13B43A58C2469C151DE22D0 /*  ROFormFieldButton.h */,
+				A9414D11B8B53BE71BC14ECC /*  ROFormFieldButton.m */,
+				E64F41859AE5748773FA6151 /*  ROFormFieldDate.h */,
+				7705497A81A72800160C1878 /*  ROFormFieldDate.m */,
+				BDE042C58A1B37A99BFA00EC /*  ROFormFieldDatetime.h */,
+				091E436CAB30010CCB385819 /*  ROFormFieldDatetime.m */,
+				5C12477090728A5D4158EBC3 /*  ROFormFieldDecimal.h */,
+				756A4E0F918BCD574F86E63F /*  ROFormFieldDecimal.m */,
+				76F74D8986ABF31319E162E5 /*  ROFormFieldDelegate.h */,
+				3AE54B1F9B2D88036352ADF6 /*  ROFormFieldGeo.h */,
+				D71B468E8FAED4506E2C6E6D /*  ROFormFieldGeo.m */,
+				956242E2A83A59BDEDD55C9B /*  ROFormFieldImage.h */,
+				142E4F7F8742160E264F09E0 /*  ROFormFieldImage.m */,
+				D62345EB969FEC1C894D3043 /*  ROFormFieldInteger.h */,
+				5B0543BB94E694D7F8CEBED5 /*  ROFormFieldInteger.m */,
+				35444351A0B67526F4750C3A /*  ROFormFieldPassword.h */,
+				992C43B691E08512389CE88E /*  ROFormFieldPassword.m */,
+				A35B41778388BB7DC8245DAD /*  ROFormFieldSwitch.h */,
+				FE4B4C93A7B84F2272C478D6 /*  ROFormFieldSwitch.m */,
+				741F4B2FB040B9EE44446E6E /*  ROFormFieldText.h */,
+				42F047CFB35275AFE5AD930F /*  ROFormFieldText.m */,
+				477241558030EAE54863FC9C /*  ROFormFieldTime.h */,
+				8D864D2EA7BBCA383A4D8C58 /*  ROFormFieldTime.m */,
+				6645442990685EF0262957BF /*  ROFormFieldTristateBool.h */,
+				F7F74E2F9CAB036F7930A9AF /*  ROFormFieldTristateBool.m */,
+				6476478EB1DC775015AD48D4 /*  ROFormTableViewController.h */,
+				496B4B6F8C704CE241E1E359 /*  ROFormTableViewController.m */,
+		 
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		F3B248D7BDABF64BBFD3AA46 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				48F94637A1A346315DD5D5F9 /*  ROAnnotation.h */,
+				2A2E41439D88C03B5A60916A /*  ROAnnotation.m */,
+				C7CF4D25A469C36E1185332E /*  ROMapViewController.h */,
+				56B747A4B0604ACA5CF1CB73 /*  ROMapViewController.m */,
+				038D418AB88D478225F89C59 /*  ROMapViewDelegate.h */,
+		 
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		81D14E1E92D063E0050725A0 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				D8594BE2B813EFD06DB00D41 /*  ROTabBarController.h */,
+				A5C346AD83A104008B7DCC30 /*  ROTabBarController.m */,
+		 
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		3CD44E3D97110689BE25FFDA /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				2ADE470CA646BBB8DB2B10A0 /*  ROCustomTableViewController.h */,
+				8C27438C83F1AE03B4AD2610 /*  ROCustomTableViewController.m */,
+				796346869F1D224315B9C96D /*  ROTableViewController.h */,
+				395343A093CAC55C15BF2E56 /*  ROTableViewController.m */,
+		 
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		000D42928BA9D8EBC4C12BF9 /* CRUD */ = {
+			isa = PBXGroup;
+			children = (
+				86BA4EDE97A96C21B42A4FBF /*  ROCreateItemDelegate.h */,
+				ADDB457EB8BC10B628497614 /*  ROCRUDServiceDelegate.h */,
+				55E04661BF3A0FEEB87FF881 /*  ROCRUDTableViewController.h */,
+				22914484A5F4F1FAD1A5D56C /*  ROCRUDTableViewController.m */,
+				2F9C48759D0975C0EE8D536A /*  RODeleteItemDelegate.h */,
+				6EE94EDB9966BC16DC4EDE63 /*  ROUpdateItemDelegate.h */,
+		 
+			);
+			path = CRUD;
+			sourceTree = "<group>";
+		};
+		D2E64DD6BF4D2414C18E7579 /* Cloudant */ = {
+			isa = PBXGroup;
+			children = (
+				23FD41809B4433C97C073F75 /*  ROCloudantDatasource.h */,
+				0C4C41ACBE0105C930535905 /*  ROCloudantDatasource.m */,
+				E63441D2837054C55F8011B1 /*  ROCloudantDatastoreManagerBuilder.h */,
+				1A4046E99BFC042588122AA9 /*  ROCloudantDatastoreManagerBuilder.m */,
+				F0194D8BB5ECD8418A4A6FC8 /*  ROCloudantItem.h */,
+				94054F9EBDA5719B56F26084 /*  ROCloudantManager.h */,
+				7F0D4F9AABEA1493FA95E3D3 /*  ROCloudantManager.m */,
+				28F94828AACFEE5B905EC162 /*  ROCloudantManagerBuilder.h */,
+				5E92450F8B8AE1E48FE2B7E0 /*  ROCloudantManagerBuilder.m */,
+		 
+			);
+			path = Cloudant;
+			sourceTree = "<group>";
+		};
+		27C64CE9BAC3E0CF066DC8F3 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				C6AD40F786605A2A58C2612D /*  ROBoundingBoxFilter.h */,
+				9F3C46AAAEDE934351D532F2 /*  ROBoundingBoxFilter.m */,
+				1E214C9EB8A3CC9D0D8ABDB4 /*  RODateRangeFilter.h */,
+				525E4F8789F6473B3E91BC39 /*  RODateRangeFilter.m */,
+				D9B3461BACFC3B137BE63F7F /*  ROFilter.h */,
+				5B444B91A260C5A27944D7A3 /*  RONearFilter.h */,
+				5FA741108AB1198C84F7D69B /*  RONearFilter.m */,
+				1D504610AD63691BEC63ECD2 /*  RONumberFilter.h */,
+				4A7644A18828019A1CECD8D3 /*  RONumberFilter.m */,
+				57544E70AFC489B21D508BF4 /*  ROOptionsFilter.h */,
+				3A084ECE88CB3E715C14A7BE /*  ROOptionsFilter.m */,
+				C6D9423E902902CF828254AD /*  ROStringFilter.h */,
+				D35242258DDC9A8F4A879FDD /*  ROStringFilter.m */,
+				19F24CEA8956769DAB9964AC /*  ROStringListFilter.h */,
+				552D437587A4A728518B29CB /*  ROStringListFilter.m */,
+		 
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		00AF4739B348F032FCEC44C7 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				1CF04D54A9769B5ED0D75B08 /*  RODataLoader.h */,
+				0D8E433AA8A753C09B06A728 /*  ROListDataLoader.h */,
+				270946E5AF722851A349ECFE /*  ROListDataLoader.m */,
+				BA2F4DFBA130EC325752F8CE /*  ROSingleDataLoader.h */,
+				F0FE46AAA3FE4C3A3C69D568 /*  ROSingleDataLoader.m */,
+		 
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		6AFF4BF2897FBF33EC262C59 /* Geo */ = {
+			isa = PBXGroup;
+			children = (
+				434E4CD0BF0B64D4D45D9411 /*  RORestGeoPoint.h */,
+				3DCD435B9223513BAB50B523 /*  RORestGeoPoint.m */,
+		 
+			);
+			path = Geo;
+			sourceTree = "<group>";
+		};
+		91DD4107AE1F3D6076FCA3AE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				70BA4249961DC84AAD835D52 /*  NSArray+RO.h */,
+				8B204149BB87EFD344698812 /*  NSArray+RO.m */,
+				D80F430993F1DEE60A942588 /*  NSDate+RO.h */,
+				309A4CD4AD55BBAEE04CF11C /*  NSDate+RO.m */,
+				1ED94E208F037751257E177E /*  NSDecimalNumber+RO.h */,
+				DA254913A23FB4DCFBF253A5 /*  NSDecimalNumber+RO.m */,
+				22F6410F97353A87471F9F53 /*  NSDictionary+RO.h */,
+				D1A24580B514080C36E07885 /*  NSDictionary+RO.m */,
+				158B4FCAB85EDA9240370BA2 /*  NSNumber+RO.h */,
+				B10D4866AC1E55DD72F6A1B4 /*  NSNumber+RO.m */,
+				FE4D4A87A5EC51F36E184660 /*  NSString+RO.h */,
+				6C4A4320B3305E86562AAF6A /*  NSString+RO.m */,
+				6168495B90B50A2450E4C8C8 /*  UIAlertView+RO.h */,
+				FEA548F58E25C9CBDEB61894 /*  UIAlertView+RO.m */,
+				FBE44C86B52FDA94292871E3 /*  UIColor+RO.h */,
+				E23941C3BE620D6A9ED92FEF /*  UIColor+RO.m */,
+				443D4F9E8923A56B45BC0A9C /*  UIFont+RO.h */,
+				5FE64E8AB78BF5C53C4F256F /*  UIFont+RO.m */,
+				CEEA439F9B4A5528BB44F8AD /*  UIImage+RO.h */,
+				01314E789D45B54F0BD4417A /*  UIImage+RO.m */,
+				73CF4D8EBBD8A96A9C7D2562 /*  UIImageView+RO.h */,
+				D09943F0A003349B808F7EB4 /*  UIImageView+RO.m */,
+				EBAE4CB5A801BF0627937796 /*  UILabel+RO.h */,
+				8C92459C8E2F4E8B6A5D1330 /*  UILabel+RO.m */,
+				150D42D7A83272A60434AC96 /*  UITableViewCell+RO.h */,
+				EE564600A17164D2C8B23B26 /*  UITableViewCell+RO.m */,
+				77CC4E30AC9396310911AD41 /*  UIView+RO.h */,
+				A992405686C66D0C23076750 /*  UIView+RO.m */,
+				CE5B4222BD6B0B4B9B25E004 /*  UIViewController+RO.h */,
+				D5404400B82A2F244B6999CE /*  UIViewController+RO.m */,
+		 
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		377643E1AE799EB8003EDCE8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				E417472BBA01B04281D31804 /*  ROError.h */,
+				5C524B2C84D9E2E55103F6F4 /*  ROError.m */,
+				77B04A86B58A828603E4FE10 /*  ROErrorManager.h */,
+				EBF94BB8A3CE6464A1F7537C /*  ROErrorManager.m */,
+		 
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		76F6441DB3A26E460A399245 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				8CF94E649AB7E0842DCFBB2F /*  ROStyle.h */,
+				00BA43D0A11881BEFF342C5C /*  ROStyle.m */,
+				C9DE45C3A461020DE0E52C68 /*  ROTextStyle.h */,
+				15094A01B1DD44BD6D2C17D6 /*  ROTextStyle.m */,
+		 
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		B6B44039A08FBED04848848F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8CBE4D1B91E76755026E856D /*  CellDescriptors */,
+				8D8A44D392A9D29B24F0F853 /*  ROGeoFieldTableViewCell.h */,
+				967C4A6983FC0C85C5924623 /*  ROGeoFieldTableViewCell.m */,
+				CCF24B89A995BDF5B6C8F1D5 /*  ROImageCrudTableViewCell.h */,
+				17594F91968E895F501A39F8 /*  ROImageCrudTableViewCell.m */,
+				C63349D980ED51E5DCC488D5 /*  ROPhotoCollectionViewCell.h */,
+				65014331AA7F4E43A6E629FB /*  ROPhotoCollectionViewCell.m */,
+				986E470DB4ED9C8047325707 /*  ROPhotoTitleCollectionViewCell.h */,
+				32CA4DAB87EF4A291BB038A4 /*  ROPhotoTitleCollectionViewCell.m */,
+				955A446EAC3C67D22242D271 /*  ROSwitchTableViewCell.h */,
+				43F84658BA1F728D9C78AAC3 /*  ROSwitchTableViewCell.m */,
+				858943D5A8EA63CC67C058A0 /*  ROTableViewCell.h */,
+				1E8545069015AAC13ACC4BD7 /*  ROTableViewCell.m */,
+				D2FA4124922FDCC35364B5E6 /*  ROTextFieldTableViewCell.h */,
+				92B94CBAB991A03101282DD6 /*  ROTextFieldTableViewCell.m */,
+		 
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D5547C59EB3FD7266455700 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				95824C419E3CBF887BEA7467 /*  ROChartSerie.h */,
+				085D4616ADA643A1F6B578BB /*  ROChartSerie.m */,
+				7D534CB991799693E84049FD /*  ROChartView.h */,
+				22124005B073A5B43F5F6DD3 /*  ROChartView.m */,
+		 
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		8CBE4D1B91E76755026E856D /* CellDescriptors */ = {
+			isa = PBXGroup;
+			children = (
+				7B87459E97966745F885C7A9 /*  ROCellDescriptor.h */,
+				68DE4217BD909129E0F67000 /*  ROHeaderCellDescriptor.h */,
+				A53C4EAF915052A9AE52D9ED /*  ROHeaderCellDescriptor.m */,
+				F7BD41DD83A1AC5DD2643702 /*  ROImageCellDescriptor.h */,
+				554F41A1ADFE1392EF121CAA /*  ROImageCellDescriptor.m */,
+				F9294915B090AA5EAEF63A6D /*  ROTextCellDescriptor.h */,
+				B0BE4014ACB165C4527A728E /*  ROTextCellDescriptor.m */,
+		 
+			);
+			path = CellDescriptors;
+			sourceTree = "<group>";
+		};
+		
+        57741E7919E887BA000B31BC /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                5774246419E894A3000B31BC /* PrefixHeader.pch */,
+                57741E7A19E887BA000B31BC /* Info.plist */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+        57741E9219E887BB000B31BC /* whitewolfdemoTests */ = {
+            isa = PBXGroup;
+            children = (
+                57741E9319E887BB000B31BC /* Supporting Files */,
+            );
+            path = whitewolfdemoTests;
+            sourceTree = "<group>";
+        };
+        57741E9319E887BB000B31BC /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                57741E9419E887BB000B31BC /* Info.plist */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+		
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+        57741E7519E887BA000B31BC /* whitewolfdemo */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 57741E9919E887BB000B31BC /* Build configuration list for PBXNativeTarget "whitewolfdemo" */;
+            buildPhases = (
+                57741E7219E887BA000B31BC /* Sources */,
+                57741E7319E887BA000B31BC /* Frameworks */,
+                57741E7419E887BA000B31BC /* Resources */,
+                573342361D363C38008CB947 /* Embed Frameworks */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = whitewolfdemo;
+            productName = whitewolfdemo;
+            productReference = 57741E7619E887BA000B31BC /* whitewolfdemo.app */;
+            productType = "com.apple.product-type.application";
+        };
+        57741E8E19E887BB000B31BC /* whitewolfdemoTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 57741E9C19E887BB000B31BC /* Build configuration list for PBXNativeTarget "whitewolfdemoTests" */;
+            buildPhases = (
+                57741E8B19E887BB000B31BC /* Sources */,
+                57741E8C19E887BB000B31BC /* Frameworks */,
+                57741E8D19E887BB000B31BC /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                57741E9119E887BB000B31BC /* PBXTargetDependency */,
+                5774204919E88E1C000B31BC /* PBXTargetDependency */,
+            );
+            name = whitewolfdemoTests;
+            productName = whitewolfdemoTests;
+            productReference = 57741E8F19E887BB000B31BC /* whitewolfdemoTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+        57741E6E19E887BA000B31BC /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+				LastSwiftUpdateCheck = 0730;
+                LastUpgradeCheck = 0800;
+                ORGANIZATIONNAME = "ibmmobileappbuilder";
+                TargetAttributes = {
+                    57741E7519E887BA000B31BC = {
+                        CreatedOnToolsVersion = 6.0.1;
+                        SystemCapabilities = {
+                            com.apple.BackgroundModes = {
+                                enabled = 1;
+                            };
+							com.apple.Push = {
+								enabled = 1;
+							};
+                        };
+                    };
+                    57741E8E19E887BB000B31BC = {
+                        CreatedOnToolsVersion = 6.0.1;
+                        TestTargetID = 57741E7519E887BA000B31BC;
+                    };
+                };
+            };
+            buildConfigurationList = 57741E7119E887BA000B31BC /* Build configuration list for PBXProject "whitewolfdemo" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 57741E6D19E887BA000B31BC;
+            productRefGroup = 57741E7719E887BA000B31BC /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                57741E7519E887BA000B31BC /* whitewolfdemo */,
+                57741E8E19E887BB000B31BC /* whitewolfdemoTests */,
+            );
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+        57741E7419E887BA000B31BC /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                57741E8719E887BA000B31BC /* Assets.xcassets in Resources */,
+                577421C419E89235000B31BC /* Style.plist in Resources */,
+                57F68B631BDE959C00835706 /* LaunchScreenView.xib in Resources */,
+                5F5A485F8A47AF0CDE3EA294 /* EmptyDatasource.plist in Resources */,
+                76C849F886984880C042CD2B /* ROLoginViewController.xib in Resources */,
+                1BD84700AA88B30361477EF1 /* mfpclient.plist in Resources */,
+                278D410BB99276A110E341D6 /* credentials.plist in Resources */,
+      
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        57741E8D19E887BB000B31BC /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                573341FA1D36218D008CB947 /* Assets.xcassets in Resources */,
+                577421C519E89235000B31BC /* Style.plist in Resources */,
+             );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        57741E7219E887BA000B31BC /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                2308417DA9FD603F0C3CF53D /* BluemixPush.swift in Sources */,
+                60644D87B3F3DA571A393383 /* BluemixCredentials.swift in Sources */,
+                C3B14C26BC303502E338447F /* ABOUTUSViewController.m in Sources */,
+                6C534A638919C8E1A5F940A7 /* THREATMAPDetailViewController.m in Sources */,
+                42B14D159EED7B84E90FCE9A /* THREATMAPFormViewController.m in Sources */,
+                F8EA4E1CA734B7CE6FDDA595 /* THREATMAPViewController.m in Sources */,
+                807D434280F060B840022672 /* THREATSCORESViewController.m in Sources */,
+                4FE54217B2072602A14CB132 /* TODOFormViewController.m in Sources */,
+                00FA4825AACAE03C57C08336 /* TODOLISTDetailViewController.m in Sources */,
+                D8804715A98431B744E8E183 /* TODOLISTViewController.m in Sources */,
+                8DDA49B18FF45D7E230AAF57 /* WelcomeViewController.m in Sources */,
+                D0824F8B88BF5D33725F2461 /* WHITEWOLFHAITOOLViewController.m in Sources */,
+                258F41808C2862E2DDEB9B83 /* DatasourceManager.m in Sources */,
+                522D4B6CB66049160574E2E4 /* EmptyDatasource.m in Sources */,
+                B74C45FB8DEE4BD959A1B23E /* GoogleTrendsTestDS.m in Sources */,
+                76894B75861D2BD5B317C706 /* TasksDBDS.m in Sources */,
+                D5EF4BDAAC2F2FB54CF72039 /* ThreatmapDBDS.m in Sources */,
+                1B894F6CB573D1B898743EBD /* WwdemoDS.m in Sources */,
+                1F8D4382B22D6C745CD4F6E0 /* GoogleTrendsTestDSSchemaItem.m in Sources */,
+                1DD34074B7E57B93BC8DA930 /* Item.m in Sources */,
+                951542B59192A7D6FF14AD44 /* TasksDBDSSchemaItem.m in Sources */,
+                3C234AAAB922C625C7D54EDF /* ThreatmapDBDSSchemaItem.m in Sources */,
+                133E42FC9F137ACE0B5B2204 /* WwdemoDSSchemaItem.m in Sources */,
+                03074E39A352D5A3BE216401 /* ROBlockAction.m in Sources */,
+                597A49BCA84FB926686FB94B /* ROFacetimeAction.m in Sources */,
+                586945ED8D5872FD9D4BC1E5 /* ROMailAction.m in Sources */,
+                112E4EF1826ABCDD08CCBE58 /* ROMapAction.m in Sources */,
+                206F419BBE226CDECE79C294 /* ROMapDirectionsAction.m in Sources */,
+                091F4FDCBF811E6D81CC2001 /* ROMapSearchAction.m in Sources */,
+                B9D645C88D3DB79BC5CF29F6 /* RONavigationAction.m in Sources */,
+                71FE4F3BB2B32B32D28A9893 /* ROPhoneAction.m in Sources */,
+                76E249C98685E0011BB1E2AB /* ROSMSAction.m in Sources */,
+                FD014B3188E95A6F33F2B037 /* ROUriAction.m in Sources */,
+                4C1247DC8A2288E29785988F /* ROWebBrowserAction.m in Sources */,
+                1D984101A501AC390DE3F53D /* ROYoutubeAction.m in Sources */,
+                24064F84A16BE7C7FEFEA021 /* ROUtils.m in Sources */,
+                B7EC4288842603E203859FF3 /* ROCreateItemBehavior.m in Sources */,
+                147543F4A6806D87EC95D4B6 /* RODeleteItemBehavior.m in Sources */,
+                929149F59B10F43B11562D5B /* ROEditCellsBehavior.m in Sources */,
+                E7AB430CB74C620FB2C42FB2 /* ROEditRowsBehavior.m in Sources */,
+                62934D85938F40E61B779940 /* ROFilterBehavior.m in Sources */,
+                57E04D0D8E3EFBDC5BDE2968 /* ROMapSearchBehavior.m in Sources */,
+                747A4C9FAC2915850D22EE35 /* RORefreshBehavior.m in Sources */,
+                348240699E33906E8724E0FD /* ROSearchBehavior.m in Sources */,
+                D2AB45B2B524071E3C539FA3 /* ROShareBehavior.m in Sources */,
+                7E2F4C8EA78A3EA77A998AD9 /* ROUpdateItemBehavior.m in Sources */,
+                FF15449399EB21A224EBDAD0 /* ROViewController.m in Sources */,
+                CB05496B865A954391901816 /* RODataViewController.m in Sources */,
+                336D4D3CAA27DD500072C2FD /* ROScrollViewController.m in Sources */,
+                9A2346A2B16079C8C9A10083 /* ROCollectionCloudDatasource.m in Sources */,
+                DAB244C0A909A6FD1FD7B606 /* ROCollectionLocalDatasource.m in Sources */,
+                E8C5482994835E1CA6BA348A /* RORestDatasource.m in Sources */,
+                6AF947ACA553EC1D4FC7C549 /* ROItemCell.m in Sources */,
+                403B4191B11AE1658D771188 /* ROObject.m in Sources */,
+                1E3543638689E747511D6E6C /* Push.m in Sources */,
+                4ED449DABAE7211495FC7A96 /* RONotificationHandler.m in Sources */,
+                38CF4A2293E203B058E25A7B /* RONotificationView.m in Sources */,
+                062A4943B99F85DB4B8B6EF6 /* ROBasicAuthLoginService.m in Sources */,
+                ABDE4F1F8DC3524955F2961F /* ROLoginManager.m in Sources */,
+                F8F5450E9DEC669C03B3B55A /* ROLoginResponse.m in Sources */,
+                13E94973B10F36CC8C24E6E7 /* ROLoginViewController.m in Sources */,
+                754B4BD8BD7912D3178E2745 /* ROLogoutAction.m in Sources */,
+                A75A463FB61A2615254EC422 /* ROLogoutBehavior.m in Sources */,
+                992B4EAC8267184222F1C3CE /* RORestClient.m in Sources */,
+                F1454AF3A0B9C631E5D40444 /* ROSlidingAction.m in Sources */,
+                4F984AFF991D11A1BB72D719 /* UIViewController+Sliding.m in Sources */,
+                B8CE44ABBC72DFD9E3550E27 /* Analytics.m in Sources */,
+                23744ADCB4F69499D62D968E /* Logger.m in Sources */,
+                0F944A41B9EACBCD9E9EB6F5 /* ROChartViewController.m in Sources */,
+                A5B2438EA50FA6FCFD1D8B60 /* ROCollectionViewController.m in Sources */,
+                A46E4C03AECE093DD0194D29 /* ROFilterFieldDateRange.m in Sources */,
+                85574193A21126FB39A580AC /* ROFilterFieldSelection.m in Sources */,
+                07C7466CBE4EF65FF2057AE6 /* ROFilterViewController.m in Sources */,
+                F49D4880B9EECEC644D6DB13 /* ROOptionsViewController.m in Sources */,
+                A58A4D82AA25D06E1BE791EB /* ROFormFieldButton.m in Sources */,
+                859842C4A47A91A31FC5F5FD /* ROFormFieldDate.m in Sources */,
+                F81C40E7A0C46ABC32847004 /* ROFormFieldDatetime.m in Sources */,
+                D393494CA123916AD367AE39 /* ROFormFieldDecimal.m in Sources */,
+                52824C3382AF3901F48744E5 /* ROFormFieldGeo.m in Sources */,
+                C26648D39D0E1456B0C2FD5C /* ROFormFieldImage.m in Sources */,
+                610E4FF0BC5D1EDB2CAF6000 /* ROFormFieldInteger.m in Sources */,
+                755341F18715BF7BC15B866D /* ROFormFieldPassword.m in Sources */,
+                9BF34F8A86E0C0424DD135B9 /* ROFormFieldSwitch.m in Sources */,
+                31CE4E75B5D1F512FE9682FB /* ROFormFieldText.m in Sources */,
+                78754CD6A7657B8B4A8CE539 /* ROFormFieldTime.m in Sources */,
+                73594A0395954ECB7C1A3FEC /* ROFormFieldTristateBool.m in Sources */,
+                BBBA4DFEAC4C0E63815F3722 /* ROFormTableViewController.m in Sources */,
+                64AE4404BA62DF54BE793115 /* ROAnnotation.m in Sources */,
+                AAAB449DB9430D275351C1C9 /* ROMapViewController.m in Sources */,
+                71AE4AC38F9059C940BE6678 /* ROTabBarController.m in Sources */,
+                4E834204A1A8C2B92DA88F07 /* ROCustomTableViewController.m in Sources */,
+                6FEA471A8B46925BDB3F49E7 /* ROTableViewController.m in Sources */,
+                FA8E434F803E8976D6FD1FDB /* ROCRUDTableViewController.m in Sources */,
+                7DD44E239FC610F4216DE5B1 /* ROCloudantDatasource.m in Sources */,
+                69BD48CF852E415BDE2D75CF /* ROCloudantDatastoreManagerBuilder.m in Sources */,
+                FC8E4CD3A82D2F88640BACC3 /* ROCloudantManager.m in Sources */,
+                291C43D3A13E5FF1085B9ECA /* ROCloudantManagerBuilder.m in Sources */,
+                4D4E44C6841D2D4EA33DE01A /* ROBoundingBoxFilter.m in Sources */,
+                9423489489B4472BDAB8D2FE /* RODateRangeFilter.m in Sources */,
+                6A2F40F1BF594637DD0B3626 /* RONearFilter.m in Sources */,
+                8B9949C8AACCA827BF59E37E /* RONumberFilter.m in Sources */,
+                A0CF421FB02BC770E1F5C582 /* ROOptionsFilter.m in Sources */,
+                CD4D4CCB88B7972A9CB5BC07 /* ROStringFilter.m in Sources */,
+                D9C941B1851AABFC19AC83CF /* ROStringListFilter.m in Sources */,
+                3A39421C88F732C5DCAA9AD3 /* ROListDataLoader.m in Sources */,
+                692742E7B610812736BBC68F /* ROSingleDataLoader.m in Sources */,
+                6758454DB6BD26FEFB415E1E /* RORestGeoPoint.m in Sources */,
+                97FF4A2384451AE8E32A2439 /* NSArray+RO.m in Sources */,
+                71774D7FB6288593A96CFEF5 /* NSDate+RO.m in Sources */,
+                380743D98DB026E7CE7460AF /* NSDecimalNumber+RO.m in Sources */,
+                CF2B4CEFBD564303C714F27F /* NSDictionary+RO.m in Sources */,
+                B3A045BD80EF438145DDCDF6 /* NSNumber+RO.m in Sources */,
+                490F4C67B0C91E1EF2D9B073 /* NSString+RO.m in Sources */,
+                F8A54F08B8BF5D21BE3A7529 /* UIAlertView+RO.m in Sources */,
+                A6AA4EF89466A0C491D44C3D /* UIColor+RO.m in Sources */,
+                874645D9A18C4267EBC11CBA /* UIFont+RO.m in Sources */,
+                9161488F8FE0FF79A2244A9E /* UIImage+RO.m in Sources */,
+                CFC74F4588199AF98738645C /* UIImageView+RO.m in Sources */,
+                05ED4FD7B9C6B31B1F8D14E8 /* UILabel+RO.m in Sources */,
+                70F34861BBAEDF984FE6FB3E /* UITableViewCell+RO.m in Sources */,
+                06124926BB34DB47F4C116EA /* UIView+RO.m in Sources */,
+                8EF34B7E830815C2F2389AF1 /* UIViewController+RO.m in Sources */,
+                5C0F4A439B9929962F41D2C2 /* ROError.m in Sources */,
+                603D4FA88012FEAEB30BE0E9 /* ROErrorManager.m in Sources */,
+                B38B4F08B355A04189405AD8 /* ROStyle.m in Sources */,
+                000E47D59A40DAA94129A547 /* ROTextStyle.m in Sources */,
+                B3B946D6B71CEC49F6D2E773 /* ROGeoFieldTableViewCell.m in Sources */,
+                E02245C3B14977DF8875B254 /* ROImageCrudTableViewCell.m in Sources */,
+                0A5447FCAFF6A0A2C4B95C74 /* ROPhotoCollectionViewCell.m in Sources */,
+                70F44822A818622638B39989 /* ROPhotoTitleCollectionViewCell.m in Sources */,
+                A2D54BF580459171F9CAEF99 /* ROSwitchTableViewCell.m in Sources */,
+                1C2F436CA4EFB36A5A3EFB8E /* ROTableViewCell.m in Sources */,
+                D613491C8C9EF7329EC63DB0 /* ROTextFieldTableViewCell.m in Sources */,
+                9B6F426983CF2E1DB52AA5F9 /* ROChartSerie.m in Sources */,
+                5C864C50BEDC1096A4DBB240 /* ROChartView.m in Sources */,
+                D3DA4F82A38BE1184DC5EEE7 /* ROHeaderCellDescriptor.m in Sources */,
+                DE3C44229128F4C858A03F3B /* ROImageCellDescriptor.m in Sources */,
+                82F34939A05B242CF84F3F37 /* ROTextCellDescriptor.m in Sources */,
+                A0B04B5FA858983F56341A06 /* AppDelegate.m in Sources */,
+                55244EFC941DDFD3CB53272E /* main.m in Sources */,
+                2E224BA4AA85CA5082A4BC83 /* MainNavigationManager.m in Sources */,
+  
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        57741E8B19E887BB000B31BC /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+        57741E9119E887BB000B31BC /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 57741E7519E887BA000B31BC /* whitewolfdemo */;
+            targetProxy = 57741E9019E887BB000B31BC /* PBXContainerItemProxy */;
+        };
+        5774204919E88E1C000B31BC /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 57741E7519E887BA000B31BC /* whitewolfdemo */;
+            targetProxy = 5774204819E88E1C000B31BC /* PBXContainerItemProxy */;
+        };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+        57741E9719E887BB000B31BC /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                ENABLE_BITCODE = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = whitewolfdemo/PrefixHeader.pch;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        57741E9819E887BB000B31BC /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+                COPY_PHASE_STRIP = YES;
+                ENABLE_BITCODE = NO;
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = whitewolfdemo/PrefixHeader.pch;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        57741E9A19E887BB000B31BC /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = whitewolfdemo/whitewolfdemo.entitlements;
+				
+				
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+                INFOPLIST_FILE = whitewolfdemo/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobileappbuilder.whitewolfdemo20170206144851;
+                PRODUCT_NAME = whitewolfdemo;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "whitewolfdemo/whitewolfdemo-Bridging-Header.h";
+				
+            };
+            name = Debug;
+        };
+        57741E9B19E887BB000B31BC /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = whitewolfdemo/whitewolfdemo.entitlements;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+                GCC_OPTIMIZATION_LEVEL = 0;
+                INFOPLIST_FILE = whitewolfdemo/Info.plist;
+               	LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobileappbuilder.whitewolfdemo20170206144851;
+                PRODUCT_NAME = whitewolfdemo;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "whitewolfdemo/whitewolfdemo-Bridging-Header.h";
+				
+            };
+            name = Release;
+        };
+        57741E9D19E887BB000B31BC /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/whitewolfdemo.app/whitewolfdemo";
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(SDKROOT)/Developer/Library/Frameworks",
+                    "$(inherited)",
+                );
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                INFOPLIST_FILE = whitewolfdemoTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                LIBRARY_SEARCH_PATHS = "$(inherited)";
+                PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobileappbuilder.whitewolfdemo20170206144851;
+                PRODUCT_NAME = whitewolfdemoTests;
+                TEST_HOST = "$(BUNDLE_LOADER)";
+            };
+            name = Debug;
+        };
+        57741E9E19E887BB000B31BC /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/whitewolfdemo.app/whitewolfdemo";
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(SDKROOT)/Developer/Library/Frameworks",
+                    "$(inherited)",
+                );
+                INFOPLIST_FILE = whitewolfdemoTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                LIBRARY_SEARCH_PATHS = "$(inherited)";
+                PRODUCT_BUNDLE_IDENTIFIER = com.ibm.mobileappbuilder.whitewolfdemo20170206144851;
+                PRODUCT_NAME = whitewolfdemoTests;
+                TEST_HOST = "$(BUNDLE_LOADER)";
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        57741E7119E887BA000B31BC /* Build configuration list for PBXProject "whitewolfdemo" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                57741E9719E887BB000B31BC /* Debug */,
+                57741E9819E887BB000B31BC /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        57741E9919E887BB000B31BC /* Build configuration list for PBXNativeTarget "whitewolfdemo" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                57741E9A19E887BB000B31BC /* Debug */,
+                57741E9B19E887BB000B31BC /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        57741E9C19E887BB000B31BC /* Build configuration list for PBXNativeTarget "whitewolfdemoTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                57741E9D19E887BB000B31BC /* Debug */,
+                57741E9E19E887BB000B31BC /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+    };
+    rootObject = 57741E6E19E887BA000B31BC /* Project object */;
+}
