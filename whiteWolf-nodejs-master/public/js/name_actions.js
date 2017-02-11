@@ -122,7 +122,8 @@ $("#view_room").click(function(e){
 					console.log("Received info from back end");
 					document.getElementById("add_new_name_form").style.display="none";
 					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="block";
+					document.getElementById("show_all_names").style.display="none";
+					document.getElementById("show_all_rooms").style.display="block";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
 					document.getElementById("duplicate_name").style.display="none";
@@ -140,10 +141,10 @@ $("#view_room").click(function(e){
           			var names_table = "<table class=\"table table-striped table-hover\">";
           			names_table += "<thead><th> Rooms in Database </th></thead>";
           			names_table += "<tbody>";
-             		names_table += "<tr class=\"info\"><td >";
-            		names_table += "<form>";         			
+             		names_table += "<tr class=\"info\">";         			
           			for(var i = 0; i < data.length; i++) {
-                          	names_table += "<h3>Room " + data[i].roomId +" : " + data[i].roomName + " </h3>";
+          			        names_table += '<td ><form id=\"room'+i+'\">';
+                          	names_table += "<b>Room " + data[i].roomId +" : " + data[i].roomName + " </b>";
                           	names_table += '<img src=\"' + data[i].roomImage + '\" alt=\"\" width=\"35px\"/><br/>';
                             
                             names_table += '<label for=\"deviceWarning\">Device warning:</label>';
@@ -169,13 +170,11 @@ $("#view_room").click(function(e){
                             
                             names_table += '<label for=\"missedTasks\">Missed tasks:</label>';
                             names_table += '<input type=\"number\" name=\"missedTasks\" id=\"missedTasks\" value=\"'+data[i].missedTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                    
+                            names_table += '</form></td>';
         			}
-
-                    names_table += '</form>';
-            		names_table += "</td></tr>";
+            		names_table += "</tr>";
           			names_table += "</tbody></table>";
-          			document.getElementById("show_all_names").innerHTML = names_table;
+          			document.getElementById("show_all_rooms").innerHTML = names_table;
 				}
 				else
 					document.getElementById("db_read_error").style.display="block";

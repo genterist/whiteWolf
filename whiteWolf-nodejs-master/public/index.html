@@ -1,266 +1,351 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+DEVELOPER: TAM N. NGUYEN
+STYLES:
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+ORIGINAL NODE.JS HOOKS
+	IBM bluemix code gen
+-->
 <html>
-  <head>
-      <title> White Wolf - Simulation Console </title>
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
-      <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
-      <link href="stylesheets/styles.css" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-      <script src="js/bootstrap.js"> </script>
-      <script src="js/name_actions.js"> </script>
-  </head>
+	<head>
+		<title>WHITE WOLF ADMIN CONSOLE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+		<script src="js/bootstrap.js"> </script>
+		<script src="js/name_actions.js"> </script>
+	</head>
+	<body>
 
-  <body>
-        <div class="navbar navbar-inverse navbar-fixed-top navigation_bar" style="background-color:#152935;">
-          <div class="content" align="center" style="background-color:#25313D;">
-            <table style="width: 100%;">
-              <tr>
-                <td align="center"><h3 style="color: #FFFFFA;">White Wolf Simulation Console</h3></td>
-              </tr>
-            </table>x
-          </div>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-            <!-- Main menu START here -->
-          <div class="container collapse navbar-collapse navHeaderCollapse" style="width: 600px !important">
-            <div class="row">
-              <div class="col-sm-3 operations_options">
-                <button class="btn btn-success crud" type="button" onclick="show_new_name_form()"> Create Name </button>
-              </div>
-              <div class="col-sm-3 operations_options">
-                <form class="form-horizontal" action="/view_names" method="GET" name="outcome" id="outcome">
-                  <fieldset>
-                      <input type="hidden" class="form-control" id="allnames" value="allnames" name="allnames"/>
-                      <button id="view_name" class="btn btn-success crud" type="submit"> Read Names </button>
-                  </fieldset>
-                </form>
-              </div>
-              <div class="col-sm-3 operations_options">
-                <button class="btn btn-success crud" type="button" onclick="show_update_name_form()"> Update Name </button>
-              </div>
-              <div class="col-sm-3 operations_options">
-                <button class="btn btn-success crud" type="button" onclick="show_remove_name_form()"> Delete Name </button>
-              </div>
-              <div class="col-sm-3 operations_options">
-                <form class="form-horizontal" action="/view_rooms" method="GET" name="outcome" id="outcome">
-                  <fieldset>
-                      <input type="hidden" class="form-control" id="allroom" value="allroom" name="allroom"/>
-                      <button id="view_room" class="btn btn-success crud" type="submit"> Read Rooms </button>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-          </div>
-          <!-- Main menu STOP here -->
-        </div>
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="#">White Wolf admin console</a></h1>
+						<nav class="links">
+							<ul>
+								<li><button type="button" onclick="show_new_name_form()"> Create Name </button></li>
+								<li>
+									<form action="/view_names" method="GET" name="outcome" id="outcome" style="border: hidden white">
+									  <fieldset>
+										  <input type="hidden" class="form-control" id="allnames" value="allnames" name="allnames"/>
+										  <button id="view_name" type="submit" style="border-style: hidden; border-color: white;"> Read Names </button>
+									  </fieldset>
+									</form>
+								</li>
+								<li><button type="button" onclick="show_update_name_form()"> Update Name </button></li>
+								<li><button type="button" onclick="show_remove_name_form()"> Delete Name </button></li>
+								<li>
+									<form class="form-horizontal" action="/view_rooms" method="GET" name="outcome" id="outcome">
+									  <fieldset>
+										  <input type="hidden" class="form-control" id="allroom" value="allroom" name="allroom"/>
+										  <button id="view_room" type="submit"> Read Rooms </button>
+									  </fieldset>
+									</form>
+                				</li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+							</ul>
+						</nav>
+					</header>
 
-      <div class="container form_details">
-          <!-- Creating a new name -->
-          <div id="add_new_name_form" style="display:none">
-            <form class="form-horizontal" action="/add_name" method="GET" name="outcome" id="outcome">
-              <fieldset>
-                <legend class="resizables"> New Record Information </legend>
-                <div class="form-group">
-                    <label for="newname" class="col-lg-2 control-label">Enter name to be added:</label>
-                    <div class="col-lg-10">
-                      <input type="text" autocomplete="off" class="form-control" id="newname" placeholder="Enter Name"/>
-                    </div>
-                </div>
+				<!-- Menu -->
+				<!-- Main -->
+			  <div id="main">
 
-                <div class="form-group">
-                  <div class="col-lg-10 col-lg-offset-2">
-                    <button id="add_name_button" type="submit" class="btn btn-danger">Add Name</button>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
+					<!-- Forms and controls and stats will be displayed here -->
+					<article class="post">
+						 <!-- Creating a new person -->
+						  <div id="add_new_name_form" style="display:none">
+							<form class="form-horizontal" action="/add_name" method="GET" name="outcome" id="outcome">
+							  <fieldset>
+								<legend class="resizables"> New Record Information </legend>
+								<div class="form-group">
+									<label for="newname" class="col-lg-2 control-label">Enter name to be added:</label>
+									<div class="col-lg-10">
+									  <input type="text" autocomplete="off" class="form-control" id="newname" placeholder="Enter Name"/>
+									</div>
+								</div>
 
-          <div id="added_name" style="display:none">
-            <div class="alert alert-success">
-                Name has been added to the database.
-            </div>
-     	 </div>
+								<div class="form-group">
+								  <div class="col-lg-10 col-lg-offset-2">
+									<button id="add_name_button" type="submit" class="btn btn-danger">Add Name</button>
+								  </div>
+								</div>
+							  </fieldset>
+							</form>
+						  </div>
+						 <!-- End of create new person -->
+						
+						 <div id="added_name" style="display:none">
+							<div class="alert alert-success">
+								Name has been added to the database.
+							</div>
+						 </div>
 
-     	 <div id="duplicate_name" style="display:none;">
-            <div class="alert alert-danger">
-              Name is already present in the list. Enter a new one.
-            </div>
-     	</div>
+						 <div id="duplicate_name" style="display:none;">
+							<div class="alert alert-danger">
+							  Name is already present in the list. Enter a new one.
+							</div>
+						 </div>
 
-     	<div id="db_insert_error" style="display:none">
-            <div class="alert alert-danger">
-     				  Could not insert into database. Please try later.
-            </div>
-     	</div>
+						 <div id="db_insert_error" style="display:none">
+							<div class="alert alert-danger">
+									  Could not insert into database. Please try later.
+							</div>
+						 </div>
 
-     		<div id="db_read_error" style="display:none">
-           	 <div class="alert alert-danger">
-     				  Could not read database to check for name.
-            	</div>
-     		</div>
+						 <div id="db_read_error" style="display:none">
+							<div class="alert alert-danger">
+									  Could not read database to check for name.
+							</div>
+						 </div>
 
-     		<div id="removed_name" style="display:none">
-            <div class="alert alert-success">
-     				     Removed Name.
-            </div>
-     		</div>
+						 <div id="removed_name" style="display:none">
+							<div class="alert alert-success">
+										 Removed Name.
+							</div>
+						 </div>
 
-     		<div id="updated_name" style="display:none">
-            <div class="alert alert-success">
-                 Updated Name.
-            </div>
-     		</div>
+						<div id="updated_name" style="display:none">
+							<div class="alert alert-success">
+								 Updated Name.
+							</div>
+						</div>
 
-     		<div id="could_not_update" style="display:none">
-            <div class="alert alert-danger">
-                 Could not update name.
-            </div>
-     		</div>
+						<div id="could_not_update" style="display:none">
+							<div class="alert alert-danger">
+								 Could not update name.
+							</div>
+						</div>
 
-     		<div id="could_not_remove" style="display:none">
-            <div class="alert alert-danger">
-     				     Could not remove name from list. Please check Database.
-            </div>
-     		</div>
+						<div id="could_not_remove" style="display:none">
+							<div class="alert alert-danger">
+										 Could not remove name from list. Please check Database.
+							</div>
+						</div>
 
-     		<div id="empty_database" style="display:none">
-            <div class="alert alert-warning">
-     				     Database is already empty. It needs to be populated first.
-            </div>
-     		</div>
+						<div id="empty_database" style="display:none">
+							<div class="alert alert-warning">
+										 Database is already empty. It needs to be populated first.
+							</div>
+						</div> 
+						
+						
+						<div id="remove_name_form" style="display:none">
+							<div class="alert alert-warning">
+								 Refresh page for updated list of names!
+							</div>
+							<form class="form-horizontal" action="/remove_name" method="GET" name="outcome" id="outcome">
+							  <fieldset>
+								<legend class="resizables"> Remove Name Information </legend>
+								  <div class="form-group">
+									  <label for="names_to_be_removed" class="col-lg-2 control-label">Choose name to be removed :</label>
+									  <div class="col-lg-10">
+										<select class="form-control" name="names_to_be_removed" id="names_to_be_removed">
 
-            <!-- This is the container for all info in view mode, including rooms, etc -->
-          <div id="show_all_names" style="display:none">
-          </div>
+										</select>
+									  </div>
+								  </div>
 
-          <div id="remove_name_form" style="display:none">
-            <div class="alert alert-warning">
-                 Refresh page for updated list of names!
-            </div>
-            <form class="form-horizontal" action="/remove_name" method="GET" name="outcome" id="outcome">
-              <fieldset>
-                <legend class="resizables"> Remove Name Information </legend>
-                  <div class="form-group">
-                      <label for="names_to_be_removed" class="col-lg-2 control-label">Choose name to be removed :</label>
-                      <div class="col-lg-10">
-                        <select class="form-control" name="names_to_be_removed" id="names_to_be_removed">
-
-                        </select>
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <div class="col-lg-10 col-lg-offset-2">
-                        <button id="remove_name_button" type="submit" class="btn btn-danger">Remove Name</button>
-                      </div>
-                  </div>
-              </fieldset>
-            </form>
-          </div>
+								  <div class="form-group">
+									  <div class="col-lg-10 col-lg-offset-2">
+										<button id="remove_name_button" type="submit" class="btn btn-danger">Remove Name</button>
+									  </div>
+								  </div>
+							  </fieldset>
+							</form>
+						 </div>
 
 
-          <div id="update_name_form" style="display:none">
-            <div class="alert alert-warning">
-                 Refresh page for updated list of names!
-            </div>
-            <form class="form-horizontal" action="/update_name" method="GET" name="outcome" id="outcome">
-              <fieldset>
-                <legend class="resizables"> Update Name Information </legend>
-                  <div class="form-group">
-                      <label for="name_list" class="col-lg-2 control-label">Choose name to be updated :</label>
-                      <div class="col-lg-10">
-                        <select class="form-control" name="name_list" id="name_list">
+						 <div id="update_name_form" style="display:none">
+							<div class="alert alert-warning">
+								 Refresh page for updated list of names!
+							</div>
+							<form class="form-horizontal" action="/update_name" method="GET" name="outcome" id="outcome">
+							  <fieldset>
+								<legend class="resizables"> Update Name Information </legend>
+								  <div class="form-group">
+									  <label for="name_list" class="col-lg-2 control-label">Choose name to be updated :</label>
+									  <div class="col-lg-10">
+										<select class="form-control" name="name_list" id="name_list">
 
-                        </select>
-                      </div>
-                  </div>
+										</select>
+									  </div>
+								  </div>
 
-                  <div class="form-group">
-                      <label for="updated_new_name" class="col-lg-2 control-label">Enter new name:</label>
-                      <div class="col-lg-10">
-                        <input type="text" autocomplete="off" class="form-control" id="updated_new_name" name="updated_new_name" placeholder="Enter Name"/>
-                      </div>
-                  </div>
+								  <div class="form-group">
+									  <label for="updated_new_name" class="col-lg-2 control-label">Enter new name:</label>
+									  <div class="col-lg-10">
+										<input type="text" autocomplete="off" class="form-control" id="updated_new_name" name="updated_new_name" placeholder="Enter Name"/>
+									  </div>
+								  </div>
 
-                  <div class="form-group">
-                      <div class="col-lg-10 col-lg-offset-2">
-                        <button id="update_name_button" type="submit" class="btn btn-danger">Update Name</button>
-                      </div>
-                  </div>
-              </fieldset>
-            </form>
-          </div>
-        </div>
+								  <div class="form-group">
+									  <div class="col-lg-10 col-lg-offset-2">
+										<button id="update_name_button" type="submit" class="btn btn-danger">Update Name</button>
+									  </div>
+								  </div>
+							  </fieldset>
+							</form>
+						 </div>
+					</article>
 
-        <script>
-  			function show_new_name_form()
-  			{
-  				document.getElementById("add_new_name_form").style.display="block";
-  				document.getElementById("remove_name_form").style.display="none";
-  				document.getElementById("update_name_form").style.display="none";
-  				document.getElementById("show_all_names").style.display="none";
-  				document.getElementById("added_name").style.display="none";
-  				document.getElementById("removed_name").style.display="none";
-  				document.getElementById("duplicate_name").style.display="none";
-  				document.getElementById("db_insert_error").style.display="none";
-  				document.getElementById("could_not_remove").style.display="none";
-  				document.getElementById("db_read_error").style.display="none";
-  				document.getElementById("updated_name").style.display="none";
-  				document.getElementById("could_not_update").style.display="none";
-  				document.getElementById("empty_database").style.display="none";
-  			}
-  			
-  			function show_new_room_form()
-  			{
-  				document.getElementById("add_new_name_form").style.display="block";
-  				document.getElementById("remove_name_form").style.display="none";
-  				document.getElementById("update_name_form").style.display="none";
-  				document.getElementById("show_all_names").style.display="none";
-  				document.getElementById("added_name").style.display="none";
-  				document.getElementById("removed_name").style.display="none";
-  				document.getElementById("duplicate_name").style.display="none";
-  				document.getElementById("db_insert_error").style.display="none";
-  				document.getElementById("could_not_remove").style.display="none";
-  				document.getElementById("db_read_error").style.display="none";
-  				document.getElementById("updated_name").style.display="none";
-  				document.getElementById("could_not_update").style.display="none";
-  				document.getElementById("empty_database").style.display="none";
-  			}
+					</div>
+					
+					
+					<section id="sidebar">
+					<!-- Personel list -->
+						<section id="show_all_names">
+							<ul class="posts">
+								<li>
+									<article>
+										<header>
+											<h3><a href="#">Mid Side bar</a></h3>
+											<time class="published" datetime="2015-10-20">October 20, 2015</time>
+										</header>
+										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+									</article>
+								</li>
 
-  			function show_remove_name_form()
-  			{
-  				document.getElementById("add_new_name_form").style.display="none";
-  				document.getElementById("remove_name_form").style.display="block";
-  				document.getElementById("update_name_form").style.display="none";
-  				document.getElementById("show_all_names").style.display="none";
-  				document.getElementById("added_name").style.display="none";
-  				document.getElementById("removed_name").style.display="none";
-  				document.getElementById("duplicate_name").style.display="none";
-  				document.getElementById("db_insert_error").style.display="none";
-  				document.getElementById("could_not_remove").style.display="none";
-  				document.getElementById("db_read_error").style.display="none";
-  				document.getElementById("updated_name").style.display="none";
-  				document.getElementById("could_not_update").style.display="none";
-  				document.getElementById("empty_database").style.display="none";
-  			}
+							</ul>
+						</section>
+					</section>
 
-  			function show_update_name_form()
-  			{
-  				document.getElementById("add_new_name_form").style.display="none";
-  				document.getElementById("remove_name_form").style.display="none";
-  				document.getElementById("update_name_form").style.display="block";
-  				document.getElementById("show_all_names").style.display="none";
-  				document.getElementById("added_name").style.display="none";
-  				document.getElementById("removed_name").style.display="none";
-  				document.getElementById("duplicate_name").style.display="none";
-  				document.getElementById("db_insert_error").style.display="none";
-  				document.getElementById("could_not_remove").style.display="none";
-  				document.getElementById("db_read_error").style.display="none";
-  				document.getElementById("updated_name").style.display="none";
-  				document.getElementById("could_not_update").style.display="none";
-  				document.getElementById("empty_database").style.display="none";
-  			}
-  		</script>
-  </body>
+					<!-- Room list -->
+					<section id="sidebar">
+						<!-- Rooms -->
+							<section>
+								<div class="mini-posts">
+								<!-- Room details -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="#">Vitae sed condimentum</a></h3>
+											<time class="published" datetime="2015-10-20">October 20, 2015</time>
+											<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											<section class="published"> test </section>
+										</header>											
+									</article>
+								</div>
+							</section>
+
+
+						<!-- About -->
+							<section class="blurb">
+								<h2>About</h2>
+								<p>Information about the team here</p>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+									<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+
+					</section>
+				<!-- end of room bar -->
+					
+					
+
+	</div>
+	<!-- End of wrapper -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>
+				function show_new_name_form()
+				{
+					document.getElementById("add_new_name_form").style.display="block";
+					document.getElementById("remove_name_form").style.display="none";
+					document.getElementById("update_name_form").style.display="none";
+					document.getElementById("show_all_names").style.display="none";
+					document.getElementById("added_name").style.display="none";
+					document.getElementById("removed_name").style.display="none";
+					document.getElementById("duplicate_name").style.display="none";
+					document.getElementById("db_insert_error").style.display="none";
+					document.getElementById("could_not_remove").style.display="none";
+					document.getElementById("db_read_error").style.display="none";
+					document.getElementById("updated_name").style.display="none";
+					document.getElementById("could_not_update").style.display="none";
+					document.getElementById("empty_database").style.display="none";
+				}
+
+				function show_new_room_form()
+				{
+					document.getElementById("add_new_name_form").style.display="block";
+					document.getElementById("remove_name_form").style.display="none";
+					document.getElementById("update_name_form").style.display="none";
+					document.getElementById("show_all_names").style.display="none";
+					document.getElementById("added_name").style.display="none";
+					document.getElementById("removed_name").style.display="none";
+					document.getElementById("duplicate_name").style.display="none";
+					document.getElementById("db_insert_error").style.display="none";
+					document.getElementById("could_not_remove").style.display="none";
+					document.getElementById("db_read_error").style.display="none";
+					document.getElementById("updated_name").style.display="none";
+					document.getElementById("could_not_update").style.display="none";
+					document.getElementById("empty_database").style.display="none";
+				}
+
+				function show_remove_name_form()
+				{
+					document.getElementById("add_new_name_form").style.display="none";
+					document.getElementById("remove_name_form").style.display="block";
+					document.getElementById("update_name_form").style.display="none";
+					document.getElementById("show_all_names").style.display="none";
+					document.getElementById("added_name").style.display="none";
+					document.getElementById("removed_name").style.display="none";
+					document.getElementById("duplicate_name").style.display="none";
+					document.getElementById("db_insert_error").style.display="none";
+					document.getElementById("could_not_remove").style.display="none";
+					document.getElementById("db_read_error").style.display="none";
+					document.getElementById("updated_name").style.display="none";
+					document.getElementById("could_not_update").style.display="none";
+					document.getElementById("empty_database").style.display="none";
+				}
+
+				function show_update_name_form()
+				{
+					document.getElementById("add_new_name_form").style.display="none";
+					document.getElementById("remove_name_form").style.display="none";
+					document.getElementById("update_name_form").style.display="block";
+					document.getElementById("show_all_names").style.display="none";
+					document.getElementById("added_name").style.display="none";
+					document.getElementById("removed_name").style.display="none";
+					document.getElementById("duplicate_name").style.display="none";
+					document.getElementById("db_insert_error").style.display="none";
+					document.getElementById("could_not_remove").style.display="none";
+					document.getElementById("db_read_error").style.display="none";
+					document.getElementById("updated_name").style.display="none";
+					document.getElementById("could_not_update").style.display="none";
+					document.getElementById("empty_database").style.display="none";
+				}
+			</script>
+		
+
+	</body>
 </html>
