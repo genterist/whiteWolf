@@ -72,22 +72,19 @@ $(document).ready(function(){
           			//Bootstrap for table-stripped
 
 
-          			var names_table = "<table class=\"table table-striped table-hover\">";
-          			names_table += "<thead><th> Names in Database </th><th>";
-          			names_table += "<form class=\"form-horizontal\" action=\"/download_csv\" method=\"GET\" id=\"download_data\"> <fieldset><input type=\"hidden\" class=\"form-control\" id=\"csvdata\" value=\"csvdata\"/><button id=\"download_csv\" class=\"btn btn-danger crud\" type=\"submit\" style=\"float:right; text-align: center; padding: 0px\"> Download CSV </button></fieldset></form>";
-          			names_table += "</th></thead>";
-          			names_table += "<tbody>";
-          			for(var i = 0; i < data.length; i++)
-            			names_table += "<tr class=\"info\"><td colspan=\"2\">" + data[i].name + "</td></tr>";
-          			names_table += "</tbody></table>";
+          			var names_table = "";
+          			for(var i = 0; i < data.length; i++){
+            			names_table += "<li><article><header>";
+						names_table += '<h3>'+data[i].name+'</h3>';
+						names_table += '<div class=\"published\" >';
+						names_table += 	'Role: '+data[i].role+'<br/>';
+						names_table += 	'Room: '+data[i].room + '</div></header>';
+						names_table += 	'<a href=\"\" class=\"image\"><img src=\"images/pic08.jpg\" /></a>';
+						names_table += '</article></li>';
+                    }
+          			
           			document.getElementById("show_all_names").innerHTML = names_table;
 
-/*
-					var names_table = "<font size=\"4\" > Names </font> <br><br> <table border=\"1\">";
-					for(var i = 0; i < data.length; i++)
-						names_table += "<tr><td>" + data[i].name + "</td></tr>";
-					names_table += "</table>";
-*/
 				}
 				else
 					document.getElementById("db_read_error").style.display="block";
@@ -122,8 +119,7 @@ $("#view_room").click(function(e){
 					console.log("Received info from back end");
 					document.getElementById("add_new_name_form").style.display="none";
 					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("show_all_rooms").style.display="block";
+					document.getElementById("show_all_names").style.display="block";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
 					document.getElementById("duplicate_name").style.display="none";
@@ -138,42 +134,30 @@ $("#view_room").click(function(e){
           			//Bootstrap for table-stripped
 
 
-          			var names_table = "<table class=\"table table-striped table-hover\">";
-          			names_table += "<thead><th> Rooms in Database </th></thead>";
-          			names_table += "<tbody>";
-             		names_table += "<tr class=\"info\">";         			
+          			var names_table = "";
+   			
           			for(var i = 0; i < data.length; i++) {
-          			        names_table += '<td ><form id=\"room'+i+'\">';
-                          	names_table += "<b>Room " + data[i].roomId +" : " + data[i].roomName + " </b>";
-                          	names_table += '<img src=\"' + data[i].roomImage + '\" alt=\"\" width=\"35px\"/><br/>';
+          			    
+              			    names_table +='<article class=\"mini-post\">';
+        					names_table += "	<header>";
+        					names_table += '		<h3> Room '+ data[i].roomId + " : " + data[i].roomName + '</h3>';
+        					names_table += '		<div class=\"author\" onclick=\" document.getElementById(\''+ data[i].roomId + data[i].roomName +'\').style.display=\'block\'\" ><img src=\"'+ data[i].roomImage + '\" /></div>';
+        					names_table += '        <div id=\"'+ data[i].roomId + data[i].roomName +'\" class=\"published\" style=\"display:none\"> ';
+                            names_table += '            <div id=\"'+i+'_deviceWarning\">Device warning:'+data[i].deviceWarning+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_humanWarning\">Human warning:'+data[i].humanWarning+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_timeWarning\">Time warning:'+data[i].timeWarning+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_breachWarning\">Breach warning:'+data[i].breachWarning+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_currentPeople\">Current ocupancy:'+data[i].currentPeople+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_totalTasks\">Total task:'+data[i].totalTasks+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_executingTasks\">Executing tasks:'+data[i].executingTasks+'</div><br/>';
+                            names_table += '            <div id=\"'+i+'_missedTasks\">Missed tasks:'+data[i].missedTasks+'</div><br/>';
+                            names_table += '            <div onclick=\" document.getElementById(\''+ data[i].roomId + data[i].roomName +'\').style.display=\'none\'\" ><b>CLOSE</b></div>';
+                            names_table += '		</div>';
+                            names_table += "	</header>";
+                            names_table +='</article>';
                             
-                            names_table += '<label for=\"deviceWarning\">Device warning:</label>';
-                            names_table += '<input type=\"number\" name=\"deviceWarning\" id=\"deviceWarning\" value=\"'+data[i].deviceWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
                             
-                            names_table += '<label for=\"humanWarning\">Human warning:</label>';
-                            names_table += '<input type=\"number\" name=\"humanWarning\" id=\"humanWarning\" value=\"'+data[i].humanWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"timeWarning\">Time warning:</label>';
-                            names_table += '<input type=\"number\" name=\"timeWarning\" id=\"timeWarning\" value=\"'+data[i].timeWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"breachWarning\">Breach warning:</label>';
-                            names_table += '<input type=\"number\" name=\"breachWarning\" id=\"breachWarning\" value=\"'+data[i].breachWarning+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"currentPeople\">Current ocupancy:</label>';
-                            names_table += '<input type=\"number\" name=\"currentPeople\" id=\"currentPeople\" value=\"'+data[i].currentPeople+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"totalTasks\">Total task:</label>';
-                            names_table += '<input type=\"number\" name=\"totalTasks\" id=\"totalTasks\" value=\"'+data[i].totalTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"executingTasks\">Executing tasks:</label>';
-                            names_table += '<input type=\"number\" name=\"executingTasks\" id=\"executingTasks\" value=\"'+data[i].executingTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            
-                            names_table += '<label for=\"missedTasks\">Missed tasks:</label>';
-                            names_table += '<input type=\"number\" name=\"missedTasks\" id=\"missedTasks\" value=\"'+data[i].missedTasks+'\" disabled size=\"5\" maxlength=\"5\"><br/>';
-                            names_table += '</form></td>';
         			}
-            		names_table += "</tr>";
-          			names_table += "</tbody></table>";
           			document.getElementById("show_all_rooms").innerHTML = names_table;
 				}
 				else
