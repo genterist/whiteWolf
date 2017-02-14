@@ -1,0 +1,15 @@
+Auto Refresh Code
+
+viewDidLoad function:
+
+//After loadData
+
+[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(reloadTable) userInfo:nil repeats:YES]; //5 sec timer 
+
+//New function
+-(void) reloadTable
+{
+   [self loadData];
+   [self.tableView reloadData];
+
+}
