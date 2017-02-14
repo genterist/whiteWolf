@@ -127,6 +127,7 @@ app.get('/download_csv', function(req, res){
 	var fileName = __dirname + '\/' + "database_names.csv";
 	res.download(fileName);
 });
+
 //To update the 'Read Names' list
 app.get('/view_names',function(req, res){
 	var json_string_for_csv_conversion = new Array();
@@ -140,38 +141,28 @@ app.get('/view_names',function(req, res){
 			var user_data = body.rows;  //body.rows contains an array of IDs, Revision numbers and Names from the view
 			var list_of_names = '[';
 			var name_array = [];
+			var role_array  = [];
+			var inRoom_array = [];
+			var intask_array  = [];
+			var name_id_array  = [];
 
 			for(var i=0; i< user_data.length; i++)
 			{
-				name_array.push(user_data[i].value[1]);
-				var csv_data = new Array();
-				csv_data["|__Names_in_Database__|"]=user_data[i].value[1];
-				json_string_for_csv_conversion.push(csv_data);
+				name_id_array.push(user_data[i].value[1]);
+				name_array.push(user_data[i].value[2]);
+				role_array.push(user_data[i].value[3]);
+				inRoom_array.push(user_data[i].value[4]);
+				intask_array.push(user_data[i].value[5]);
 			}
-			var download_filename = "database_names.csv";
-			var fields =['|__Names_in_Database__|'];
-			json2csv({data: json_string_for_csv_conversion, fields: fields }, function(err, csv) {
-				if (err) console.log(err);
-				fs.writeFile(download_filename, csv, function(err) {
-					if (err) throw err;
-					console.log('file saved');
-					console.log(csv);
 
-					fs.readdir(__dirname, function (err, files) {
-						if (err)
-							throw err;
-						for (var index in files) {
-							if(files[index] === download_filename)
-								console.log(download_filename + " is present");
-						}
-					});
-				});
-			});
-
-			name_array.sort();
 			for(var i=0; i<name_array.length; i++)
 			{
-				var name_JSON = '{\"name\":\"' + name_array[i] + '\"}'; //create an array of names only
+				var name_JSON = '{\"id\":\"' + name_id_array[i] + '\" ,';
+				name_JSON += '\"name\":\"' + name_array[i] + '\" ,';
+				name_JSON += '\"role\":\"' + role_array[i] + '\" ,';
+				name_JSON += '\"room\":\"' + inRoom_array[i] + '\" ,';
+				name_JSON += '\"task_id\":\"' + intask_array[i] + '\"';
+				name_JSON += '}';
 				if(i !== 0)
 					list_of_names = list_of_names.concat(",");
 				list_of_names = list_of_names.concat(name_JSON);
@@ -203,20 +194,51 @@ app.get('/view_rooms',function(req, res){
 		{
 			var user_data = body.rows;  //body.rows contains an array of IDs, Revision numbers and Names from the view
 			var list_of_names = '[';
-			var name_array = [];
+			var roomId_array  = [];
+			var roomName_array = [];
+			var roomImage_array  = [];
 			var deviceWarning_array = [];
+			var humanWarning_array  = [];
+			var timeWarning_array  = [];
+			var breachWarning_array  = [];
+			var currentPeople_array  = [];
+			var totalTasks_array  = [];
+			var executingTasks_array  = [];
+			var missedTasks_array  = [];
 
 			for(var i=0; i< user_data.length; i++)
 			{
-				name_array.push(user_data[i].value[1]);
-				deviceWarning_array.push(user_data[i].value[2]);
+				roomId_array.push(user_data[i].value[1]);
+			    roomName_array.push(user_data[i].value[2]);
+			    roomImage_array.push(user_data[i].value[3]);
+			    deviceWarning_array.push(user_data[i].value[4]);
+			    humanWarning_array.push(user_data[i].value[5]);
+			    timeWarning_array.push(user_data[i].value[6]);
+			    breachWarning_array.push(user_data[i].value[7]);
+			    currentPeople_array.push(user_data[i].value[8]);
+			    totalTasks_array.push(user_data[i].value[9]);
+			    executingTasks_array.push(user_data[i].value[10]);
+			    missedTasks_array.push(user_data[i].value[11]);
 			}
 			var fields =['|__Rooms_in_Database__|'];
 
-			name_array.sort();
-			for(var i=0; i<name_array.length; i++)
+			//name_array.sort();
+			
+			//generate JSON object to send to front end here
+			for(var i=0; i<roomId_array.length; i++)
 			{
-				var name_JSON = '{\"name\":\"' + name_array[i] + '\" , \"deviceWarning\":\"' + deviceWarning_array[i] +'\"}'; //create an array of names only
+				var name_JSON = '{\"roomId\":\"' + roomId_array[i] + '\" ,';
+				name_JSON += '\"roomName\":\"' + roomName_array[i] + '\" ,';
+				name_JSON += '\"roomImage\":\"' + roomImage_array[i] + '\" ,';
+				name_JSON += '\"deviceWarning\":\"' + deviceWarning_array[i] + '\" ,';
+				name_JSON += '\"humanWarning\":\"' + deviceWarning_array[i] + '\" ,';
+				name_JSON += '\"timeWarning\":\"' + timeWarning_array[i] + '\" ,';
+				name_JSON += '\"breachWarning\":\"' + breachWarning_array[i] + '\" ,';
+				name_JSON += '\"currentPeople\":\"' + currentPeople_array[i] + '\" ,';
+				name_JSON += '\"totalTasks\":\"' + totalTasks_array[i] + '\" ,';
+				name_JSON += '\"executingTasks\":\"' + executingTasks_array[i] + '\" ,';
+				name_JSON += '\"missedTasks\":\"' + missedTasks_array[i] + '\"';
+				name_JSON += '}';
 				if(i !== 0)
 					list_of_names = list_of_names.concat(",");
 				list_of_names = list_of_names.concat(name_JSON);

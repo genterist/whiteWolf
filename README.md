@@ -1,6 +1,12 @@
 # Project White Wolf
 
-One Paragraph of project description
+Our project aims to find reasonable software solutions that prevent or reduce Healthcare Associated Infections (HAI).
+In today’s society it’s hard to find common aspects of life that affect everyone. However, that is not the case when speaking to healthcare. Unfortunately, the high monetary cost of healthcare and an individual’s socio-economic standing usually correlate to the quality of healthcare people receive. As medical advances increase the lifespan of the aging population we can assume that the cost of healthcare will continue to rise causing tax payers to pay the brunt of those increased cost.
+In an effort to decrease the cost of healthcare, we analyzed the affect Healthcare Associated Infections (HAI) and how potential software applications can be utilized to reduce instances of HAI’s in healthcare facilities. 
+
+Software Solutions:
+Application - Threat Map
+
 
 ## Getting Started
 

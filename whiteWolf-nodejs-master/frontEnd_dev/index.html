@@ -33,20 +33,20 @@ ORIGINAL NODE.JS HOOKS
 							<ul>
 								<li><button type="button" onclick="show_new_name_form()"> Create Name </button></li>
 								<li>
-									<form action="/view_names" method="GET" name="name_outcome" id="name_outcome" style="border: hidden white">
+									<form action="/view_names" method="GET" name="outcome" id="outcome" style="border: hidden white">
 									  <fieldset>
 										  <input type="hidden" class="form-control" id="allnames" value="allnames" name="allnames"/>
-										  <button id="view_name" data-modal="view_name" type="submit" > Load Names </button>
+										  <button id="view_name" type="submit" style="border-style: hidden; border-color: white;"> Read Names </button>
 									  </fieldset>
 									</form>
 								</li>
 								<li><button type="button" onclick="show_update_name_form()"> Update Name </button></li>
 								<li><button type="button" onclick="show_remove_name_form()"> Delete Name </button></li>
 								<li>
-									<form class="form-horizontal" action="/view_rooms" target="_myFrame" method="GET" name="room_outcome" id="room_outcome">
+									<form class="form-horizontal" action="/view_rooms" method="GET" name="outcome" id="outcome">
 									  <fieldset>
 										  <input type="hidden" class="form-control" id="allroom" value="allroom" name="allroom"/>
-										  <button id="view_room" type="submit" data-modal="view_room"> Read Rooms </button>
+										  <button id="view_room" type="submit"> Read Rooms </button>
 									  </fieldset>
 									</form>
                 				</li>
@@ -69,7 +69,6 @@ ORIGINAL NODE.JS HOOKS
 			  <div id="main">
 
 					<!-- Forms and controls and stats will be displayed here -->
-					
 					<article class="post">
 						 <!-- Creating a new person -->
 						  <div id="add_new_name_form" style="display:none">
@@ -212,8 +211,17 @@ ORIGINAL NODE.JS HOOKS
 					
 					<section id="sidebar">
 					<!-- Personel list -->
-						<section >
-							<ul class="posts" id="show_all_names">
+						<section id="show_all_names">
+							<ul class="posts">
+								<li>
+									<article>
+										<header>
+											<h3><a href="#">Mid Side bar</a></h3>
+											<time class="published" datetime="2015-10-20">October 20, 2015</time>
+										</header>
+										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+									</article>
+								</li>
 
 							</ul>
 						</section>
@@ -223,9 +231,16 @@ ORIGINAL NODE.JS HOOKS
 					<section id="sidebar">
 						<!-- Rooms -->
 							<section>
-								<div class="mini-posts" id="show_all_rooms">
+								<div class="mini-posts">
 								<!-- Room details -->
-								room details
+									<article class="mini-post">
+										<header>
+											<h3><a href="#">Vitae sed condimentum</a></h3>
+											<time class="published" datetime="2015-10-20">October 20, 2015</time>
+											<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											<section class="published"> test </section>
+										</header>											
+									</article>
 								</div>
 							</section>
 
@@ -330,24 +345,7 @@ ORIGINAL NODE.JS HOOKS
 					document.getElementById("empty_database").style.display="none";
 				}
 			</script>
-		      
-		      <!--Refresh code for data fields-->
-            <script type="text/javascript">
-                
-                window.onload=function(){
-                    var auto = setTimeout(function(){ autoRefresh(); }, 100);
-            
-                    function refresh_room(){
-                      //document.forms["room_outcome"].submit();
-                      jQuery('#view_room').click();
-                    }
-            
-                    function autoRefresh(){
-                       clearTimeout(auto);
-                       auto = setTimeout(function(){ refresh_room(); autoRefresh(); }, 10000);
-                    }
-                }
-            </script>
+		
 
 	</body>
 </html>
