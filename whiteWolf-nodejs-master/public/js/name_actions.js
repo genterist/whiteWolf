@@ -18,7 +18,7 @@ $(document).ready(function(){
 				var name_drop_down;
 				for(var i = 0; i<data.length; i++)
 				{
-					//var name_option = '<option style=\"font-family: montserrat, arial, verdana\">' + data[i].name + '</option>'; //Need to check style
+					
           			var name_option = '<option>' + data[i].name + '</option>';
 					name_drop_down += name_option;
 				}
@@ -55,9 +55,6 @@ $(document).ready(function(){
 				if(!data.hasOwnProperty("added"))
 				{
 					console.log("Received info from back end");
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="block";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
 					document.getElementById("duplicate_name").style.display="none";
@@ -66,7 +63,6 @@ $(document).ready(function(){
 					document.getElementById("db_read_error").style.display="none";
 					document.getElementById("updated_name").style.display="none";
 					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
 					document.getElementById("empty_database").style.display="none";
 
           			//Bootstrap for table-stripped
@@ -79,8 +75,9 @@ $(document).ready(function(){
 						names_table += '<div class=\"published\" >';
 						names_table += 	'Role: '+data[i].role+'<br/>';
 						names_table += 	'Room: '+data[i].room + '</div></header>';
-						names_table += 	'<a href=\"\" class=\"image\"><img src=\"images/pic08.jpg\" /></a>';
+						names_table += 	'<a  class=\"image\"><img src=\"images/pic08.jpg\" /></a>';
 						names_table += '</article></li>';
+						
                     }
           			
           			document.getElementById("show_all_names").innerHTML = names_table;
@@ -117,8 +114,6 @@ $("#view_room").click(function(e){
 				if(!data.hasOwnProperty("added"))
 				{
 					console.log("Received info from back end");
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
 					document.getElementById("show_all_names").style.display="block";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
@@ -128,7 +123,6 @@ $("#view_room").click(function(e){
 					document.getElementById("db_read_error").style.display="none";
 					document.getElementById("updated_name").style.display="none";
 					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
 					document.getElementById("empty_database").style.display="none";
 
           			//Bootstrap for table-stripped
@@ -171,71 +165,6 @@ $("#view_room").click(function(e){
 	});
 
 
-	$("#add_name_button").click(function(e){
-			e.preventDefault();
-			//In 'data' parameter, send new name to be added to 'url', to be received by back end for further processing
-
-			$.ajax({
-				url: "/add_name",
-				type: "GET",
-				dataType: "json",
-				data:{new_name: $("#newname").val()},
-				contentType: "application/json",
-				cache: true,
-				timeout: 5000,
-				complete: function() {
-				  //called when complete
-				  console.log('process complete');
-				},
-				success: function(data) {
-					//console.log("Received : " + data + "value = " + JSON.stringify(data));
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
-					document.getElementById("updated_name").style.display="none";
-					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
-					document.getElementById("empty_database").style.display="none";
-
-					//Based on what's received from back end(app.js), show appropriate message.
-					if(data.added === "Yes")
-					{
-						document.getElementById("added_name").style.display="block";
-						document.getElementById("duplicate_name").style.display="none";
-						document.getElementById("db_insert_error").style.display="none";
-						document.getElementById("db_read_error").style.display="none";
-					}
-					else if(data.added === "No")
-					{
-						document.getElementById("added_name").style.display="none";
-						document.getElementById("duplicate_name").style.display="block";
-						document.getElementById("db_insert_error").style.display="none";
-						document.getElementById("db_read_error").style.display="none";
-					}
-					else if(data.added === "DB insert error")
-					{
-						document.getElementById("added_name").style.display="none";
-						document.getElementById("duplicate_name").style.display="none";
-						document.getElementById("db_insert_error").style.display="block";
-						document.getElementById("db_read_error").style.display="none";
-					}
-					else if(data.added === "DB read error")
-					{
-						document.getElementById("added_name").style.display="none";
-						document.getElementById("duplicate_name").style.display="none";
-						document.getElementById("db_insert_error").style.display="none";
-						document.getElementById("db_read_error").style.display="block";
-					}
-		   			$("#newname").val("");
-		    		$("#newname").attr("placeholder", "Enter Name");
-				},
-				error: function() {
-				  console.log('process error');
-				},
-			});
-	});
 
 	$("#update_name_button").click(function(e){
 		e.preventDefault();
@@ -256,10 +185,6 @@ $("#view_room").click(function(e){
 				},
 				success: function(data) {
 					console.log("Returned from Update.....");
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("duplicate_name").style.display="none";
 					document.getElementById("db_insert_error").style.display="none";

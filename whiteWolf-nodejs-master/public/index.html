@@ -31,7 +31,6 @@ ORIGINAL NODE.JS HOOKS
 						<h1><a href="#">White Wolf admin console</a></h1>
 						<nav class="links">
 							<ul>
-								<li><button type="button" onclick="show_new_name_form()"> Create Name </button></li>
 								<li>
 									<form action="/view_names" method="GET" name="name_outcome" id="name_outcome" style="border: hidden white">
 									  <fieldset>
@@ -41,7 +40,6 @@ ORIGINAL NODE.JS HOOKS
 									</form>
 								</li>
 								<li><button type="button" onclick="show_update_name_form()"> Update Name </button></li>
-								<li><button type="button" onclick="show_remove_name_form()"> Delete Name </button></li>
 								<li>
 									<form class="form-horizontal" action="/view_rooms" target="_myFrame" method="GET" name="room_outcome" id="room_outcome">
 									  <fieldset>
@@ -147,31 +145,6 @@ ORIGINAL NODE.JS HOOKS
 							</div>
 						</div> 
 						
-						
-						<div id="remove_name_form" style="display:none">
-							<div class="alert alert-warning">
-								 Refresh page for updated list of names!
-							</div>
-							<form class="form-horizontal" action="/remove_name" method="GET" name="outcome" id="outcome">
-							  <fieldset>
-								<legend class="resizables"> Remove Name Information </legend>
-								  <div class="form-group">
-									  <label for="names_to_be_removed" class="col-lg-2 control-label">Choose name to be removed :</label>
-									  <div class="col-lg-10">
-										<select class="form-control" name="names_to_be_removed" id="names_to_be_removed">
-
-										</select>
-									  </div>
-								  </div>
-
-								  <div class="form-group">
-									  <div class="col-lg-10 col-lg-offset-2">
-										<button id="remove_name_button" type="submit" class="btn btn-danger">Remove Name</button>
-									  </div>
-								  </div>
-							  </fieldset>
-							</form>
-						 </div>
 
 
 						 <div id="update_name_form" style="display:none">
@@ -237,7 +210,7 @@ ORIGINAL NODE.JS HOOKS
 							</section>
 
 						<!-- Footer -->
-							<section id="footer">
+							<section id="footer" onload="jQuery('#view_room').click()">
 								<ul class="icons">
 									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
@@ -281,9 +254,6 @@ ORIGINAL NODE.JS HOOKS
 
 				function show_new_room_form()
 				{
-					document.getElementById("add_new_name_form").style.display="block";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
 					document.getElementById("show_all_names").style.display="none";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
@@ -296,29 +266,10 @@ ORIGINAL NODE.JS HOOKS
 					document.getElementById("empty_database").style.display="none";
 				}
 
-				function show_remove_name_form()
-				{
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="block";
-					document.getElementById("update_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
-					document.getElementById("db_read_error").style.display="none";
-					document.getElementById("updated_name").style.display="none";
-					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("empty_database").style.display="none";
-				}
 
 				function show_update_name_form()
 				{
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
 					document.getElementById("update_name_form").style.display="block";
-					document.getElementById("show_all_names").style.display="none";
 					document.getElementById("added_name").style.display="none";
 					document.getElementById("removed_name").style.display="none";
 					document.getElementById("duplicate_name").style.display="none";
@@ -338,7 +289,6 @@ ORIGINAL NODE.JS HOOKS
                     var auto = setTimeout(function(){ autoRefresh(); }, 100);
             
                     function refresh_room(){
-                      //document.forms["room_outcome"].submit();
                       jQuery('#view_room').click();
                     }
             

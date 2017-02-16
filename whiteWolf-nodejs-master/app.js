@@ -5,7 +5,6 @@ var request = require('request');
 var Cloudant = require('cloudant');
 var path = require('path');
 var bodyParser = require('body-parser');
-var json2csv = require('json2csv');
 var fs = require('fs');
 app.use(express.static(__dirname + '/public'));
 
@@ -100,7 +99,8 @@ app.get('/fill_remove_update_names_dropdown', function(req, res){
 
 			//'user_data' is an array with all names
 			for(var i=0; i< user_data.length; i++)
-				name_array.push(user_data[i].value[1]);
+			     //put the correct index of name column here
+				name_array.push(user_data[i].value[2]);
 			name_array.sort();
 			for(var i=0; i<name_array.length; i++)
 			{
@@ -123,10 +123,7 @@ app.get('/fill_remove_update_names_dropdown', function(req, res){
 		}
 	});
 });
-app.get('/download_csv', function(req, res){
-	var fileName = __dirname + '\/' + "database_names.csv";
-	res.download(fileName);
-});
+
 
 //To update the 'Read Names' list
 app.get('/view_names',function(req, res){
@@ -260,77 +257,10 @@ app.get('/view_rooms',function(req, res){
 	});
 });
 
-app.get('/add_name',function(req, res){ //to add a city into the database
-	console.log("Name to be added : = " + req.query.new_name);
-	req.query.new_name = req.query.new_name.toUpperCase(); //convert to uppercase and trim white space before inserting
-	req.query.new_name = req.query.new_name.trim();
-
-	//Search through the DB completely to check for duplicate name, before adding a new name
-	var url = cloudant_url + "/names_database/_design/names_database/_view/names_database";
-	var name_present = 0; //flag variable for checking if name is already present before inserting
-	var name_string; //variable to store update for front end.
-
-	//In this case, check if the ID is already present, else, insert a new document
-	request({
-			 url: url,
-			 json: true
-			}, function (error, response, body) {
-		if (!error && response.statusCode === 200)
-		{
-			//Check if current input is present in the table, else add. If present then return with error message
-			var user_data = body.rows;
-			console.log("length of table: " + user_data.length);
-			var loop_len = user_data.length;
-			for(var i=0; i< loop_len; i++)
-			{
-				var doc = user_data[i];
-				console.log("in Db : " + doc.value[1]);
-				if(req.query.new_name === doc.value[1])
-				{
-					name_present = 1;
-					break;
-				}
-			}
-			if(name_present === 0) //if city is not already in the list
-			{
-				db.insert(req.query, function(err, data){
-					if (!err)
-					{
-						console.log("Added new name");
-						name_string="{\"added\":\"Yes\"}";
-						res.contentType('application/json'); //res.contentType and res.send is added inside every block as code returns immediately
-						res.send(JSON.parse(name_string));
-					}
-					else
-					{
-						console.log("Error inserting into DB " + err);
-						name_string="{\"added\":\"DB insert error\"}";
-						res.contentType('application/json');
-						res.send(JSON.parse(name_string));
-
-					}
-				});
-		    }
-			else
-			{
-				console.log("Name is already present");
-				name_string="{\"added\":\"No\"}";
-				res.contentType('application/json');
-				res.send(JSON.parse(name_string));
-			}
-		}
-		else
-		{
-			console.log("No data from URL. Response : " + response.statusCode);
-			name_string="{\"added\":\"DB read error\"}";
-			res.contentType('application/json');
-			res.send(JSON.parse(name_string));
-		}
-	});
-});
 
 
-app.get('/update_name',function(req, res){ //to update a city into the database
+
+app.get('/update_name',function(req, res){ //to update a name into the database
 	console.log("Received : " + JSON.stringify(req.query));
 	req.query.updated_new_name = req.query.updated_new_name.toUpperCase();
 	req.query.updated_new_name = req.query.updated_new_name.trim();
@@ -417,72 +347,6 @@ app.get('/update_name',function(req, res){ //to update a city into the database
 	});
 });
 
-app.get('/remove_name',function(req, res){ //to update a city into the database
-	console.log("Name to be removed : = " + req.query.name_to_remove);
-	//Search through the DB completely to retrieve document ID and revision number
-	var url = cloudant_url + "/names_database/_design/names_database/_view/names_database";
-	request({
-			 url: url, //url returns doc id, revision number and name for each document
-			 json: true
-			}, function (error, response, body) {
-			if (!error && response.statusCode === 200)
-			{
-				var name_string;
-				var user_data = body.rows;
-				var id_to_remove;
-				var rev_to_remove; //for removing, ID and revision number are essential.
-				var total_rows = user_data.length;
-				for(var i=0; i< user_data.length; i++)
-				{
-					var doc = user_data[i];
-					if(doc.value[1] === req.query.name_to_remove)
-					{
-						id_to_remove = doc.key;
-						rev_to_remove = doc.value[0];
-						break;
-					}
-				}
-				if(total_rows !== 0)
-				{
-				    db.destroy(id_to_remove, rev_to_remove, function(err)
-				    {
-						if(!err)
-						{
-							console.log("Removed name");
-							name_string="{\"removed\":\"removed\"}";
-							res.contentType('application/json');
-							res.send(JSON.parse(name_string));
-						}
-						else
-						{
-							console.log("Couldn't remove name");
-							console.log(err);
-							name_string="{\"removed\":\"could not remove\"}";
-							res.contentType('application/json');
-							res.send(JSON.parse(name_string));
-						}
-					});
-
-				}
-				else
-				{
-					console.log("DB is empty");
-					name_string="{\"removed\":\"empty database\"}";
-					res.contentType('application/json');
-					res.send(JSON.parse(name_string));
-				}
-			}
-			else
-			{
-				console.log("No data from URL");
-				console.log("Response is : " + response.statusCode);
-				name_string="{\"removed\":\"DB read error\"}";
-				res.contentType('application/json');
-				res.send(JSON.parse(name_string));
-			}
-	});
-
-});
 
 var appEnv = cfenv.getAppEnv();
 app.listen(appEnv.port, '0.0.0.0', function() {
