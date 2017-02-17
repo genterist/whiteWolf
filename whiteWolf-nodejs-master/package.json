@@ -12,10 +12,7 @@
 		"cloudant": "*",
 		"body-parser": "1.13.3",
 		"request": "*",
-		"nano":"*",
-		"path": "*",
-		"json2csv": "*",
-		"fs": "*"
+		"nano":"*"
 	},
 	"repository": {},
 	"engines": {

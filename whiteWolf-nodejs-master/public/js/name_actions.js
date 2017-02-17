@@ -10,7 +10,7 @@ $(document).ready(function(){
 		timeout: 5000,
 		complete: function() {
 		  //called when complete
-		  console.log('process complete');
+		  console.log("process complete");
 		},
 		success: function(data) {
 			if(!data.hasOwnProperty("added")) //added key contains "DB read error" as returned from app.js
@@ -19,7 +19,7 @@ $(document).ready(function(){
 				for(var i = 0; i<data.length; i++)
 				{
 					
-          			var name_option = '<option>' + data[i].name + '</option>';
+          			var name_option = "<option>" + data[i].name + "</option>";
 					name_drop_down += name_option;
 				}
 				//Populate update
@@ -31,7 +31,7 @@ $(document).ready(function(){
 				document.getElementById("db_read_error").style.display="block";
 		},
 		error: function() {
-		    console.log('process error');
+		    console.log("process error");
 		},
 	});
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
 			timeout: 5000,
 			complete: function() {
 			  //called when complete
-			  console.log('process complete');
+			  console.log("process complete");
 			},
 			success: function(data) {
 				//back end(app.js) sends back either added: DB read error or a list of names. Check for that before taking necessary action
@@ -66,12 +66,27 @@ $(document).ready(function(){
           			var names_table = "";
           			for(var i = 0; i < data.length; i++){
             			names_table += "<li><article><header>";
-						names_table += '<h3>'+data[i].name+'</h3>';
-						names_table += '<div class=\"published\" >';
-						names_table += 	'Role: '+data[i].role+'<br/>';
-						names_table += 	'Room: '+data[i].room + '</div></header>';
-						names_table += 	'<a  class=\"image\"><img src=\"images/pic08.jpg\" /></a>';
-						names_table += '</article></li>';
+						names_table += "<h3>"+data[i].name+"</h3>";
+						names_table += "<div class=\"published\" >";
+						names_table += 	"Role: "+data[i].role+"<br/>";
+						names_table += 	"Room: "+data[i].room;
+						names_table += 	"</div></header>";
+					    names_table += "		<div class=\"image\" onclick=\" document.getElementById('"+ data[i].name +"').style.display='block'\" ><img src=\""+ data[i].image+"\" /></div>";
+    					names_table += "</article>";
+    					names_table += "";
+    					names_table += "        <section id=\""+ data[i].name +"\" class=\"published\" style=\"display:none\"> ";
+                        names_table += "            <div id=\""+i+"_task1\">Task 1:"+data[i].task1+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task2\">Human warning:"+data[i].task2+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task3\">Time warning:"+data[i].task3+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task4\">Breach warning:"+data[i].task4+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task5\">Current ocupancy:"+data[i].task5+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task6\">Total task:"+data[i].task6+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task7\">Executing tasks:"+data[i].task7+"</div><br/>";
+                        names_table += "            <div id=\""+i+"_task8\">Missed tasks:"+data[i].task8+"</div><br/>";
+                        names_table += "            <div onclick=\" document.getElementById('"+ data[i].name +"').style.display='none'\" ><b>CLOSE</b></div>";
+                        names_table += "		</section>";
+						names_table += "</li>";
+						
 						
                     }
           			
@@ -83,7 +98,7 @@ $(document).ready(function(){
 			},
 
 			error: function() {
-			  console.log('process error');
+			  console.log("process error");
 			},
 		});
 	});
@@ -102,7 +117,7 @@ $("#view_room").click(function(e){
 			timeout: 5000,
 			complete: function() {
 			  //called when complete
-			  console.log('process complete');
+			  console.log("process complete");
 			},
 			success: function(data) {
 				//back end(app.js) sends back either added: DB read error or a list of names. Check for that before taking necessary action
@@ -121,23 +136,25 @@ $("#view_room").click(function(e){
    			
           			for(var i = 0; i < data.length; i++) {
           			    
-              			    names_table +='<article class=\"mini-post\">';
+              			    names_table +="<article class=\"mini-post\">";
         					names_table += "	<header>";
-        					names_table += '		<h3> Room '+ data[i].roomId + " : " + data[i].roomName + '</h3>';
-        					names_table += '		<div class=\"author\" onclick=\" document.getElementById(\''+ data[i].roomId + data[i].roomName +'\').style.display=\'block\'\" ><img src=\"'+ data[i].roomImage + '\" /></div>';
-        					names_table += '        <div id=\"'+ data[i].roomId + data[i].roomName +'\" class=\"published\" style=\"display:none\"> ';
-                            names_table += '            <div id=\"'+i+'_deviceWarning\">Device warning:'+data[i].deviceWarning+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_humanWarning\">Human warning:'+data[i].humanWarning+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_timeWarning\">Time warning:'+data[i].timeWarning+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_breachWarning\">Breach warning:'+data[i].breachWarning+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_currentPeople\">Current ocupancy:'+data[i].currentPeople+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_totalTasks\">Total task:'+data[i].totalTasks+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_executingTasks\">Executing tasks:'+data[i].executingTasks+'</div><br/>';
-                            names_table += '            <div id=\"'+i+'_missedTasks\">Missed tasks:'+data[i].missedTasks+'</div><br/>';
-                            names_table += '            <div onclick=\" document.getElementById(\''+ data[i].roomId + data[i].roomName +'\').style.display=\'none\'\" ><b>CLOSE</b></div>';
-                            names_table += '		</div>';
+        					names_table += "		<h3> "+ data[i].roomName + "</h3>";
+        					names_table += "		<div class=\"author\" onclick=\" document.getElementById('"+ data[i].roomId + data[i].roomName +"').style.display='block'\" ><img src=\""+ data[i].roomImage + "\" /></div>";
+        					names_table += "        <div id=\""+ data[i].roomId + data[i].roomName +"\" class=\"published\" style=\"display:none\"> ";
+                            names_table += "            <div id=\""+i+"_threatLevel\">Threat level:"+data[i].threatLevel+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_illnessTypes\">Illness:"+data[i].illnessTypes+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_patientAge\">Age:"+data[i].patientAge+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_lengthOfStay\">Length of stay:"+data[i].lengthOfStay+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_nurseVisits\">Nurse visit:"+data[i].nurseVisits+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_visitors\">Visitors:"+data[i].visitors+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_wasteDispose\">Linnens change:"+data[i].wasteDispose+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_lastCleaning\">Last cleaning:"+data[i].lastCleaning+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_deviceWarning\">Device warning:"+data[i].deviceWarning+"</div><br/>";
+                            names_table += "            <div id=\""+i+"_missingTasks\">Missing tasks:"+data[i].missingTasks+"</div><br/>";         
+                            names_table += "            <div onclick=\" document.getElementById('"+ data[i].roomId + data[i].roomName +"').style.display='none'\" ><b>CLOSE</b></div>";
+                            names_table += "		</div>";
                             names_table += "	</header>";
-                            names_table +='</article>';
+                            names_table +="</article>";
                             
                             
         			}
@@ -148,7 +165,7 @@ $("#view_room").click(function(e){
 			},
 
 			error: function() {
-			  console.log('process error');
+			  console.log("process error");
 			},
 		});
 	});
@@ -170,7 +187,7 @@ $("#view_room").click(function(e){
 				timeout: 5000,
 				complete: function() {
 				  //called when complete
-				  console.log('process complete');
+				  console.log("process complete");
 				},
 				success: function(data) {
 					console.log("Returned from Update.....");
@@ -219,7 +236,7 @@ $("#view_room").click(function(e){
 
 				},
 				error: function() {
-				  console.log('process error');
+				  console.log("process error");
 				}
 		});
 	});
