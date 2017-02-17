@@ -1,0 +1,174 @@
+Scenario 1
+
+A 30 year old male was admitted to the hospital with a laceration to his
+finger that will require multiple stitches.
+
+The patient is placed in Room number 1
+
+Initial State:
+-Illness Threat Level = 3
+-Length of Stay = 0
+-Nurse Visits = 0
+-Number of Visitors = 0
+-Last Waste disposal = 0
+-Last Room Cleaning = 0
+-Total Missing Task = 0
+-Device Warning = 0
+
+30 minutes later:
+-Nurse Visits = 1
+-length of Stay = 0.5
+-Last Waste disposal = 0.5
+-Last Room Cleaning = 0.5
+
+30 minutes later: 
+-Illness Threat Level = 3
+-Length of Stay = 1
+-Nurse Visits = 7
+-Last Waste Disposal = 1
+-Total Missing Task = 1
+-Last Room Cleaning = 1
+END:
+
+Scenario 2
+
+A 40 year old male has reconstructive knee surgery.
+
+The patient is placed in Room number 2
+
+Initial State:
+-Illness Threat Level = 5
+-Length of Stay = 0
+-Nurse Visits = 0
+-Number of Visitors = 0
+-Last Waste disposal = 0
+-Last Room Cleaning = 0
+-Total Missing Task = 0
+-Device Warning = 0
+
+6 hours later:
+-Length of Stay = 6
+-Nurse Visits = 6
+-Number of Visitors = 2
+-Last Waste Disposal = 6
+-Last Room Cleaning = 6
+-Total Missing Task = 2
+
+6 hours later:
+-Length of Stay = 12
+-Nurse Visits = 9
+-Last Waste Disposal = 12
+-Last Room Cleaning = 12
+
+8 hours later:
+-Length of Stay = 20
+-Nurse Visits = 15
+-Last Wast Disposal = 6
+-Last Room Cleaning = 20
+-Device Warning = 1
+END:
+
+Scenario 3
+
+A 65 year old male has radiation treatment for colon cancer.
+
+The patient is placed in Room number 3
+
+Initial State:
+-Illness Threat Level = 9
+-Length of Stay = 0
+-Nurse Visits = 0
+-Number of Visitors = 0
+-Last Waste disposal = 0
+-Last Room Cleaning = 0
+-Total Missing Task = 0
+-Device Warning = 0
+
+6 hours later:
+-Length of Stay = 6
+-Nurse Visits = 10
+-Number of Visitors = 6
+-Last Waste disposal = 3
+-Last Room Cleaning = 1
+-Device Warning = 1
+
+6 hours later:
+-Length of Stay = 12
+-Nurse Visits = 25
+-Last Waste disposal = 1
+-Device Warning = 4
+END:
+
+Scenario 4
+
+20 year female admitted for stomach pains
+
+The patient is placed in Room number 4
+
+Initial State:
+-Illness Threat Level = 2
+-Length of Stay = 0
+-Nurse Visits = 0
+-Number of Visitors = 0
+-Last Waste disposal = 0
+-Last Room Cleaning = 0
+-Total Missing Task = 0
+-Device Warning = 0
+
+2 hours later:
+-Length of Stay = 2
+-Nurse Visits = 4
+-Number of Visitors = 2
+-Last Waste disposal = 2
+-Last Room Cleaning = 2
+-Total Missing Task = 2
+
+1 hours later:
+-Length of Stay = 3
+-Nurse Visits = 6
+-Last Waste disposal = 4
+-Last Room Cleaning = 4
+END:
+
+Scenario 5
+
+80 year old man has heart surgery
+
+The patient is placed in Room number 5
+Initial State:
+-Illness Threat Level = 10
+-Length of Stay = 0
+-Nurse Visits = 0
+-Number of Visitors = 0
+-Last Waste disposal = 0
+-Last Room Cleaning = 0
+-Total Missing Task = 0
+-Device Warning = 0
+
+6 hours later:
+-Length of Stay = 6
+-Nurse Visits = 10
+-Last Waste disposal = 3
+-Last Room Cleaning = 6
+-Device Warning = 1
+
+6 hours later:
+-Length of Stay = 12
+-Nurse Visits = 30
+-Last Room Cleaning = 2
+-Device Warning = 5
+
+12 hours later:
+-Length of Stay = 24
+-Nurse Visits = 50
+-Last Room Cleaning = 2
+-Total Missing Task = 5
+-Device Warning = 9
+
+12 hours later:
+-Length of Stay = 36
+-Nurse Visits = 70
+-Last Room Cleaning = 2
+-Total Missing Task = 7
+-Device Warning = 13
+END:
