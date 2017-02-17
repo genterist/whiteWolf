@@ -55,11 +55,6 @@ $(document).ready(function(){
 				if(!data.hasOwnProperty("added"))
 				{
 					console.log("Received info from back end");
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
 					document.getElementById("db_read_error").style.display="none";
 					document.getElementById("updated_name").style.display="none";
 					document.getElementById("could_not_update").style.display="none";
@@ -114,12 +109,6 @@ $("#view_room").click(function(e){
 				if(!data.hasOwnProperty("added"))
 				{
 					console.log("Received info from back end");
-					document.getElementById("show_all_names").style.display="block";
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
 					document.getElementById("db_read_error").style.display="none";
 					document.getElementById("updated_name").style.display="none";
 					document.getElementById("could_not_update").style.display="none";
@@ -185,11 +174,6 @@ $("#view_room").click(function(e){
 				},
 				success: function(data) {
 					console.log("Returned from Update.....");
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
 
 					//Based on what's received from back end(app.js) end, show appropriate message.
 					if(data.updated === "updated")
@@ -198,7 +182,6 @@ $("#view_room").click(function(e){
 						document.getElementById("updated_name").style.display="block";
 						document.getElementById("could_not_update").style.display="none";
 						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("duplicate_name").style.display="none";
 						document.getElementById("empty_database").style.display="none";
 					}
 					else if(data.updated === "could not update")
@@ -207,7 +190,6 @@ $("#view_room").click(function(e){
 						document.getElementById("updated_name").style.display="none";
 						document.getElementById("could_not_update").style.display="block";
 						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("duplicate_name").style.display="none";
 						document.getElementById("empty_database").style.display="none";
 					}
 					else if(data.updated === "DB read error")
@@ -216,7 +198,6 @@ $("#view_room").click(function(e){
 						document.getElementById("updated_name").style.display="none";
 						document.getElementById("could_not_update").style.display="none";
 						document.getElementById("db_read_error").style.display="block";
-						document.getElementById("duplicate_name").style.display="none";
 						document.getElementById("empty_database").style.display="none";
 					}
 					else if(data.updated === "No")
@@ -224,7 +205,6 @@ $("#view_room").click(function(e){
 						document.getElementById("updated_name").style.display="none";
 						document.getElementById("could_not_update").style.display="none";
 						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("duplicate_name").style.display="block";
 						document.getElementById("empty_database").style.display="none";
 					}
 					else if(data.updated === "empty database")
@@ -232,7 +212,6 @@ $("#view_room").click(function(e){
 						document.getElementById("updated_name").style.display="none";
 						document.getElementById("could_not_update").style.display="none";
 						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("duplicate_name").style.display="none";
 						document.getElementById("empty_database").style.display="block";
 					}
 					$("#updated_new_name").val("");
@@ -243,67 +222,5 @@ $("#view_room").click(function(e){
 				  console.log('process error');
 				}
 		});
-	});
-
-	$("#remove_name_button").click(function(e){
-		e.preventDefault();
-		//In 'data' parameter, send name chosen in drop down to be removed, to 'url', to be received by back end for further processing
-		$.ajax({
-				url: "/remove_name",
-				type: "GET",
-				dataType: "json",
-				data:{name_to_remove: $("#names_to_be_removed option:selected").text()},
-				contentType: "application/json",
-				cache: true,
-				timeout: 5000,
-				complete: function() {
-				  //called when complete
-				  console.log('process complete');
-				},
-				success: function(data) {
-					document.getElementById("add_new_name_form").style.display="none";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("updated_name").style.display="none";
-					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
-
-					//Based on what's received from back end(app.js) end, show appropriate message.
-					if(data.removed === "removed")
-					{
-						document.getElementById("removed_name").style.display="block";
-						document.getElementById("could_not_remove").style.display="none";
-						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("empty_database").style.display="none";
-					}
-					else if(data.removed === "could not remove")
-					{
-						document.getElementById("removed_name").style.display="none";
-						document.getElementById("could_not_remove").style.display="block";
-						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("empty_database").style.display="none";
-					}
-					else if(data.removed === "DB read error")
-					{
-						document.getElementById("removed_name").style.display="none";
-						document.getElementById("could_not_remove").style.display="none";
-						document.getElementById("db_read_error").style.display="block";
-						document.getElementById("empty_database").style.display="none";
-					}
-					else if(data.removed === "empty database")
-					{
-						document.getElementById("removed_name").style.display="none";
-						document.getElementById("could_not_remove").style.display="none";
-						document.getElementById("db_read_error").style.display="none";
-						document.getElementById("empty_database").style.display="block";
-					}
-				},
-				error: function() {
-				  console.log('process error');
-				},
-			});
 	});
 });

@@ -69,55 +69,10 @@ ORIGINAL NODE.JS HOOKS
 					<!-- Forms and controls and stats will be displayed here -->
 					
 					<article class="post">
-						 <!-- Creating a new person -->
-						  <div id="add_new_name_form" style="display:none">
-							<form class="form-horizontal" action="/add_name" method="GET" name="outcome" id="outcome">
-							  <fieldset>
-								<legend class="resizables"> New Record Information </legend>
-								<div class="form-group">
-									<label for="newname" class="col-lg-2 control-label">Enter name to be added:</label>
-									<div class="col-lg-10">
-									  <input type="text" autocomplete="off" class="form-control" id="newname" placeholder="Enter Name"/>
-									</div>
-								</div>
-
-								<div class="form-group">
-								  <div class="col-lg-10 col-lg-offset-2">
-									<button id="add_name_button" type="submit" class="btn btn-danger">Add Name</button>
-								  </div>
-								</div>
-							  </fieldset>
-							</form>
-						  </div>
-						 <!-- End of create new person -->
-						
-						 <div id="added_name" style="display:none">
-							<div class="alert alert-success">
-								Name has been added to the database.
-							</div>
-						 </div>
-
-						 <div id="duplicate_name" style="display:none;">
-							<div class="alert alert-danger">
-							  Name is already present in the list. Enter a new one.
-							</div>
-						 </div>
-
-						 <div id="db_insert_error" style="display:none">
-							<div class="alert alert-danger">
-									  Could not insert into database. Please try later.
-							</div>
-						 </div>
 
 						 <div id="db_read_error" style="display:none">
 							<div class="alert alert-danger">
 									  Could not read database to check for name.
-							</div>
-						 </div>
-
-						 <div id="removed_name" style="display:none">
-							<div class="alert alert-success">
-										 Removed Name.
 							</div>
 						 </div>
 
@@ -130,12 +85,6 @@ ORIGINAL NODE.JS HOOKS
 						<div id="could_not_update" style="display:none">
 							<div class="alert alert-danger">
 								 Could not update name.
-							</div>
-						</div>
-
-						<div id="could_not_remove" style="display:none">
-							<div class="alert alert-danger">
-										 Could not remove name from list. Please check Database.
 							</div>
 						</div>
 
@@ -235,38 +184,6 @@ ORIGINAL NODE.JS HOOKS
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-				function show_new_name_form()
-				{
-					document.getElementById("add_new_name_form").style.display="block";
-					document.getElementById("remove_name_form").style.display="none";
-					document.getElementById("update_name_form").style.display="none";
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
-					document.getElementById("db_read_error").style.display="none";
-					document.getElementById("updated_name").style.display="none";
-					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("empty_database").style.display="none";
-				}
-
-				function show_new_room_form()
-				{
-					document.getElementById("show_all_names").style.display="none";
-					document.getElementById("added_name").style.display="none";
-					document.getElementById("removed_name").style.display="none";
-					document.getElementById("duplicate_name").style.display="none";
-					document.getElementById("db_insert_error").style.display="none";
-					document.getElementById("could_not_remove").style.display="none";
-					document.getElementById("db_read_error").style.display="none";
-					document.getElementById("updated_name").style.display="none";
-					document.getElementById("could_not_update").style.display="none";
-					document.getElementById("empty_database").style.display="none";
-				}
-
-
 				function show_update_name_form()
 				{
 					document.getElementById("update_name_form").style.display="block";
