@@ -22,7 +22,6 @@ Initial State:
 -Last Room Cleaning = 0.5
 
 30 minutes later: 
--Illness Threat Level = 3
 -Length of Stay = 1
 -Nurse Visits = 7
 -Last Waste Disposal = 1
