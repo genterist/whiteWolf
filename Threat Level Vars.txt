@@ -1,0 +1,80 @@
+Threat Map Variables:
+
+Patient Illness Threat Level:
+-This varible will take in multiple other varibles about the patients
+illness(reason for being in the hospital) and the patients demographic information. However,
+for the purpose of this demo we will aggregate these varibles into one threat rating.
+SCALE - 1 to 10: 1 being the lowest risk, 10 being highest risk.
+
+included varibles
+-Type of Illiness: 1 to 10 rating - a rating of 1 would mean that the patients illness is not suseptiable 
+to catching an HAI. A rating of 10 would mean that the patients illness causes the patient to be at a higher risk of 
+acquiring an HAI. these types of illness would include illnesses that causes the immune system to be weakened. 
+
+-Patient Age: 1 to 10 rating - the older the patients age, the higher the rating will be. However, young children would also
+receive a high rating as they are more suseptiable to HAI.   
+
+Patient Length of Stay:
+-This variable will be a single integer that increases by one for each day that the patient is in the hospital.
+the longer the patient is in the hospital the more suseptiable they are to acquiring an HAI.
+
+Number of Nurse Visits:
+-This varible would be a single integer that counts the number of nurse visits to the patients room. Increased visits
+by nurses increases the HAI threat level.   
+
+Number of Visitors:
+-This variable will be a single integer that counts the number of visitors that a patient has received. A high number
+of visitors increases that chance that they may bring outside infections into the patients room. 
+
+Time of Last Waste Disposal:
+-This variable will be a single integer that counts the number of hours from the last time the patient waste was removed
+from their room. As time increases between waste disposal, the HAI threat increases. Once the waste has been disposed, 
+the rating will return to zero. 
+
+Time of Last Room Cleaning:
+-This variable will be a single integer that counts the number of hours from the last time the patients room was cleaned.
+As time increases betwen room cleaning, the HAI threat increases. Once the room is cleaned the rating will return to zero.
+
+All variables are added up to create a single threat rating based off the sum of the variables. 
+
+Example 1:
+Patient Illness Threat level:
+-Illness - HIV = 9
+-Age - 75 = 9
+Patient Illness Threat level Total = 9
+
+Patient length of Stay:
+-length of Stay = 5
+
+Number of Nurse Visits:
+-Nurse Visits = 30
+
+Time of Last Waste Disposal:
+- Waste Disposal = 3 hours ago
+
+Time of Last Room Cleaning:
+-Room Cleaning = 6 hours ago
+
+Total HAI Threat Level = 53 Very High Threat Level
+
+Example 2:
+
+Patient Illness Threat Level:
+-Illiness - Broken hand = 2
+-Age - 25 = 1
+Patient Illness Threat Level Total = 1.5
+
+Patient Length of Stay:
+-length of stay = 0
+
+Number of Nurse Visits:
+-Nurse Visits = 2
+
+Time of Last Waste Disposal:
+-Waste Disposal = 1 hour ago
+
+Time of Last Room Cleaning:
+-Room Cleaning = 3 hours ago 
+
+Total HAI Threat Level = 7.5 Very Low Threat Level
+
