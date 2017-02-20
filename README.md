@@ -12,6 +12,12 @@ these variables into a threat rating which is applied to an overall HAI risk rat
 the patients illness, age and other demographic information as well as the number of nurse visits, number of outside visitors, the last time the patients room was cleaned,
 patients length of stay, and others. An overall threat rating for each patient will give hospital staff the information needed to efficiently allocate resources to the highest priority.      
 
+Application -To Do Check List
+Current methods to reduce HAI rely on hospital staff following strict protocols. Unfortunately, due to a lack of resources and the hectic environment of 
+a hospital, protocols often get missed. The "To Do Check List" is an application that can run on a wearable device such as the apple watch that informs hospital staff
+of the correct protocol that needs to be followed, but more importantly it alerts hospital staff of protocols that were missed while caring for a patient. The application
+also allows for the integration into patient monitoring equipment that can instantaneously alert staff of an issue.      
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
