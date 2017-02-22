@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Basic simulation of situations
 - Working push notifications
 
+## 0.0.4 - 2017-02-21
+### Added
+- Adding google trends feature
+
 ## 0.0.3 - 2017-02-06
 ### Added
 - Innitial IBM Bluemix Mobile platform codes
