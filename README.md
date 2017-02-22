@@ -1,10 +1,11 @@
 # Project White Wolf
 
+## Introduction
 Our project aims to find reasonable software solutions that prevent or reduce Healthcare Associated Infections (HAI).
 In today’s society it’s hard to find common aspects of life that affect everyone. However, this is not the case when speaking to healthcare. Unfortunately, the high monetary cost of healthcare and an individual’s socio-economic standing usually correlate to the quality of healthcare people receive. As medical advances increase the lifespan of the aging population we can assume that the cost of healthcare will continue to rise causing tax payers to pay the brunt of those increased cost.
 In an effort to decrease the cost of healthcare, we analyzed the affect of Healthcare Associated Infections (HAI) and how potential software applications can be utilized to reduce instances of HAI’s in healthcare facilities. 
 
-Software Solutions: 
+## Software Solutions: 
 
 Application - Threat Map
 The threat map application utilizes data as a surveillance method to reduce HAI events. The threat map takes input as variables from internal databases and transforms
@@ -30,9 +31,7 @@ These instructions will get you a copy of the project up and running on IBM Clou
 * Basic knowledge of IBM Node.JS and its associated modules
 * Basic knowledge of HTML and CSS
 
-### Installing
-
-WHITE WOLF DASH BOARD (nodeJS:
+### Installing :: WHITE WOLF DASH BOARD (nodeJS)
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://hub.jazz.net/deploy/index.html?repository=https://github.com/genterist/whiteWolf/tree/master/whiteWolf-nodejs-master)
 
@@ -91,6 +90,14 @@ To troubleshoot your Bluemix app the main useful source of information are the l
   $ cf logs <application-name> --recent
   ```
 
+### Installing :: WHITE WOLF Cloudant NoSQL database
+
+JSON files of our tables are as followed:
+
+(to be added)
+
+
+
 ## Contributing
 
 Please read [CONTRIBUTING.md]for details on our code of conduct, and the process for submitting pull requests to us.
@@ -101,7 +108,7 @@ We use GitHub
 
 ## Authors
 
-See also the list of [contributors] who participated in this project.
+Tam Nguyen - Christine Zeng - Matt Farver
 
 ## License
 
