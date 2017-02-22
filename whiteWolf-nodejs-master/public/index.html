@@ -32,16 +32,16 @@ ORIGINAL NODE.JS HOOKS
 						<nav class="links">
 							<ul>
 								<li>
-									<form action="/view_names" method="GET" name="name_outcome" id="name_outcome" style="border: hidden white">
+									<form action="/view_names" method="GET" name="name_outcome" id="name_outcome" style="display:none">
 									  <fieldset>
 										  <input type="hidden" class="form-control" id="allnames" value="allnames" name="allnames"/>
 										  <button id="view_name" data-modal="view_name" type="submit" > Load Names </button>
 									  </fieldset>
 									</form>
 								</li>
-								<li><button type="button" onclick="show_update_name_form()"> Update Name </button></li>
+								<li><button type="button" onclick="show_update_name_form()" style="display:none"> Update Name </button></li>
 								<li>
-									<form class="form-horizontal" action="/view_rooms" target="_myFrame" method="GET" name="room_outcome" id="room_outcome">
+									<form class="form-horizontal" action="/view_rooms" target="_myFrame" method="GET" name="room_outcome" id="room_outcome" style="display:none">
 									  <fieldset>
 										  <input type="hidden" class="form-control" id="allroom" value="allroom" name="allroom"/>
 										  <button id="view_room" type="submit" data-modal="view_room"> Read Rooms </button>
@@ -147,7 +147,7 @@ ORIGINAL NODE.JS HOOKS
 							<section>
 								<div class="mini-posts" id="show_all_rooms">
 								<!-- Room details -->
-								room details
+								Please wait ...
 								</div>
 							</section>
 
@@ -203,15 +203,21 @@ ORIGINAL NODE.JS HOOKS
             <script type="text/javascript">
                 
                 window.onload=function(){
-                    var auto = setTimeout(function(){ autoRefresh(); }, 100);
+                    var auto = setTimeout(function(){ refresh_room(); }, 100);
+                    auto = setTimeout(function(){ refresh_name(); }, 100);
+                    auto = setTimeout(function(){ autoRefresh(); }, 100);
             
                     function refresh_room(){
                       jQuery('#view_room').click();
                     }
+                    
+                    function refresh_name(){
+                      jQuery('#view_name').click();
+                    }
             
                     function autoRefresh(){
                        clearTimeout(auto);
-                       auto = setTimeout(function(){ refresh_room(); autoRefresh(); }, 10000);
+                       auto = setTimeout(function(){ refresh_room(); refresh_name(); autoRefresh(); }, 10000);
                     }
                 }
             </script>
