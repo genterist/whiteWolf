@@ -1,10 +1,10 @@
-# NodeJSCloudantSampleApp Overview
+# WhiteWolf NodeJS Dashboard
 
-This application uses the [Cloudant NoSQL Database service](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db) to demonstrate the operations of Create, Read, Update and Delete into database using the Node.js runtime. Cloudant node module is used for these operations. They can alternatively be done with API calls which returns a JSON.
+This application uses the [Cloudant NoSQL Database service](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db). They can alternatively be done with API calls which returns a JSON.
 
 ### Click on the button below to deploy this Bluemix project to your account
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://hub.jazz.net/deploy/index.html?repository=https://github.com/IBM-Bluemix/nodejs-cloudantdb-crud-example)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://hub.jazz.net/deploy/index.html?repository=https://github.com/genterist/whiteWolf/tree/master/whiteWolf-nodejs-master)
 
 
 ## Application Requirements
@@ -16,7 +16,7 @@ This application uses the [Cloudant NoSQL Database service](https://console.ng.b
 
 * [Sign up][sign_up] for Bluemix. 
 * Download and install Cloud Foundry CLI to be used on the terminal.
-* Fork this project into your Gitub account by clickig on the "Fork Project" button in the top-right hand corner of this page : https://github.com/IBM-Bluemix/nodejs-cloudantdb-crud-example
+* Fork this project into your Gitub account by clickig on the "Deploy to bluemix"
 * On the Terminal, Connect to Bluemix using the CF CLI and follow the prompts to log in. 
 * Once you're in the same space as the app, create the Cloudant NoSQL DB service in Bluemix
 ```
@@ -26,13 +26,13 @@ This application uses the [Cloudant NoSQL Database service](https://console.ng.b
 ```
 * Bind this service to your app
 ```
-    $cf bs NodeJSCloudantSampleApp <service-name-as-in-previous-step>
+    $cf bs WhiteWolfDashboard <service-name-as-in-previous-step>
 ```
 * Edit the manifest.yml file and change the <application-host> parameter to something unique.
 ```
     applications:
     - path: .
-    name: NodeJSCloudantSampleApp
+    name: WhiteWolfDashboard
     host: <change_to_something_unique>
     framework: node
     memory:256M
@@ -49,10 +49,10 @@ This application uses the [Cloudant NoSQL Database service](https://console.ng.b
 ```    	     
 * Start the application by typing
 ```
-    $cf start NodeJSCloudantSampleApp
+    $cf start WhiteWolfDashboard
 ```    
 
-And voila! Your very own instance of Cloudant NoSQL DB with NodeJSCloudantSampleApp is now running on Bluemix.
+And voila! Your very own instance of Cloudant NoSQL DB with WhiteWolfDashboard is now running on Bluemix.
 
 ## Running the app locally:
 
@@ -74,31 +74,6 @@ https://github.com/IBM-Bluemix/nodejs-cloudantdb-crud-example
 		/*
 			if(process.env.VCAP_SERVICES)
 			{
-				services = JSON.parse(process.env.VCAP_SERVICES);
-				if(services.cloudantNoSQLDB) //Check if cloudantNoSQLDB service is bound to your project
-				{
-					cloudant_url = services.cloudantNoSQLDB[0].credentials.url;  //Get URL and other paramters
-					console.log("Name = " + services.cloudantNoSQLDB[0].name);
-					console.log("URL = " + services.cloudantNoSQLDB[0].credentials.url);
-    				console.log("username = " + services.cloudantNoSQLDB[0].credentials.username);
-					console.log("password = " + services.cloudantNoSQLDB[0].credentials.password);
-				}
-			}
- 		*/
-``` 		
-* cd into the project folder and if required by any modules, run
-```
-		npm install
-```		
-* Start the application by typing
-```
-		node app.js
-```		
-* When the application executes, the first line will say:
-```
-		http://localhost:<port_number>
-```		
-Paste this URL in the browser to open the application.
 
 ### For more documents on Cloudant NoSQL DB
 
