@@ -20,33 +20,76 @@ also allows for the integration into patient monitoring equipment that can insta
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on IBM Cloud.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* An IBM Bluemix account (free for students).
+* Basic knowledge of IBM Mobile app builder (to be completely moved to Kinetise.com after May 2017)
+* Basic knowledge of IBM Cloudant Database
+* Basic knowledge of IBM Node.JS and its associated modules
+* Basic knowledge of HTML and CSS
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+WHITE WOLF DASH BOARD (nodeJS:
 
-Say what the step will be
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://hub.jazz.net/deploy/index.html?repository=https://github.com/genterist/whiteWolf/tree/master/whiteWolf-nodejs-master)
 
+* Download and install Cloud Foundry CLI to be used on the terminal.
+* On the Terminal, Connect to Bluemix using the CF CLI and follow the prompts to log in. 
+* Once you're in the same space as the app, create the Cloudant NoSQL DB service in Bluemix
 ```
-Give the example
+    $cf api https://api.ng.bluemix.net
+    $cf login
+    $cf create-service cloudantNoSQLDB Lite <service-name>
 ```
-
-And repeat
-
+* Bind this service to your app
 ```
-until finished
+    $cf bs NodeJSCloudantSampleApp <service-name-as-in-previous-step>
 ```
+* Edit the manifest.yml file and change the <application-host> parameter to something unique.
+```
+    applications:
+    - path: .
+    name: NodeJSCloudantSampleApp
+    host: <change_to_something_unique>
+    framework: node
+    memory:256M
+    instances: 1
+    services:
+    - <service-name>
+```
+   The host you use will determinate your application url(e.g. <host>.mybluemix.net). REMOVE the following lines from manifest.yml as you no longer need this cloudant service. The one you created in step 4 will be the one primarily used.
+```   
+	declared-services:
+  	   cloudant-nodejs:
+    	     label: cloudantNoSQLDB
+    	     plan: Shared
+```    	     
+* Start the application by typing
+```
+    $cf start NodeJSCloudantSampleApp
+```  
 
-End with an example of getting some data out of the system or using it for a little demo
+#### For more documents on Cloudant NoSQL DB
+
+* https://cloudant.com
+
+* https://docs.cloudant.com/document.html#undefined
+
+* https://github.com/cloudant/nodejs-cloudant/blob/master/example/crud.js
+
+* https://www.ng.bluemix.net/docs/#services/Cloudant/index.html#Cloudant
+
+
+#### Troubleshooting
+
+To troubleshoot your Bluemix app the main useful source of information are the logs, to see them, run:
+
+  ```
+  $ cf logs <application-name> --recent
+  ```
 
 ## Contributing
 
