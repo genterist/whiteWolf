@@ -7,6 +7,8 @@ In an effort to decrease the cost of healthcare, we analyzed the affect of Healt
 
 ## Software Solutions: 
 
+![whitewolf](https://cloud.githubusercontent.com/assets/21042389/23233907/579387d8-f91e-11e6-824d-31946e4a311b.png)
+
 Application - Threat Map
 The threat map application utilizes data as a surveillance method to reduce HAI events. The threat map takes input as variables from internal databases and transforms
 these variables into a threat rating which is applied to an overall HAI risk rating for each patient within the hospital. Example variables include 
