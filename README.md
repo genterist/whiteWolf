@@ -110,7 +110,7 @@ We use GitHub
 
 ## Authors
 
-Tam Nguyen - Christine Zeng - Matt Farver
+Tam Nguyen - Christine Tzeng - Matt Farver
 
 ## License
 
