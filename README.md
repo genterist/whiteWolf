@@ -1,6 +1,9 @@
 # Project White Wolf
 
 ## Introduction
+
+[![introduction](https://cloud.githubusercontent.com/assets/21042389/23274878/6129d144-f9d2-11e6-8219-631b02ff118b.png)](https://www.youtube.com/watch?v=988ecqkKdJI)
+
 Our project aims to find reasonable software solutions that prevent or reduce Healthcare Associated Infections (HAI).
 In today’s society it’s hard to find common aspects of life that affect everyone. However, this is not the case when speaking to healthcare. Unfortunately, the high monetary cost of healthcare and an individual’s socio-economic standing usually correlate to the quality of healthcare people receive. As medical advances increase the lifespan of the aging population we can assume that the cost of healthcare will continue to rise causing tax payers to pay the brunt of those increased cost.
 In an effort to decrease the cost of healthcare, we analyzed the affect of Healthcare Associated Infections (HAI) and how potential software applications can be utilized to reduce instances of HAI’s in healthcare facilities. 
@@ -73,6 +76,17 @@ These instructions will get you a copy of the project up and running on IBM Clou
     $cf start NodeJSCloudantSampleApp
 ```  
 
+### Installing :: WHITE WOLF Cloudant NoSQL database
+
+[threatmap]
+
+[names_database]
+
+[tasks]
+
+
+(to be added)
+
 #### For more documents on Cloudant NoSQL DB
 
 * https://cloudant.com
@@ -91,13 +105,6 @@ To troubleshoot your Bluemix app the main useful source of information are the l
   ```
   $ cf logs <application-name> --recent
   ```
-
-### Installing :: WHITE WOLF Cloudant NoSQL database
-
-JSON files of our tables are as followed:
-
-(to be added)
-
 
 
 ## Contributing
