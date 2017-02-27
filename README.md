@@ -1,30 +1,51 @@
 # Project White Wolf
 
-## Introduction
+## White Wolf Project Deliverables
+* Demo video : https://youtu.be/ooFfdp3kWvY
+* APK file : https://github.com/genterist/whiteWolf/blob/master/WHITEWOLF-2.apk
+* Github page : https://github.com/genterist/whiteWolf
 
-[![introduction](https://cloud.githubusercontent.com/assets/21042389/23274878/6129d144-f9d2-11e6-8219-631b02ff118b.png)](https://www.youtube.com/watch?v=988ecqkKdJI)
+## 1. Inspiration
+According to the Center for Disease Control (CDC), HAIs are infections that patients acquire during the course of receiving treatment for other condition within a healthcare setting. However, HAIs are not limited to patients. Healthcare staff can also get infected. Recently, HAIs have gained increased attention due to high profile cases such as the Ebola outbreak in 2014 which resulted in two nurses contracting the Ebola virus while giving treatment to an Ebola patient in Texas. Other cases of HAIs include antibiotic resistant super-bugs such as MRSA which has become increasingly common in healthcare settings.
 
-Our project aims to find reasonable software solutions that prevent or reduce Healthcare Associated Infections (HAI).
-In today’s society it’s hard to find common aspects of life that affect everyone. However, this is not the case when speaking to healthcare. Unfortunately, the high monetary cost of healthcare and an individual’s socio-economic standing usually correlate to the quality of healthcare people receive. As medical advances increase the lifespan of the aging population we can assume that the cost of healthcare will continue to rise causing tax payers to pay the brunt of those increased cost.
-In an effort to decrease the cost of healthcare, we analyzed the affect of Healthcare Associated Infections (HAI) and how potential software applications can be utilized to reduce instances of HAI’s in healthcare facilities. 
+[![Top issues in hospital setting](https://s9.postimg.org/xfbup60zz/Screen_Shot_2017_02_26_at_9_55_44_PM.png)](https://postimg.org/image/t674mzxqj/)
 
-## Software Solutions: 
+"Critical Issues in Healthcare Environments" _ Cohen2009
+
+Our team performed issue research and conclude that:
+
+1. We need to change the culture of how we perceive and react to HAI. Instead of confirming HAI, we need to **focus more on predicting HAI**. With prediction and early prevention, the chance of being investigated and/or being sued is much lesser than the case of a confirmed HAI. With that as an incentive, we believe more people will be more willing to participate in the data colection process. In a long run, it will also increase the speed of patient flow resulting in higher revenue for the institution and lesser work load for nurses.
+2. Instead of statistical data, we need to focus more on gathering **contextual** data. We believe it is not harder to design a system that can identify abnormalities in contextual data when compared to a system designed for statistical data. Understand the context of an incident can also be very beneficial to many stakeholders. The policy makers will be able to make adjustments to policies and work flows. Helpful contextual data may also help nursees to defend themselves in court cases.
+3. We need to **focus on real-time data collection**, data sharing and data processing. Each and every second, there are million of usable data floating around both inside and outside an institution. What if a police's incident database can help with the positioning of ambulances for future cases? What if a twitter trend can help with forecasting a healthcare outage?
+
+Our full report is available at 
+
+[https://github.com/genterist/whiteWolf/blob/master/proactive-software-solutions.pdf](https://github.com/genterist/whiteWolf/blob/master/proactive-software-solutions.pdf)
+
+## 2. What "White Wolf" does
 
 ![whitewolf](https://cloud.githubusercontent.com/assets/21042389/23233907/579387d8-f91e-11e6-824d-31946e4a311b.png)
 
-Application - Threat Map
-The threat map application utilizes data as a surveillance method to reduce HAI events. The threat map takes input as variables from internal databases and transforms
-these variables into a threat rating which is applied to an overall HAI risk rating for each patient within the hospital. Example variables include 
-the patients illness, age and other demographic information as well as the number of nurse visits, number of outside visitors, the last time the patients room was cleaned,
-patients length of stay, and others. An overall threat rating for each patient will give hospital staff the information needed to efficiently allocate resources to the highest priority.      
+### Employs existing precision tracking technologies
+We realize that not all healthcare institutions will have the budget to digitalize everything and even when they do, there is a physical limitations on where we can put smart chips in. For example, we can detect if a nurse had washed her hand before a certain procedure or not (forgetting to wash hand - despite previous training - is still a very common mistake). However, we cannot detect if a medical tape was accidentally left on a bed linnen (infected) surface or not.
+Ultra wideband precision tracking like Pozyx system (pozyx.io) can keep track of nurses' hand positions (2D & 3D) and help detect if a task has been done or even detect contextual mistake
 
-Application -To Do Check List
-Current methods to reduce HAI rely on hospital staff following strict protocols. Unfortunately, due to a lack of resources and the hectic environment of 
-a hospital, protocols often get missed. The "To Do Check List" is an application that can run on a wearable device such as the apple watch that informs hospital staff
-of the correct protocol that needs to be followed, but more importantly it alerts hospital staff of protocols that were missed while caring for a patient. The application
-also allows for the integration into patient monitoring equipment that can instantaneously alert staff of an issue.      
+### Automatic To-Do Check List
+Based on precision tracking technology, we build the "Automatic To-Do Check List" which can run on a wearable device such as the apple watch, cellphone or existing hospital pads (android or ios). Based on our survey (check the above-mentioned report), we understand that the workflow of a nurse can be really complicated in real life situations (a big reason why mistakes still happen regardless of formal trainings). With this app, nurses just have to remember the rooms s/he is responsible for and once s/he enters the room, a list of pending tasks for the room will pop up. This is particularly helpful when nurse while performing procedures in a room was disrupted by emergencies in other room(s). The software also help nurses with executing the correct order of tasks - once a task is done, it will be removed from the displayed list. The application also allows for the integration into patient monitoring equipment that can instantaneously alert staff of an issue.  
 
-## Getting Started
+### Threat Map
+The threat map application utilizes data as a surveillance method to reduce HAI events. The threat map takes input as variables from internal databases (such as the task database from the "Automatic To-do checklist" module) and transforms these variables into a threat rating which is then used to calculate an overall HAI risk rating for each room. Example variables include the patients illness, age and other demographic information as well as the number of nurse visits, number of outside visitors, the last time the patients room was cleaned, patients length of stay, and others. An overall threat rating for each patient will give hospital staff the information needed to efficiently allocate resources to the highest priority.      
+
+[![Features](https://cloud.githubusercontent.com/assets/21042389/23274877/61293f68-f9d2-11e6-8ef3-4161041094d0.png)](https://www.youtube.com/watch?v=86cTLcC28yk)
+
+## 3. How we built it
+* Precision tracking system data feeds will be processed by its api (PoZyx and its python api).
+* Data will the be presented in our mobile client (Android and iOS) and web dashboard
+* We use IBM cloud stack of Cloudant DB + Express + Node.JS + MobileFirst/Mobile UI builder
+* Agile method was used with tool chain of
+[IBM control interface + Github] --> [IBM Build] --> [Sauce labs/tests] --> [Deploy]    
+
+## 4. Getting Started
 
 These instructions will get you a copy of the project up and running on IBM Cloud.
 
@@ -106,22 +127,36 @@ To troubleshoot your Bluemix app the main useful source of information are the l
   $ cf logs <application-name> --recent
   ```
 
+## 5. Challenges we ran into
+[![IBM cloud issues](https://s13.postimg.org/70m0irq1j/16807327_10154452750098995_4978137719176985651_n.jpg)](https://postimg.org/image/rkquh95sj/)
 
+* We started coding our project in beginning of February (our team was formed in January and we spent that month on issue research). Unfortunately, IBM cloud was scheduled to undergo several major changes including but not limited to the upgrading of its entire Cloud Foundry's architecture (https://www.ibm.com/blogs/bluemix/2016/11/bluemix-cloud-foundry-upgrading-dea-diego-architecture/). Our team was having issues (sometimes even cannot access the cloud control interfaces) making changes to our projects.
+
+* We also have to deal with the learning curve since this is the first time we use IBM's cloud service and implement an entire project on the cloud. 
+
+## 6. Accomplishments that we're proud of
+* We are most proud of the results of our issue research. We are not in the healthcare industry but through literature reviews, performing our own user surveys, we were able to identify the issue, understand the root causes of it and form our own conclusions on what need to be done differently.
+
+* We are also proud of how fast our team went from almost zero knowledge with IBM cloud to a good enough demo considering we are all master candidates with heavy academic workload and schedules.
+
+## 7. What we learned
+* We got hands on experience on automatic execution of tool chains (build, test and deployment were automated and executed right away after each time new codes were committed)
+* We learned about new features of IBM cloud
+* We learned to be more flexible when working with each other (considering the time limit and the issues we faced)
+* We learned about Hospital Acquired Infection - a hot topic in health care industry
+
+## 8. What's next for White Wolf
+
+[![introduction](https://cloud.githubusercontent.com/assets/21042389/23274878/6129d144-f9d2-11e6-8219-631b02ff118b.png)](https://www.youtube.com/watch?v=988ecqkKdJI)
 ## Contributing
 
 Please read [CONTRIBUTING.md]for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use GitHub
-
-## Authors
+## 9. Authors
 
 Tam Nguyen - Christine Tzeng - Matt Farver
 
-## License
+## 10. License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-* etc
