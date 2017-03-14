@@ -1,0 +1,406 @@
+commit 3a9e0b6f08f3a588ab5a109f6d7983967feea94a
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Tue Feb 28 17:51:09 2017 -0500
+
+    Feb Progress Report
+    
+    Feb Progress Report
+
+commit d6a386c47a6f02b64534260229f64b6b16be1b82
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Mon Feb 27 13:44:46 2017 -0500
+
+    Update README.md
+
+commit 70988e750e3331454739bdcfce6db267123cce30
+Author: Tam Nguyen <genterist@live.com>
+Date:   Mon Feb 27 00:57:48 2017 -0500
+
+    Upload apk file
+
+commit 5324fe5e850ba3afffee18618bc5285e3ec9e222
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Thu Feb 23 14:28:23 2017 -0500
+
+    Added intro
+
+commit a353680d506e7af327c1c38e10feb6430c315cea
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Thu Feb 23 10:18:43 2017 -0500
+
+    Hackathon
+
+commit 39a003b7ad37c704ee49a958cf5791fe68aeb9fd
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Thu Feb 23 10:17:18 2017 -0500
+
+    Hackathon
+
+commit edcbb1de0e5c52576aa99f02dc1844c43bb1e1b3
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Wed Feb 22 20:08:28 2017 -0500
+
+    Update README.md
+
+commit b049154ea2707be13472b0ad83013d3c6f39716f
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Wed Feb 22 16:46:20 2017 -0500
+
+    Update README.md
+
+commit 990e8c198307815f8e9bb087380e613a8e9eedb5
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Wed Feb 22 15:58:26 2017 -0500
+
+    Update README.md
+
+commit 048ca9b7e914fc21538744b2b7650be1bca031bf
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Wed Feb 22 15:56:01 2017 -0500
+
+    Update DEVLOG.md
+
+commit 85d5f306e699f00095272fccf20981271770ad7d
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Wed Feb 22 15:50:47 2017 -0500
+
+    Add cloudant and nodeJS setup instructions
+
+commit 82085e29c4d0e9e0c9cb3926c47ec1c708fdcc6b
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Wed Feb 22 14:33:45 2017 -0500
+
+    Update README.md
+
+commit 0236dcd890340dcaf82761463417a7bb591d18a7
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Wed Feb 22 08:16:59 2017 -0500
+
+    Update README.md
+
+commit 1ba81544f35f70ad9217262412d5e6ece3684caf
+Author: Tam Nguyen <genterist@live.com>
+Date:   Tue Feb 21 22:19:51 2017 -0500
+
+    Task list - update 1
+    
+    -change quotes in source codes
+    -lean up codes
+    -hide buttons, add autoload behavior
+    -create task list request codes
+
+commit 81e05c81389cf4016e8e0bbfde0ae6a75a9aa58f
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Tue Feb 21 21:57:14 2017 -0500
+
+    nam setting file
+
+commit 936def1253e90d248ade2dda5b8ba1ab2bf6c81a
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Tue Feb 21 21:56:19 2017 -0500
+
+    google trends in nodejs
+
+commit e16ea848559f0db669cc3111850280d246c81768
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Sun Feb 19 22:10:49 2017 -0500
+
+    READme
+    
+    To Do Check List
+
+commit d3713ff31e3ff5e5e0ac0afc07bc266d424fcd28
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Sun Feb 19 21:30:36 2017 -0500
+
+    Up dated READme
+    
+    Threat Map
+
+commit 8461fefc10c7dc9b19809f5347b340b4bff1bd89
+Author: Tam Nguyen <genterist@live.com>
+Date:   Fri Feb 17 18:07:55 2017 -0500
+
+    Improve personel stats
+    
+    Modify app.js to add more stats to nurses (image change, task list)
+    Modified noSQL structure of nurse and room tables
+    Modify frontend js and html codes for nurse section
+    Upload more images for dashboard
+
+commit 943bc5fee8becd6d443d2b27489719133cfcab24
+Merge: fa1122e b3cd41d
+Author: Tam Nguyen <genterist@live.com>
+Date:   Fri Feb 17 18:04:10 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b3cd41d76d3008c26f01024be4972c3c692ff107
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Fri Feb 17 14:34:15 2017 -0500
+
+    Scenario's
+
+commit fa703d0a9376c7bc05012d5f6e311156eadfde56
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Fri Feb 17 13:19:29 2017 -0500
+
+    Scenario's
+    
+    Example Scenario's
+
+commit ae6edaa31db2ad28e8bdf9fbd60648e2c4e764d8
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Fri Feb 17 11:39:07 2017 -0500
+
+    Threat Level Variables
+    
+    Threat Level Variables.
+
+commit fa1122e7145cd28c962b7d11f253d5deeb304aeb
+Author: Tam Nguyen <genterist@live.com>
+Date:   Thu Feb 16 22:02:41 2017 -0500
+
+    more code lean up
+    
+    Removed irrelevant html and nodes functions
+
+commit 7de0400751e200c7e66dc0f98e1b7a2ee13af2c9
+Author: Tam Nguyen <genterist@live.com>
+Date:   Thu Feb 16 15:12:39 2017 -0500
+
+    Lean up codes, remove artifacts
+    
+    Lean up codes, remove artifacts from IBM sample
+
+commit c34ae9e4542bda9738c393dd2b85f6a8c3bee270
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Tue Feb 14 14:46:47 2017 -0500
+
+    AutoRefesh
+    
+    Threat Map view Controller, Auto Refresh
+
+commit 6038d0cd1c12a2aba1331624b66a6e93e7834f8d
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Tue Feb 14 14:40:46 2017 -0500
+
+    README Intro
+    
+    README Intro
+
+commit cafc2f304df441947ddc1355687d2fea3960406c
+Merge: b76a0d0 ac2c9e8
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Tue Feb 14 14:37:05 2017 -0500
+
+    Merge branch 'master' of https://github.com/genterist/whiteWolf
+    
+    # Conflicts:
+    #       Matt_UI_Code/All_Code/Test.txt
+
+commit ac2c9e8541391a6624c120dc0118a8865200ec07
+Author: Tam Nguyen <genterist@live.com>
+Date:   Sun Feb 12 22:21:39 2017 -0500
+
+    Uploaded graphic files to project's graphic library
+
+commit a567ac946b6520e4fdf21afc37a570d67fd21a0b
+Author: Tam Nguyen <genterist@live.com>
+Date:   Sun Feb 12 11:51:44 2017 -0500
+
+    Updated UI and auto refresh of room stats
+
+commit 9f74d8ef91a6a1ef39096755240f88778ac5a11a
+Author: Tam Nguyen <genterist@live.com>
+Date:   Sat Feb 11 10:06:49 2017 -0500
+
+    Admin console Upgraded
+
+commit 175a08a5e45d8beda5473f367ffcc513e930ca84
+Author: Tam Nguyen <genterist@live.com>
+Date:   Fri Feb 10 16:24:40 2017 -0500
+
+    Code to load Room stats
+    
+    modified app.js and name_actions.js to fully load room stats
+
+commit b76a0d0f2ba92fde68ba762052bdb3467ffb8612
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Fri Feb 10 16:00:20 2017 -0500
+
+    Project_Code_Matt
+
+commit 188e61d4e600af9434cc3267992c5a09273b1ce6
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Fri Feb 10 15:56:23 2017 -0500
+
+    Testing
+
+commit 9bf8c0c012c517a8e9f1fc946b01f326c10f7b0e
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Thu Feb 9 16:46:28 2017 -0500
+
+    draft of back up plan - threat map (in php with Codeigniter)
+
+commit 1c730f8e2dbfbed1724383278c448c9e7c09930b
+Author: Tam Nguyen <genterist@live.com>
+Date:   Thu Feb 9 15:17:12 2017 -0500
+
+    Cloudant and NodeJS mode
+    
+    Update button function in name_actions.js
+    Modify app.get(/view_rooms)
+    - change DB table
+    - remove cvs export feature
+    - change DB queries
+    Modify app.get(/view_rooms) and name_actions.js - add more fields to
+    room stats display
+
+commit a68873909ea1218792720ff7804e722144af78be
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Thu Feb 9 10:01:44 2017 -0500
+
+    Update DEVLOG.md
+
+commit 92e2ed5dac33cbd6452ff4ddd8d53db81fa15073
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Wed Feb 8 15:56:01 2017 -0500
+
+    Test-UI Code Object-C
+
+commit f6db858922a96f2d577e93eab1720856faa5a451
+Author: mfarver <mfarver@ncsu.edu>
+Date:   Wed Feb 8 15:50:53 2017 -0500
+
+    node.js Code
+
+commit 97a5dafe0669cf76b800379f5d7a3a15310eecc2
+Author: mfarve1 <mfarver@ncsu.edu>
+Date:   Tue Feb 7 16:48:32 2017 -0500
+
+    Create Matt-TestCode
+
+commit 4b35dd1093950393f3abc9ba04ab139794a2bc15
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Feb 7 14:25:56 2017 -0500
+
+    Rename PodInstall-ReadME.md to PodInstall.md
+
+commit 2fd10c750da89d438126fc0c694cdd43bdd803f3
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Feb 7 14:17:29 2017 -0500
+
+    Update and rename devLog.md to DEVLOG.md
+
+commit 6c61a3d1a6aedf32f3b773f679243215ef40de16
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Feb 7 14:03:56 2017 -0500
+
+    Create devLog.md
+
+commit 50e1960547489e186417feb7fb11a8d6a404d18c
+Author: ChristineTzeng <fly90265@hotmail.com>
+Date:   Mon Feb 6 16:04:04 2017 -0500
+
+    source tree test
+
+commit a636715b08b7c6053012c7caace445f834831062
+Author: Tam Nguyen <genterist@live.com>
+Date:   Mon Feb 6 11:29:59 2017 -0500
+
+    test credential
+
+commit 08a319f86689984885614f3102c1d5d2d4174ede
+Author: Tam Nguyen <genterist@live.com>
+Date:   Mon Feb 6 11:20:45 2017 -0500
+
+    test commit
+
+commit ba59387b51befd050d2a5eac1aa4748b086c90e6
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 11:08:07 2017 -0500
+
+    test
+
+commit c763f736bab14d068fcc6b2dd35ea7e89303f806
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 10:59:49 2017 -0500
+
+    test credential
+
+commit a5b910afcf1dfc6252fa30831bbd60fac6d302b0
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 10:53:23 2017 -0500
+
+    test
+
+commit 5bd67ec31e1ca25259df51b49e483fe199450383
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 10:38:53 2017 -0500
+
+    Initial BlueMix code gen
+    
+    +Place holder codes
+    +Credentials are not shared between team members
+    +Advanced mobil and db features are not synced
+
+commit 515b5b72f51ea90d9142ae30e6c076732b4223b2
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 10:29:55 2017 -0500
+
+    Revert "Initial IBM BlueMix code gen"
+    
+    This reverts commit 914e5e0613e0076bacdaf77f7917c5eb88e5fa18.
+
+commit 914e5e0613e0076bacdaf77f7917c5eb88e5fa18
+Author: Tam Nguyen <genterist@gmail.com>
+Date:   Mon Feb 6 10:23:20 2017 -0500
+
+    Initial IBM BlueMix code gen
+    
+    +Place holder codes
+    +Credentials are not shared between team members
+    +Advanced mobil and db features are not synced
+
+commit af6a04605f1fcf1c74925b065d9c686a8804b0cd
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 31 16:04:06 2017 -0500
+
+    original upload
+
+commit 9727bd6faf24961a62e2b369737c7ba57524f909
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 23:58:23 2017 -0500
+
+    Create Progress.md
+
+commit 4c98469389900e0871da55004e1c92c9fb3787fa
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 23:34:29 2017 -0500
+
+    Create LICENSE.md
+
+commit 48fa1c543faceef6dabf965d5d879a01850feaef
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 23:32:13 2017 -0500
+
+    Create CONTRIBUTING.md
+
+commit fedc21a0a184df994faa26f36f2ef807e4a6b9c8
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 23:30:50 2017 -0500
+
+    Update README.md
+
+commit 8c8f0aa44f1eca17c0cb15fdf452e1641f138964
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 14:06:06 2017 -0500
+
+    Update README.md
+
+commit c9d7f3ecce5158e2914d08d079e35eb1937196c0
+Author: Tam Nguyen <genterist@users.noreply.github.com>
+Date:   Tue Jan 17 14:03:51 2017 -0500
+
+    Initial commit
