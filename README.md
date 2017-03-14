@@ -46,7 +46,7 @@ The threat map application utilizes data as a surveillance method to reduce HAI 
 [IBM control interface + Github] --> [IBM Build] --> [Sauce labs/tests] --> [Deploy] 
 <br/>
 
-[![Toolchain](http://i68.tinypic.com/153205c.png)]
+![Toolchain](http://i68.tinypic.com/153205c.png)
 
 ## 4. Getting Started
 
