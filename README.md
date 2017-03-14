@@ -42,8 +42,11 @@ The threat map application utilizes data as a surveillance method to reduce HAI 
 * Precision tracking system data feeds will be processed by its api (PoZyx and its python api).
 * Data will the be presented in our mobile client (Android and iOS) and web dashboard
 * We use IBM cloud stack of Cloudant DB + Express + Node.JS + MobileFirst/Mobile UI builder
-* Agile method was used with tool chain of
-[IBM control interface + Github] --> [IBM Build] --> [Sauce labs/tests] --> [Deploy]    
+* Agile method was used with tool chain of<br/>
+[IBM control interface + Github] --> [IBM Build] --> [Sauce labs/tests] --> [Deploy] 
+<br/>
+
+[![Toolchain](http://i68.tinypic.com/153205c.png)]
 
 ## 4. Getting Started
 
