@@ -1,8 +1,18 @@
 # Project White Wolf
 
-## White Wolf Project Deliverables
+## Project Updates
+
+13MAY2017: Tam here. I am leading another effort to drill down further the "live tracking" component of this project. I call it "White Wolf 2". My team will try to make huge improvements on the simulator, make communications more secure and HIPPA compliant, and will try to do some stress tests to make sure our application is practical. We will also extend the impact besides HealthCare to other industries (currious?). We'll update you once we're done with the project. 
+ 
+05MAY2017: we do not have free access to IBM services (from our old account). All services will be turned off. However, we will reboot the project and put things under new free account. Please stand by for our updates.
+
+01MAY2017: Our project and related award was recognized in NC State Department of Computer Science annual Award ceremony. We would like to thank our Professor - Dr. Tim Menzies (http://menzies.us/) - for teaching us the knowledge that was employed and contributed greatly to WhiteWolf1 success
+
+## Project Deliverables
 * Demo video : https://youtu.be/ooFfdp3kWvY
 * APK file : https://github.com/genterist/whiteWolf/blob/master/WHITEWOLF-2.apk
+* Issue research paper: https://github.com/genterist/whiteWolf/blob/master/proactive-software-solutions.pdf
+* User study paper: https://github.com/genterist/whiteWolf/blob/master/WhiteWolf-March-Paper.pdf
 * Github page : https://github.com/genterist/whiteWolf
 
 ## 1. Inspiration
